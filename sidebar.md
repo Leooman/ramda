@@ -14,7 +14,5 @@ Author：[Leooman](http://leooman.com/)
 1. [Function函数](#docs/Function)
 
 ## More
-- [Link](http://leooman.com/ramda-doc/)
-- [Source Code](https://github.com/Leooman/ramda-doc)
+- [Source Code](https://github.com/Leooman/ramda)
 - [Github](https://github.com/Leooman)
-- [Feedback](https://github.com/Leooman/ramda-doc/issues)
