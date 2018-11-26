@@ -1,0 +1,1001 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组List · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Object.html" />
+    
+    
+    <link rel="prev" href="String.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://github.com/Leooman/ramda">
+            
+                    
+                    Ramda V0.25.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Type.html">
+            
+                <a href="Type.html">
+            
+                    
+                    类型Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Math.html">
+            
+                <a href="Math.html">
+            
+                    
+                    数学运算Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Logic.html">
+            
+                <a href="Logic.html">
+            
+                    
+                    逻辑运算Logic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Relation.html">
+            
+                <a href="Relation.html">
+            
+                    
+                    关系运算Relation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    字符串String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="List.html">
+            
+                <a href="List.html">
+            
+                    
+                    数组List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Object.html">
+            
+                <a href="Object.html">
+            
+                    
+                    对象Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    函数Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数组List</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="list">List</h1>
+<h2 id="length&#x6570;&#x7EC4;&#x957F;&#x5EA6;">length(&#x6570;&#x7EC4;&#x957F;&#x5EA6;)</h2>
+<p><code>[a] &#x2192; Number</code></p>
+<pre><code class="lang-javascript">R.length([]); <span class="hljs-comment">//=&gt; 0</span>
+R.length([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; 3</span>
+</code></pre>
+<h2 id="adjust&#x5BF9;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x5143;&#x7D20;&#x6267;&#x884C;&#x64CD;&#x4F5C;">adjust(&#x5BF9;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x5143;&#x7D20;&#x6267;&#x884C;&#x64CD;&#x4F5C;)</h2>
+<p><code>(a &#x2192; a) &#x2192; Number &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5143;&#x7D20;&#x8981;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7D22;&#x5F15;index</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;array-like&#x5217;&#x8868;&#x5BF9;&#x8C61;</span>
+R.adjust(R.add(<span class="hljs-number">10</span>), <span class="hljs-number">1</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);     <span class="hljs-comment">//=&gt; [1, 12, 3]</span>
+R.adjust(R.add(<span class="hljs-number">10</span>))(<span class="hljs-number">1</span>)([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);     <span class="hljs-comment">//=&gt; [1, 12, 3]</span>
+</code></pre>
+<h2 id="all&#x6240;&#x6709;&#x6210;&#x5458;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x5224;&#x5B9A;&#x89C4;&#x5219;">all(&#x6240;&#x6709;&#x6210;&#x5458;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x5224;&#x5B9A;&#x89C4;&#x5219;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> equals3 = R.equals(<span class="hljs-number">3</span>);
+R.all(equals3)([<span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; true</span>
+R.all(equals3)([<span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="any&#x662F;&#x5426;&#x6709;&#x6210;&#x5458;&#x6EE1;&#x8DB3;&#x5224;&#x5B9A;&#x89C4;&#x5219;">any(&#x662F;&#x5426;&#x6709;&#x6210;&#x5458;&#x6EE1;&#x8DB3;&#x5224;&#x5B9A;&#x89C4;&#x5219;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> lessThan0 = R.flip(R.lt)(<span class="hljs-number">0</span>);
+<span class="hljs-keyword">var</span> lessThan2 = R.flip(R.lt)(<span class="hljs-number">2</span>);
+R.any(lessThan0)([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">//=&gt; false</span>
+R.any(lessThan2)([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="none&#x662F;&#x5426;&#x6240;&#x6709;&#x6210;&#x5458;&#x90FD;&#x4E0D;&#x6EE1;&#x8DB3;&#x5224;&#x5B9A;&#x89C4;&#x5219;">none(&#x662F;&#x5426;&#x6240;&#x6709;&#x6210;&#x5458;&#x90FD;&#x4E0D;&#x6EE1;&#x8DB3;&#x5224;&#x5B9A;&#x89C4;&#x5219;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> isEven = n =&gt; n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+<span class="hljs-keyword">var</span> isOdd = n =&gt; n % <span class="hljs-number">2</span> === <span class="hljs-number">1</span>;
+
+R.none(isEven, [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">11</span>]); <span class="hljs-comment">//=&gt; true</span>
+R.none(isOdd, [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">11</span>]); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="aperture&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6570;&#x7EC4;&#x5206;&#x5272;&#x91CD;&#x7EC4;">aperture(&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6570;&#x7EC4;&#x5206;&#x5272;&#x91CD;&#x7EC4;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [[a]]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;n&#x6307;&#x5B9A;&#x6570;&#x91CF;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;</span>
+<span class="hljs-comment">//&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x4E0E;&#x5176;&#x540E;&#x7684;n-1&#x4E2A;&#x6210;&#x5458;&#x5206;&#x4E3A;&#x4E00;&#x7EC4;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;</span>
+R.aperture(<span class="hljs-number">2</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">//=&gt; [[1, 2], [2, 3], [3, 4], [4, 5]]</span>
+R.aperture(<span class="hljs-number">3</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">//=&gt; [[1, 2, 3], [2, 3, 4], [3, 4, 5]]</span>
+R.aperture(<span class="hljs-number">7</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">//=&gt; []</span>
+</code></pre>
+<h2 id="append&#x6570;&#x7EC4;&#x540E;&#x7F6E;&#x6DFB;&#x52A0;arrayprototypepush">append(&#x6570;&#x7EC4;&#x540E;&#x7F6E;&#x6DFB;&#x52A0;Array.prototype.push)</h2>
+<p><code>a &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.append(<span class="hljs-string">&apos;tests&apos;</span>, [<span class="hljs-string">&apos;write&apos;</span>, <span class="hljs-string">&apos;more&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;write&apos;, &apos;more&apos;, &apos;tests&apos;]</span>
+R.append(<span class="hljs-string">&apos;tests&apos;</span>, []); <span class="hljs-comment">//=&gt; [&apos;tests&apos;]</span>
+R.append([<span class="hljs-string">&apos;tests&apos;</span>], [<span class="hljs-string">&apos;write&apos;</span>, <span class="hljs-string">&apos;more&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;write&apos;, &apos;more&apos;, [&apos;tests&apos;]]</span>
+</code></pre>
+<h2 id="prepend&#x6570;&#x7EC4;&#x524D;&#x7F6E;&#x6DFB;&#x52A0;arrayprototypeunshift">prepend(&#x6570;&#x7EC4;&#x524D;&#x7F6E;&#x6DFB;&#x52A0;Array.prototype.unshift)</h2>
+<p><code>a &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.prepend(<span class="hljs-string">&apos;fee&apos;</span>, [<span class="hljs-string">&apos;fi&apos;</span>, <span class="hljs-string">&apos;fo&apos;</span>, <span class="hljs-string">&apos;fum&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;fee&apos;, &apos;fi&apos;, &apos;fo&apos;, &apos;fum&apos;]</span>
+</code></pre>
+<h2 id="chain&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x94FE;&#x5F0F;&#x64CD;&#x4F5C;">chain(&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x94FE;&#x5F0F;&#x64CD;&#x4F5C;)</h2>
+<p><code>Chain m =&gt; (a &#x2192; m b) &#x2192; m a &#x2192; m b</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> duplicate = n =&gt; [n, n];
+R.chain(duplicate, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [1, 1, 2, 2, 3, 3]</span>
+
+R.chain(R.append, R.head)([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3, 1]</span>
+</code></pre>
+<h2 id="concat&#x5408;&#x5E76;">concat(&#x5408;&#x5E76;)</h2>
+<p><code>[a] &#x2192; [a] &#x2192; [a]</code> <code>String &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.concat(<span class="hljs-string">&apos;ABC&apos;</span>, <span class="hljs-string">&apos;DEF&apos;</span>); <span class="hljs-comment">// &apos;ABCDEF&apos;</span>
+R.concat([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [4, 5, 6, 1, 2, 3]</span>
+R.concat([], []); <span class="hljs-comment">//=&gt; []</span>
+</code></pre>
+<h2 id="contains&#x5217;&#x8868;&#x662F;&#x5426;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x5143;&#x7D20;">contains(&#x5217;&#x8868;&#x662F;&#x5426;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x5143;&#x7D20;)</h2>
+<p><code>a &#x2192; [a] &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.contains(<span class="hljs-number">3</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; true</span>
+R.contains(<span class="hljs-number">4</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; false</span>
+R.contains({ name: <span class="hljs-string">&apos;Fred&apos;</span> }, [{ name: <span class="hljs-string">&apos;Fred&apos;</span> }]); <span class="hljs-comment">//=&gt; true</span>
+R.contains([<span class="hljs-number">42</span>], [[<span class="hljs-number">42</span>]]); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="drop&#x5220;&#x9664;&#x524D;n&#x4E2A;&#x5143;&#x7D20;">drop(&#x5220;&#x9664;&#x524D;n&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [a]</code> <code>Number &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.drop(<span class="hljs-number">1</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;bar&apos;, &apos;baz&apos;]</span>
+R.drop(<span class="hljs-number">2</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;baz&apos;]</span>
+R.drop(<span class="hljs-number">3</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; []</span>
+R.drop(<span class="hljs-number">4</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; []</span>
+R.drop(<span class="hljs-number">3</span>, <span class="hljs-string">&apos;ramda&apos;</span>);               <span class="hljs-comment">//=&gt; &apos;da&apos;</span>
+</code></pre>
+<h2 id="dropwhile&#x5220;&#x9664;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x524D;n&#x4E2A;&#x5143;&#x7D20;">dropWhile(&#x5220;&#x9664;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x524D;n&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; [a]</code> <code>(a &#x2192; Boolean) &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> lteTwo = x =&gt; x &lt;= <span class="hljs-number">2</span>;
+
+R.dropWhile(lteTwo, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; [3, 4, 3, 2, 1]</span>
+
+R.dropWhile(x =&gt; x !== <span class="hljs-string">&apos;d&apos;</span> , <span class="hljs-string">&apos;Ramda&apos;</span>); <span class="hljs-comment">//=&gt; &apos;da&apos;</span>
+</code></pre>
+<h2 id="droplast&#x5220;&#x9664;&#x540E;n&#x4E2A;&#x5143;&#x7D20;">dropLast(&#x5220;&#x9664;&#x540E;n&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [a]</code> <code>Number &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.dropLast(<span class="hljs-number">1</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;]</span>
+R.dropLast(<span class="hljs-number">2</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;]</span>
+R.dropLast(<span class="hljs-number">3</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; []</span>
+R.dropLast(<span class="hljs-number">4</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; []</span>
+R.dropLast(<span class="hljs-number">3</span>, <span class="hljs-string">&apos;ramda&apos;</span>);               <span class="hljs-comment">//=&gt; &apos;ra&apos;</span>
+</code></pre>
+<h2 id="droplastwhile&#x5220;&#x9664;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x540E;n&#x4E2A;&#x5143;&#x7D20;">dropLastWhile(&#x5220;&#x9664;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x540E;n&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; [a]</code> <code>(a &#x2192; Boolean) &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> lteThree = x =&gt; x &lt;= <span class="hljs-number">3</span>;
+
+R.dropLastWhile(lteThree, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3, 4]</span>
+
+R.dropLastWhile(x =&gt; x !== <span class="hljs-string">&apos;d&apos;</span> , <span class="hljs-string">&apos;Ramda&apos;</span>); <span class="hljs-comment">//=&gt; &apos;Ramd&apos;</span>
+</code></pre>
+<h2 id="droprepeats&#x53BB;&#x9664;&#x8FDE;&#x7EED;&#x91CD;&#x590D;&#x5143;&#x7D20;">dropRepeats(&#x53BB;&#x9664;&#x8FDE;&#x7EED;&#x91CD;&#x590D;&#x5143;&#x7D20;)</h2>
+<p><code>[a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5185;&#x7F6E;R.equals&#x5224;&#x65AD;&#x662F;&#x5426;&#x91CD;&#x590D;</span>
+R.dropRepeats([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3, 4, 2]</span>
+</code></pre>
+<h2 id="droprepeatswith&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x53BB;&#x9664;&#x8FDE;&#x7EED;&#x91CD;&#x590D;&#x5143;&#x7D20;">dropRepeatsWith(&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x53BB;&#x9664;&#x8FDE;&#x7EED;&#x91CD;&#x590D;&#x5143;&#x7D20;)</h2>
+<p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> l = [<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>];
+R.dropRepeatsWith(R.eqBy(<span class="hljs-built_in">Math</span>.abs), l); <span class="hljs-comment">//=&gt; [1, 3, 4, -5, 3]</span>
+</code></pre>
+<h2 id="endswith&#x5224;&#x65AD;&#x662F;&#x5426;&#x4EE5;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7ED3;&#x5C3E;">endsWith(&#x5224;&#x65AD;&#x662F;&#x5426;&#x4EE5;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7ED3;&#x5C3E;)</h2>
+<p><code>[a] &#x2192; Boolean</code> <code>String &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.endsWith(<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;abc&apos;</span>)                <span class="hljs-comment">//=&gt; true</span>
+R.endsWith(<span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;abc&apos;</span>)                <span class="hljs-comment">//=&gt; false</span>
+R.endsWith([<span class="hljs-string">&apos;c&apos;</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>])    <span class="hljs-comment">//=&gt; true</span>
+R.endsWith([<span class="hljs-string">&apos;b&apos;</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>])    <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="startswith&#x5224;&#x65AD;&#x662F;&#x5426;&#x4EE5;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x5F00;&#x59CB;">startsWith(&#x5224;&#x65AD;&#x662F;&#x5426;&#x4EE5;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x5F00;&#x59CB;)</h2>
+<p><code>[a] &#x2192; Boolean</code> <code>String &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.startsWith(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;abc&apos;</span>)                <span class="hljs-comment">//=&gt; true</span>
+R.startsWith(<span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;abc&apos;</span>)                <span class="hljs-comment">//=&gt; false</span>
+R.startsWith([<span class="hljs-string">&apos;a&apos;</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>])    <span class="hljs-comment">//=&gt; true</span>
+R.startsWith([<span class="hljs-string">&apos;b&apos;</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>])    <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="filter&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x6210;&#x5458;&#x96C6;&#x5408;">filter(&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x6210;&#x5458;&#x96C6;&#x5408;)</h2>
+<p><code>Filterable f =&gt; (a &#x2192; Boolean) &#x2192; f a &#x2192; f a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> isEven = n =&gt; n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+
+R.filter(isEven, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [2, 4]</span>
+
+R.filter(isEven, {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {b: 2, d: 4}</span>
+</code></pre>
+<h2 id="reject&#x4E0D;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x6210;&#x5458;&#x96C6;&#x5408;">reject(&#x4E0D;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x6210;&#x5458;&#x96C6;&#x5408;)</h2>
+<p><code>Filterable f =&gt; (a &#x2192; Boolean) &#x2192; f a &#x2192; f a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> isOdd = (n) =&gt; n % <span class="hljs-number">2</span> === <span class="hljs-number">1</span>;
+
+R.reject(isOdd, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [2, 4]</span>
+
+R.reject(isOdd, {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {b: 2, d: 4}</span>
+</code></pre>
+<h2 id="find&#x6B63;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;">find(&#x6B63;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; a | undefined</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xs = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">2</span>}];
+R.find(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">2</span>))(xs); <span class="hljs-comment">//=&gt; {a: 2}</span>
+R.find(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">4</span>))(xs); <span class="hljs-comment">//=&gt; undefined</span>
+</code></pre>
+<h2 id="findindex&#x6B63;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;&#x7D22;&#x5F15;">findIndex(&#x6B63;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;&#x7D22;&#x5F15;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; Number</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xs = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">2</span>}];
+R.findIndex(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">2</span>))(xs); <span class="hljs-comment">//=&gt; 1</span>
+R.findIndex(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">4</span>))(xs); <span class="hljs-comment">//=&gt; -1</span>
+</code></pre>
+<h2 id="findlast&#x5012;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;">findLast(&#x5012;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; a | undefined</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xs = [{a: <span class="hljs-number">1</span>, b: <span class="hljs-number">0</span>}, {a:<span class="hljs-number">1</span>, b: <span class="hljs-number">1</span>}];
+R.findLast(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">1</span>))(xs); <span class="hljs-comment">//=&gt; {a: 1, b: 1}</span>
+R.findLast(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">4</span>))(xs); <span class="hljs-comment">//=&gt; undefined</span>
+</code></pre>
+<h2 id="findlastindex&#x5012;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;&#x7D22;&#x5F15;">findLastIndex(&#x5012;&#x5E8F;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5143;&#x7D20;&#x7D22;&#x5F15;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; Number</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xs = [{a: <span class="hljs-number">1</span>, b: <span class="hljs-number">0</span>}, {a:<span class="hljs-number">1</span>, b: <span class="hljs-number">1</span>}];
+R.findLastIndex(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">1</span>))(xs); <span class="hljs-comment">//=&gt; 1</span>
+R.findLastIndex(R.propEq(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">4</span>))(xs); <span class="hljs-comment">//=&gt; -1</span>
+</code></pre>
+<h2 id="flatten&#x591A;&#x7EF4;&#x8F6C;&#x4E00;&#x7EF4;">flatten(&#x591A;&#x7EF4;&#x8F6C;&#x4E00;&#x7EF4;)</h2>
+<p><code>[a] &#x2192; [b]</code></p>
+<pre><code class="lang-javascript">R.flatten([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">5</span>, [<span class="hljs-number">6</span>, [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, [<span class="hljs-number">9</span>, [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>], <span class="hljs-number">12</span>]]]]);
+<span class="hljs-comment">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</span>
+</code></pre>
+<h2 id="foreach&#x904D;&#x5386;&#x6570;&#x7EC4;">forEach(&#x904D;&#x5386;&#x6570;&#x7EC4;)</h2>
+<p><code>(a &#x2192; *) &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> printXPlusFive = x =&gt; <span class="hljs-built_in">console</span>.log(x + <span class="hljs-number">5</span>);
+R.forEach(printXPlusFive, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
+<span class="hljs-comment">// logs 6</span>
+<span class="hljs-comment">// logs 7</span>
+<span class="hljs-comment">// logs 8</span>
+</code></pre>
+<h2 id="frompairs&#x6570;&#x7EC4;&#x8F6C;&#x5BF9;&#x8C61;">fromPairs(&#x6570;&#x7EC4;&#x8F6C;&#x5BF9;&#x8C61;)</h2>
+<p><code>[[k,v]] &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript">R.fromPairs([[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-number">3</span>]]); <span class="hljs-comment">//=&gt; {a: 1, b: 2, c: 3}</span>
+</code></pre>
+<h2 id="groupby&#x6240;&#x6709;&#x6210;&#x5458;&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x5206;&#x7EC4;">groupBy(&#x6240;&#x6709;&#x6210;&#x5458;&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x5206;&#x7EC4;)</h2>
+<p><code>(a &#x2192; String) &#x2192; [a] &#x2192; {String: [a]}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> byGrade = R.groupBy(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">student</span>) </span>{
+  <span class="hljs-keyword">var</span> score = student.score;
+  <span class="hljs-keyword">return</span> score &lt; <span class="hljs-number">65</span> ? <span class="hljs-string">&apos;F&apos;</span> :
+         score &lt; <span class="hljs-number">70</span> ? <span class="hljs-string">&apos;D&apos;</span> :
+         score &lt; <span class="hljs-number">80</span> ? <span class="hljs-string">&apos;C&apos;</span> :
+         score &lt; <span class="hljs-number">90</span> ? <span class="hljs-string">&apos;B&apos;</span> : <span class="hljs-string">&apos;A&apos;</span>;
+});
+<span class="hljs-keyword">var</span> students = [{name: <span class="hljs-string">&apos;Abby&apos;</span>, score: <span class="hljs-number">84</span>},
+                {name: <span class="hljs-string">&apos;Eddy&apos;</span>, score: <span class="hljs-number">58</span>},
+                <span class="hljs-comment">// ...</span>
+                {name: <span class="hljs-string">&apos;Jack&apos;</span>, score: <span class="hljs-number">69</span>}];
+byGrade(students);
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   &apos;A&apos;: [{name: &apos;Dianne&apos;, score: 99}],</span>
+<span class="hljs-comment">//   &apos;B&apos;: [{name: &apos;Abby&apos;, score: 84}]</span>
+<span class="hljs-comment">//   // ...,</span>
+<span class="hljs-comment">//   &apos;F&apos;: [{name: &apos;Eddy&apos;, score: 58}]</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<h2 id="groupwith&#x76F8;&#x90BB;&#x5143;&#x7D20;&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x5206;&#x7EC4;">groupWith(&#x76F8;&#x90BB;&#x5143;&#x7D20;&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x5206;&#x7EC4;)</h2>
+<p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [[a]]</code></p>
+<pre><code class="lang-javascript">R.groupWith(R.equals, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">21</span>])
+<span class="hljs-comment">//=&gt; [[0], [1, 1], [2], [3], [5], [8], [13], [21]]</span>
+
+R.groupWith((a, b) =&gt; a + <span class="hljs-number">1</span> === b, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">21</span>])
+<span class="hljs-comment">//=&gt; [[0, 1], [1, 2, 3], [5], [8], [13], [21]]</span>
+
+R.groupWith((a, b) =&gt; a % <span class="hljs-number">2</span> === b % <span class="hljs-number">2</span>, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">21</span>])
+<span class="hljs-comment">//=&gt; [[0], [1, 1], [2], [3, 5], [8], [13, 21]]</span>
+</code></pre>
+<h2 id="head&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;">head(&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>[a] &#x2192; a | Undefined</code> <code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.head([<span class="hljs-string">&apos;fi&apos;</span>, <span class="hljs-string">&apos;fo&apos;</span>, <span class="hljs-string">&apos;fum&apos;</span>]); <span class="hljs-comment">//=&gt; &apos;fi&apos;</span>
+R.head([]); <span class="hljs-comment">//=&gt; undefined</span>
+
+R.head(<span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;a&apos;</span>
+R.head(<span class="hljs-string">&apos;&apos;</span>); <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+</code></pre>
+<h2 id="last&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;">last(&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>[a] &#x2192; a | Undefined</code> <code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.last([<span class="hljs-string">&apos;fi&apos;</span>, <span class="hljs-string">&apos;fo&apos;</span>, <span class="hljs-string">&apos;fum&apos;</span>]); <span class="hljs-comment">//=&gt; &apos;fum&apos;</span>
+R.last([]); <span class="hljs-comment">//=&gt; undefined</span>
+
+R.last(<span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;c&apos;</span>
+R.last(<span class="hljs-string">&apos;&apos;</span>); <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+</code></pre>
+<h2 id="indexby&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x751F;&#x6210;&#x65B0;&#x5BF9;&#x8C61;">indexBy(&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x751F;&#x6210;&#x65B0;&#x5BF9;&#x8C61;)</h2>
+<p><code>(a &#x2192; String) &#x2192; [{k: v}] &#x2192; {k: {k: v}}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> list = [{id: <span class="hljs-string">&apos;xyz&apos;</span>, title: <span class="hljs-string">&apos;A&apos;</span>}, {id: <span class="hljs-string">&apos;abc&apos;</span>, title: <span class="hljs-string">&apos;B&apos;</span>}];
+R.indexBy(R.prop(<span class="hljs-string">&apos;id&apos;</span>), list);
+<span class="hljs-comment">//=&gt; {abc: {id: &apos;abc&apos;, title: &apos;B&apos;}, xyz: {id: &apos;xyz&apos;, title: &apos;A&apos;}}</span>
+</code></pre>
+<h2 id="indexof&#x6B63;&#x5E8F;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;">indexOf(&#x6B63;&#x5E8F;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;)</h2>
+<p><code>a &#x2192; [a] &#x2192; Number</code></p>
+<pre><code class="lang-javascript">R.indexOf(<span class="hljs-number">3</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; 2</span>
+R.indexOf(<span class="hljs-number">10</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; -1</span>
+</code></pre>
+<h2 id="lastindexof&#x5012;&#x5E8F;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;">lastIndexOf(&#x5012;&#x5E8F;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;)</h2>
+<p><code>a &#x2192; [a] &#x2192; Number</code></p>
+<pre><code class="lang-javascript">R.lastIndexOf(<span class="hljs-number">3</span>, [<span class="hljs-number">-1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; 6</span>
+R.lastIndexOf(<span class="hljs-number">10</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; -1</span>
+</code></pre>
+<h2 id="init&#x53BB;&#x5C3E;">init(&#x53BB;&#x5C3E;)</h2>
+<p><code>[a] &#x2192; [a]</code> <code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.init([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);  <span class="hljs-comment">//=&gt; [1, 2]</span>
+R.init([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);     <span class="hljs-comment">//=&gt; [1]</span>
+R.init([<span class="hljs-number">1</span>]);        <span class="hljs-comment">//=&gt; []</span>
+R.init([]);         <span class="hljs-comment">//=&gt; []</span>
+
+R.init(<span class="hljs-string">&apos;abc&apos;</span>);  <span class="hljs-comment">//=&gt; &apos;ab&apos;</span>
+R.init(<span class="hljs-string">&apos;ab&apos;</span>);   <span class="hljs-comment">//=&gt; &apos;a&apos;</span>
+R.init(<span class="hljs-string">&apos;a&apos;</span>);    <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+R.init(<span class="hljs-string">&apos;&apos;</span>);     <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+</code></pre>
+<h2 id="tail&#x53BB;&#x5934;">tail(&#x53BB;&#x5934;)</h2>
+<p><code>[a] &#x2192; [a]</code> <code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.tail([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);  <span class="hljs-comment">//=&gt; [2, 3]</span>
+R.tail([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);     <span class="hljs-comment">//=&gt; [2]</span>
+R.tail([<span class="hljs-number">1</span>]);        <span class="hljs-comment">//=&gt; []</span>
+R.tail([]);         <span class="hljs-comment">//=&gt; []</span>
+
+R.tail(<span class="hljs-string">&apos;abc&apos;</span>);  <span class="hljs-comment">//=&gt; &apos;bc&apos;</span>
+R.tail(<span class="hljs-string">&apos;ab&apos;</span>);   <span class="hljs-comment">//=&gt; &apos;b&apos;</span>
+R.tail(<span class="hljs-string">&apos;a&apos;</span>);    <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+R.tail(<span class="hljs-string">&apos;&apos;</span>);     <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+</code></pre>
+<h2 id="insert&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;">insert(&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;)</h2>
+<p><code>Number &#x2192; a &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.insert(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;x&apos;</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [1,2,&apos;x&apos;,3,4]</span>
+</code></pre>
+<h2 id="insertall&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x503C;">insertAll(&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x503C;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.insertAll(<span class="hljs-number">2</span>, [<span class="hljs-string">&apos;x&apos;</span>,<span class="hljs-string">&apos;y&apos;</span>,<span class="hljs-string">&apos;z&apos;</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [1,2,&apos;x&apos;,&apos;y&apos;,&apos;z&apos;,3,4]</span>
+</code></pre>
+<h2 id="intersperse&#x6210;&#x5458;&#x95F4;&#x63D2;&#x5165;&#x95F4;&#x9694;&#x503C;">intersperse(&#x6210;&#x5458;&#x95F4;&#x63D2;&#x5165;&#x95F4;&#x9694;&#x503C;)</h2>
+<p><code>a &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.intersperse(<span class="hljs-string">&apos;n&apos;</span>, [<span class="hljs-string">&apos;ba&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;ba&apos;, &apos;n&apos;, &apos;a&apos;, &apos;n&apos;, &apos;a&apos;]</span>
+</code></pre>
+<h2 id="into&#x539F;&#x6570;&#x7EC4;&#x5904;&#x7406;&#x540E;&#x7ED3;&#x679C;&#x4E0E;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x5408;&#x5E76;">into(&#x539F;&#x6570;&#x7EC4;&#x5904;&#x7406;&#x540E;&#x7ED3;&#x679C;&#x4E0E;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x5408;&#x5E76;)</h2>
+<p><code>a &#x2192; (b &#x2192; b) &#x2192; [c] &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">var</span> transducer = R.compose(R.map(R.add(<span class="hljs-number">1</span>)), R.take(<span class="hljs-number">2</span>));
+
+R.into([], transducer, numbers); <span class="hljs-comment">//=&gt; [2, 3]</span>
+
+<span class="hljs-keyword">var</span> intoArray = R.into(<span class="hljs-string">&quot;jsfkd&quot;</span>);
+intoArray(transducer, numbers); <span class="hljs-comment">//=&gt; &quot;jsfkd23&quot;</span>
+</code></pre>
+<h2 id="join&#x6570;&#x7EC4;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;">join(&#x6570;&#x7EC4;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;)</h2>
+<p><code>String &#x2192; [a] &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> spacer = R.join(<span class="hljs-string">&apos; &apos;</span>);
+spacer([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.4</span>]);   <span class="hljs-comment">//=&gt; &apos;a 2 3.4&apos;</span>
+R.join(<span class="hljs-string">&apos;|&apos;</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);    <span class="hljs-comment">//=&gt; &apos;1|2|3&apos;</span>
+</code></pre>
+<h2 id="map&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x64CD;&#x4F5C;">map(&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x64CD;&#x4F5C;)</h2>
+<p><code>Functor f =&gt; (a &#x2192; b) &#x2192; f a &#x2192; f b</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> double = x =&gt; x * <span class="hljs-number">2</span>;
+
+R.map(double, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [2, 4, 6]</span>
+
+R.map(double, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; {x: 2, y: 4, z: 6}</span>
+</code></pre>
+<h2 id="mapaccum&#x5143;&#x7D20;&#x5DE6;&#x4FA7;&#x7D2F;&#x52A0;">mapAccum(&#x5143;&#x7D20;&#x5DE6;&#x4FA7;&#x7D2F;&#x52A0;)</h2>
+<p><code>((acc, x) &#x2192; (acc, y)) &#x2192; acc &#x2192; [x] &#x2192; (acc, [y])</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8FED;&#x4EE3;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;acc&#x548C;&#x5F53;&#x524D;x,&#x8FD4;&#x56DE;[&#x5F53;&#x524D;&#x7D2F;&#x52A0;&#x503C;acc&#xFF0C;&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x7ED3;&#x679C;y]</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7D2F;&#x52A0;&#x521D;&#x59CB;&#x503C;acc</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;&#xFF0C;&#x4ECE;&#x5DE6;&#x4FA7;&#x5F00;&#x59CB;&#x4F20;&#x5165;&#x6267;&#x884C;</span>
+<span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;map&#x548C;reduce&#x7684;&#x7ED3;&#x5408;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;acc&#x7D2F;&#x52A0;&#x503C;&#x4E0E;&#x8FED;&#x4EE3;&#x671F;&#x95F4;&#x4EA7;&#x751F;&#x7684;&#x7ED3;&#x679C;&#x96C6;&#x5408;&#x751F;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; [&#x7D2F;&#x52A0;&#x503C;acc,[...&#x8FED;&#x4EE3;&#x7ED3;&#x679C;y]]</span>
+<span class="hljs-keyword">var</span> digits = [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;4&apos;</span>];
+<span class="hljs-keyword">var</span> appender = (a, b) =&gt; [a + b, a + b];
+
+R.mapAccum(appender, <span class="hljs-number">0</span>, digits); <span class="hljs-comment">//=&gt; [&apos;01234&apos;, [&apos;01&apos;, &apos;012&apos;, &apos;0123&apos;, &apos;01234&apos;]]</span>
+
+<span class="hljs-keyword">var</span> digits = [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;4&apos;</span>];
+<span class="hljs-keyword">var</span> appender = (a, b) =&gt; [a+<span class="hljs-number">1</span>, a + b];
+
+R.mapAccum(appender, <span class="hljs-number">0</span>, digits); <span class="hljs-comment">//=&gt; [4, [&apos;01&apos;, &apos;12&apos;, &apos;23&apos;, &apos;34&apos;]]</span>
+</code></pre>
+<h2 id="mapaccumright&#x5143;&#x7D20;&#x53F3;&#x4FA7;&#x7D2F;&#x52A0;">mapAccumRight(&#x5143;&#x7D20;&#x53F3;&#x4FA7;&#x7D2F;&#x52A0;)</h2>
+<p><code>((x, acc) &#x2192; (acc, y)) &#x2192; acc &#x2192; [x] &#x2192; ([y], acc)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8FED;&#x4EE3;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5F53;&#x524D;x&#x548C;acc,&#x8FD4;&#x56DE;[&#x5F53;&#x524D;&#x7D2F;&#x52A0;&#x503C;acc&#xFF0C;&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x7ED3;&#x679C;y]</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7D2F;&#x52A0;&#x521D;&#x59CB;&#x503C;acc</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;,&#x4ECE;&#x53F3;&#x4FA7;&#x5F00;&#x59CB;&#x4F20;&#x5165;&#x6267;&#x884C;</span>
+<span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;map&#x548C;reduce&#x7684;&#x7ED3;&#x5408;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;acc&#x7D2F;&#x52A0;&#x503C;&#x4E0E;&#x8FED;&#x4EE3;&#x671F;&#x95F4;&#x4EA7;&#x751F;&#x7684;&#x7ED3;&#x679C;&#x96C6;&#x5408;&#x751F;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; [[...&#x8FED;&#x4EE3;&#x7ED3;&#x679C;y],&#x7D2F;&#x52A0;&#x503C;acc]</span>
+<span class="hljs-keyword">var</span> digits = [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;4&apos;</span>];
+<span class="hljs-keyword">var</span> append = (a, b) =&gt; [a + b, a + b];
+
+R.mapAccumRight(append, <span class="hljs-number">5</span>, digits); <span class="hljs-comment">//=&gt; [[&apos;12345&apos;, &apos;2345&apos;, &apos;345&apos;, &apos;45&apos;], &apos;12345&apos;]</span>
+
+<span class="hljs-keyword">var</span> digits = [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;4&apos;</span>];
+<span class="hljs-keyword">var</span> append = (a, b) =&gt; [b+<span class="hljs-number">1</span>, a + b];
+
+R.mapAccumRight(append, <span class="hljs-number">5</span>, digits); <span class="hljs-comment">//=&gt; [[&apos;18&apos;, &apos;27&apos;, &apos;36&apos;, &apos;45&apos;], 9]</span>
+</code></pre>
+<h2 id="mergeall&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;">mergeAll(&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;)</h2>
+<p><code>[{k: v}] &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript">R.mergeAll([{foo:<span class="hljs-number">1</span>},{bar:<span class="hljs-number">2</span>},{baz:<span class="hljs-number">3</span>}]); <span class="hljs-comment">//=&gt; {foo:1,bar:2,baz:3}</span>
+R.mergeAll([{foo:<span class="hljs-number">1</span>},{foo:<span class="hljs-number">2</span>},{bar:<span class="hljs-number">2</span>}]); <span class="hljs-comment">//=&gt; {foo:2,bar:2}</span>
+</code></pre>
+<h2 id="nth&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x5143;&#x7D20;">nth(&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x5143;&#x7D20;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; a | Undefined</code> <code>Number &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> list = [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>, <span class="hljs-string">&apos;quux&apos;</span>];
+R.nth(<span class="hljs-number">1</span>, list); <span class="hljs-comment">//=&gt; &apos;bar&apos;</span>
+R.nth(<span class="hljs-number">-1</span>, list); <span class="hljs-comment">//=&gt; &apos;quux&apos;</span>
+R.nth(<span class="hljs-number">-99</span>, list); <span class="hljs-comment">//=&gt; undefined</span>
+
+R.nth(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;c&apos;</span>
+R.nth(<span class="hljs-number">3</span>, <span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+</code></pre>
+<h2 id="pair&#x751F;&#x6210;&#x6570;&#x7EC4;">pair(&#x751F;&#x6210;&#x6570;&#x7EC4;)</h2>
+<p><code>a &#x2192; b &#x2192; [a,b]</code></p>
+<pre><code class="lang-javascript">R.pair(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;]</span>
+</code></pre>
+<h2 id="partition&#x89C4;&#x5219;&#x8FC7;&#x6EE4;">partition(&#x89C4;&#x5219;&#x8FC7;&#x6EE4;)</h2>
+<p><code>Filterable f =&gt; (a &#x2192; Boolean) &#x2192; f a &#x2192; [f a, f a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x4F5C;&#x4E3A;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x7B26;&#x5408;&#x7684;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;</span>
+
+R.partition(R.contains(<span class="hljs-string">&apos;s&apos;</span>), [<span class="hljs-string">&apos;sss&apos;</span>, <span class="hljs-string">&apos;ttt&apos;</span>, <span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bars&apos;</span>]);
+<span class="hljs-comment">// =&gt; [ [ &apos;sss&apos;, &apos;bars&apos; ],  [ &apos;ttt&apos;, &apos;foo&apos; ] ]</span>
+
+R.partition(R.contains(<span class="hljs-string">&apos;s&apos;</span>), { a: <span class="hljs-string">&apos;sss&apos;</span>, b: <span class="hljs-string">&apos;ttt&apos;</span>, foo: <span class="hljs-string">&apos;bars&apos;</span> });
+<span class="hljs-comment">// =&gt; [ { a: &apos;sss&apos;, foo: &apos;bars&apos; }, { b: &apos;ttt&apos; }  ]</span>
+</code></pre>
+<h2 id="pluck&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x96C6;&#x5408;">pluck(&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>Functor f =&gt; k &#x2192; f {k: v} &#x2192; f v</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;key&#x952E;&#x540D;&#x6216;&#x8005;&#x7D22;&#x5F15;</span>
+R.pluck(<span class="hljs-string">&apos;a&apos;</span>)([{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}]); <span class="hljs-comment">//=&gt; [1, 2]</span>
+R.pluck(<span class="hljs-number">0</span>)([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]]);   <span class="hljs-comment">//=&gt; [1, 3]</span>
+R.pluck(<span class="hljs-string">&apos;val&apos;</span>, {a: {val: <span class="hljs-number">3</span>}, b: {val: <span class="hljs-number">5</span>}}); <span class="hljs-comment">//=&gt; {a: 3, b: 5}</span>
+</code></pre>
+<h2 id="range&#x8303;&#x56F4;&#x5185;&#x6570;&#x503C;&#x96C6;&#x5408;">range(&#x8303;&#x56F4;&#x5185;&#x6570;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>Number &#x2192; Number &#x2192; [Number]</code></p>
+<pre><code class="lang-javascript">R.range(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>);    <span class="hljs-comment">//=&gt; [1, 2, 3, 4]</span>
+R.range(<span class="hljs-number">50</span>, <span class="hljs-number">53</span>);  <span class="hljs-comment">//=&gt; [50, 51, 52]</span>
+</code></pre>
+<h2 id="scan&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;">scan(&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;)</h2>
+<p><code>((a, b) &#x2192; a) &#x2192; a &#x2192; [b] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">var</span> factorials = R.scan(R.multiply, <span class="hljs-number">1</span>, numbers); <span class="hljs-comment">//=&gt; [1, 1, 2, 6, 24]</span>
+</code></pre>
+<h2 id="reduce&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x503C;">reduce(&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x503C;)</h2>
+<p><code>((a, b) &#x2192; a) &#x2192; a &#x2192; [b] &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x548C;&#x5F53;&#x524D;&#x6570;&#x7EC4;&#x6210;&#x5458;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7D2F;&#x52A0;&#x521D;&#x59CB;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;</span>
+<span class="hljs-comment">//&#x6570;&#x7EC4;&#x6210;&#x5458;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x90FD;&#x4F1A;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x7D2F;&#x79EF;&#x53D8;&#x91CF;</span>
+R.reduce(R.subtract, <span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]) <span class="hljs-comment">// =&gt; ((((0 - 1) - 2) - 3) - 4) = -10</span>
+<span class="hljs-comment">//          -               -10</span>
+<span class="hljs-comment">//         / \              / \</span>
+<span class="hljs-comment">//        -   4           -6   4</span>
+<span class="hljs-comment">//       / \              / \</span>
+<span class="hljs-comment">//      -   3   ==&gt;     -3   3</span>
+<span class="hljs-comment">//     / \              / \</span>
+<span class="hljs-comment">//    -   2           -1   2</span>
+<span class="hljs-comment">//   / \              / \</span>
+<span class="hljs-comment">//  0   1            0   1</span>
+</code></pre>
+<h2 id="reduceby&#x5206;&#x7EC4;&#x9012;&#x5F52;&#x64CD;&#x4F5C;">reduceBy(&#x5206;&#x7EC4;&#x9012;&#x5F52;&#x64CD;&#x4F5C;)</h2>
+<p><code>((a, b) &#x2192; a) &#x2192; a &#x2192; (b &#x2192; String) &#x2192; [b] &#x2192; {String: a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;valueFn&#xFF0C;&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#x6BCF;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x503C;&#x3002;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6BCF;&#x7EC4;&#x7684;&#x7D2F;&#x52A0;&#x521D;&#x59CB;&#x503C;&#x548C;&#x5F53;&#x524D;&#x6210;&#x5458;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6BCF;&#x7EC4;&#x7684;&#x7D2F;&#x52A0;&#x521D;&#x59CB;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;keyFn&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#x5F97;&#x5230;&#x952E;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> reduceToNamesBy = R.reduceBy((acc, student) =&gt; acc.concat(student.name), []);
+<span class="hljs-keyword">var</span> namesByGrade = reduceToNamesBy(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">student</span>) </span>{
+  <span class="hljs-keyword">var</span> score = student.score;
+  <span class="hljs-keyword">return</span> score &lt; <span class="hljs-number">65</span> ? <span class="hljs-string">&apos;F&apos;</span> :
+         score &lt; <span class="hljs-number">70</span> ? <span class="hljs-string">&apos;D&apos;</span> :
+         score &lt; <span class="hljs-number">80</span> ? <span class="hljs-string">&apos;C&apos;</span> :
+         score &lt; <span class="hljs-number">90</span> ? <span class="hljs-string">&apos;B&apos;</span> : <span class="hljs-string">&apos;A&apos;</span>;
+});
+<span class="hljs-keyword">var</span> students = [{name: <span class="hljs-string">&apos;Lucy&apos;</span>, score: <span class="hljs-number">92</span>},
+                {name: <span class="hljs-string">&apos;Drew&apos;</span>, score: <span class="hljs-number">85</span>},
+                <span class="hljs-comment">// ...</span>
+                {name: <span class="hljs-string">&apos;Bart&apos;</span>, score: <span class="hljs-number">62</span>}];
+namesByGrade(students);
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   &apos;A&apos;: [&apos;Lucy&apos;],</span>
+<span class="hljs-comment">//   &apos;B&apos;: [&apos;Drew&apos;]</span>
+<span class="hljs-comment">//   // ...,</span>
+<span class="hljs-comment">//   &apos;F&apos;: [&apos;Bart&apos;]</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<h2 id="reduced&#x9012;&#x5F52;&#x7EC8;&#x6B62;">reduced(&#x9012;&#x5F52;&#x7EC8;&#x6B62;)</h2>
+<p><code>a &#x2192; *</code></p>
+<pre><code class="lang-javascript">R.reduce(
+ (acc, item) =&gt; item &gt; <span class="hljs-number">3</span> ? R.reduced(acc) : acc.concat(item),
+ [],
+ [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]) <span class="hljs-comment">// [1, 2, 3]</span>
+</code></pre>
+<h2 id="reduceright&#x5012;&#x5E8F;&#x9012;&#x5F52;&#x64CD;&#x4F5C;">reduceRight(&#x5012;&#x5E8F;&#x9012;&#x5F52;&#x64CD;&#x4F5C;)</h2>
+<p><code>((a, b) &#x2192; b) &#x2192; b &#x2192; [a] &#x2192; b</code></p>
+<pre><code class="lang-javascript">R.reduceRight(R.subtract, <span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]) <span class="hljs-comment">// =&gt; (1 - (2 - (3 - (4 - 0)))) = -2</span>
+<span class="hljs-comment">//    -               -2</span>
+<span class="hljs-comment">//   / \              / \</span>
+<span class="hljs-comment">//  1   -            1   3</span>
+<span class="hljs-comment">//     / \              / \</span>
+<span class="hljs-comment">//    2   -     ==&gt;    2  -1</span>
+<span class="hljs-comment">//       / \              / \</span>
+<span class="hljs-comment">//      3   -            3   4</span>
+<span class="hljs-comment">//         / \              / \</span>
+<span class="hljs-comment">//        4   0            4   0</span>
+</code></pre>
+<h2 id="reducewhile&#x4E0D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7EC8;&#x6B62;&#x9012;&#x5F52;&#x64CD;&#x4F5C;">reduceWhile(&#x4E0D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7EC8;&#x6B62;&#x9012;&#x5F52;&#x64CD;&#x4F5C;)</h2>
+<p><code>((a, b) &#x2192; Boolean) &#x2192; ((a, b) &#x2192; a) &#x2192; a &#x2192; [b] &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> isOdd = (acc, x) =&gt; x % <span class="hljs-number">2</span> === <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> xs = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">60</span>, <span class="hljs-number">777</span>, <span class="hljs-number">800</span>];
+R.reduceWhile(isOdd, R.add, <span class="hljs-number">0</span>, xs); <span class="hljs-comment">//=&gt; 9</span>
+
+<span class="hljs-keyword">var</span> ys = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>]
+R.reduceWhile(isOdd, R.add, <span class="hljs-number">111</span>, ys); <span class="hljs-comment">//=&gt; 111</span>
+</code></pre>
+<h2 id="remove&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5F00;&#x59CB;&#x5220;&#x9664;n&#x4E2A;&#x5143;&#x7D20;">remove(&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5F00;&#x59CB;&#x5220;&#x9664;n&#x4E2A;&#x5143;&#x7D20;)</h2>
+<p><code>Number &#x2192; Number &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.remove(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]); <span class="hljs-comment">//=&gt; [1,2,6,7,8]</span>
+</code></pre>
+<h2 id="repeat&#x91CD;&#x590D;n&#x6B21;&#x503C;">repeat(&#x91CD;&#x590D;n&#x6B21;&#x503C;)</h2>
+<p><code>a &#x2192; n &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.repeat(<span class="hljs-string">&apos;hi&apos;</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">//=&gt; [&apos;hi&apos;, &apos;hi&apos;, &apos;hi&apos;, &apos;hi&apos;, &apos;hi&apos;]</span>
+
+<span class="hljs-keyword">var</span> obj = {};
+<span class="hljs-keyword">var</span> repeatedObjs = R.repeat(obj, <span class="hljs-number">5</span>); <span class="hljs-comment">//=&gt; [{}, {}, {}, {}, {}]</span>
+repeatedObjs[<span class="hljs-number">0</span>] === repeatedObjs[<span class="hljs-number">1</span>]; <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="times&#x91CD;&#x590D;n&#x6B21;&#x51FD;&#x6570;">times(&#x91CD;&#x590D;n&#x6B21;&#x51FD;&#x6570;)</h2>
+<p><code>(Number &#x2192; a) &#x2192; Number &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;fn&#xFF0C;&#x5F53;&#x524D;&#x53C2;&#x6570;&#x503C;&#x4E3A;val</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;n&#xFF0C;val&#x503C;&#x4E3A;0~n-1&#xFF0C;&#x6BCF;&#x6B21;fn&#x6267;&#x884C;&#x5B8C;&#x81EA;&#x589E;</span>
+R.times(R.identity, <span class="hljs-number">5</span>); <span class="hljs-comment">//=&gt; [0, 1, 2, 3, 4]</span>
+</code></pre>
+<h2 id="reverse&#x7FFB;&#x8F6C;&#x64CD;&#x4F5C;">reverse(&#x7FFB;&#x8F6C;&#x64CD;&#x4F5C;)</h2>
+<p><code>[a] &#x2192; [a]</code> <code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.reverse([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);  <span class="hljs-comment">//=&gt; [3, 2, 1]</span>
+R.reverse([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);     <span class="hljs-comment">//=&gt; [2, 1]</span>
+R.reverse([<span class="hljs-number">1</span>]);        <span class="hljs-comment">//=&gt; [1]</span>
+R.reverse([]);         <span class="hljs-comment">//=&gt; []</span>
+
+R.reverse(<span class="hljs-string">&apos;abc&apos;</span>);      <span class="hljs-comment">//=&gt; &apos;cba&apos;</span>
+R.reverse(<span class="hljs-string">&apos;ab&apos;</span>);       <span class="hljs-comment">//=&gt; &apos;ba&apos;</span>
+R.reverse(<span class="hljs-string">&apos;a&apos;</span>);        <span class="hljs-comment">//=&gt; &apos;a&apos;</span>
+R.reverse(<span class="hljs-string">&apos;&apos;</span>);         <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+</code></pre>
+<h2 id="slice&#x622A;&#x53D6;&#x64CD;&#x4F5C;">slice(&#x622A;&#x53D6;&#x64CD;&#x4F5C;)</h2>
+<p><code>Number &#x2192; Number &#x2192; [a] &#x2192; [a]</code> <code>Number &#x2192; Number &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5F00;&#x59CB;&#x7D22;&#x5F15;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7ED3;&#x675F;&#x7D22;&#x5F15;</span>
+R.slice(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]);        <span class="hljs-comment">//=&gt; [&apos;b&apos;, &apos;c&apos;]</span>
+R.slice(<span class="hljs-number">1</span>, <span class="hljs-literal">Infinity</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;b&apos;, &apos;c&apos;, &apos;d&apos;]</span>
+R.slice(<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]);       <span class="hljs-comment">//=&gt; [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span>
+R.slice(<span class="hljs-number">-3</span>, <span class="hljs-number">-1</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]);      <span class="hljs-comment">//=&gt; [&apos;b&apos;, &apos;c&apos;]</span>
+R.slice(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&apos;ramda&apos;</span>);                     <span class="hljs-comment">//=&gt; &apos;ram&apos;</span>
+</code></pre>
+<h2 id="sort&#x6570;&#x7EC4;&#x6392;&#x5E8F;">sort(&#x6570;&#x7EC4;&#x6392;&#x5E8F;)</h2>
+<p><code>((a, a) &#x2192; Number) &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> diff = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{ <span class="hljs-keyword">return</span> a - b; };
+R.sort(diff, [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">5</span>]); <span class="hljs-comment">//=&gt; [2, 4, 5, 7]</span>
+</code></pre>
+<h2 id="splitat&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x5206;&#x5272;&#x6570;&#x7EC4;">splitAt(&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x5206;&#x5272;&#x6570;&#x7EC4;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [[a], [a]]</code> <code>Number &#x2192; String &#x2192; [String, String]</code></p>
+<pre><code class="lang-javascript">R.splitAt(<span class="hljs-number">1</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);          <span class="hljs-comment">//=&gt; [[1], [2, 3]]</span>
+R.splitAt(<span class="hljs-number">5</span>, <span class="hljs-string">&apos;hello world&apos;</span>);      <span class="hljs-comment">//=&gt; [&apos;hello&apos;, &apos; world&apos;]</span>
+R.splitAt(<span class="hljs-number">-1</span>, <span class="hljs-string">&apos;foobar&apos;</span>);          <span class="hljs-comment">//=&gt; [&apos;fooba&apos;, &apos;r&apos;]</span>
+</code></pre>
+<h2 id="splitevery&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x5206;&#x5272;&#x6570;&#x7EC4;">splitEvery(&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x5206;&#x5272;&#x6570;&#x7EC4;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [[a]]</code> <code>Number &#x2192; String &#x2192; [String]</code></p>
+<pre><code class="lang-javascript">R.splitEvery(<span class="hljs-number">3</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]); <span class="hljs-comment">//=&gt; [[1, 2, 3], [4, 5, 6], [7]]</span>
+R.splitEvery(<span class="hljs-number">3</span>, <span class="hljs-string">&apos;foobarbaz&apos;</span>); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;]</span>
+</code></pre>
+<h2 id="splitwhen&#x89C4;&#x5219;&#x7B2C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;&#x5904;&#x5206;&#x5272;&#x6570;&#x7EC4;">splitWhen(&#x89C4;&#x5219;&#x7B2C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;&#x5904;&#x5206;&#x5272;&#x6570;&#x7EC4;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; [[a], [a]]</code></p>
+<pre><code class="lang-javascript">R.splitWhen(R.equals(<span class="hljs-number">2</span>), [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);   <span class="hljs-comment">//=&gt; [[1], [2, 3, 1, 2, 3]]</span>
+</code></pre>
+<h2 id="take&#x6B63;&#x5E8F;&#x53D6;n&#x4E2A;&#x503C;">take(&#x6B63;&#x5E8F;&#x53D6;n&#x4E2A;&#x503C;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [a]</code> <code>Number &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.take(<span class="hljs-number">1</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;]</span>
+R.take(<span class="hljs-number">2</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;]</span>
+R.take(<span class="hljs-number">3</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;]</span>
+R.take(<span class="hljs-number">4</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;]</span>
+R.take(<span class="hljs-number">3</span>, <span class="hljs-string">&apos;ramda&apos;</span>);               <span class="hljs-comment">//=&gt; &apos;ram&apos;</span>
+</code></pre>
+<h2 id="takewhile&#x6B63;&#x5E8F;&#x53D6;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x503C;&#x96C6;&#x5408;">takeWhile(&#x6B63;&#x5E8F;&#x53D6;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; [a]</code> <code>(a &#x2192; Boolean) &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6B63;&#x5E8F;&#x53D6;&#x503C;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x4E0D;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x5904;&#x505C;&#x6B62;</span>
+<span class="hljs-keyword">var</span> isNotFour = x =&gt; x !== <span class="hljs-number">4</span>;
+
+R.takeWhile(isNotFour, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
+
+R.takeWhile(x =&gt; x !== <span class="hljs-string">&apos;d&apos;</span> , <span class="hljs-string">&apos;Ramda&apos;</span>); <span class="hljs-comment">//=&gt; &apos;Ram&apos;</span>
+</code></pre>
+<h2 id="takelast&#x5012;&#x5E8F;&#x53D6;n&#x4E2A;&#x503C;">takeLast(&#x5012;&#x5E8F;&#x53D6;n&#x4E2A;&#x503C;)</h2>
+<p><code>Number &#x2192; [a] &#x2192; [a]</code> <code>Number &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.takeLast(<span class="hljs-number">1</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;baz&apos;]</span>
+R.takeLast(<span class="hljs-number">2</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;bar&apos;, &apos;baz&apos;]</span>
+R.takeLast(<span class="hljs-number">3</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;]</span>
+R.takeLast(<span class="hljs-number">4</span>, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;]</span>
+R.takeLast(<span class="hljs-number">3</span>, <span class="hljs-string">&apos;ramda&apos;</span>);               <span class="hljs-comment">//=&gt; &apos;mda&apos;</span>
+</code></pre>
+<h2 id="takelastwhile&#x5012;&#x5E8F;&#x53D6;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x503C;&#x96C6;&#x5408;">takeLastWhile(&#x5012;&#x5E8F;&#x53D6;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>(a &#x2192; Boolean) &#x2192; [a] &#x2192; [a]</code> <code>(a &#x2192; Boolean) &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5012;&#x5E8F;&#x53D6;&#x503C;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x4E0D;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x5904;&#x505C;&#x6B62;</span>
+<span class="hljs-keyword">var</span> isNotOne = x =&gt; x !== <span class="hljs-number">1</span>;
+
+R.takeLastWhile(isNotOne, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [3, 4]</span>
+
+R.takeLastWhile(x =&gt; x !== <span class="hljs-string">&apos;R&apos;</span> , <span class="hljs-string">&apos;Ramda&apos;</span>); <span class="hljs-comment">//=&gt; &apos;amda&apos;</span>
+</code></pre>
+<h2 id="transduce&#x6570;&#x7EC4;&#x8FED;&#x4EE3;&#x8F6C;&#x6362;">transduce(&#x6570;&#x7EC4;&#x8FED;&#x4EE3;&#x8F6C;&#x6362;)</h2>
+<p><code>(c &#x2192; c) &#x2192; ((a, b) &#x2192; a) &#x2192; a &#x2192; [b] &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8F6C;&#x6362;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8FED;&#x4EE3;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7D2F;&#x52A0;&#x503C;acc&#x548C;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x503C;value</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7D2F;&#x52A0;&#x521D;&#x59CB;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">var</span> transducer = R.compose(R.map(R.add(<span class="hljs-number">1</span>)), R.take(<span class="hljs-number">2</span>));
+R.transduce(transducer, R.flip(R.append), [], numbers); <span class="hljs-comment">//=&gt; [2, 3]</span>
+
+<span class="hljs-keyword">var</span> isOdd = (x) =&gt; x % <span class="hljs-number">2</span> === <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> firstOddTransducer = R.compose(R.filter(isOdd), R.take(<span class="hljs-number">5</span>));
+R.transduce(firstOddTransducer, R.flip(R.append), [], R.range(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>)); <span class="hljs-comment">//=&gt; [1,3,5,7,9]</span>
+</code></pre>
+<h2 id="transpose&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x7684;&#x503C;&#x96C6;&#x5408;">transpose(&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x7684;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>[[a]] &#x2192; [[a]]</code></p>
+<pre><code class="lang-javascript">R.transpose([[<span class="hljs-number">1</span>, <span class="hljs-string">&apos;a&apos;</span>], [<span class="hljs-number">2</span>, <span class="hljs-string">&apos;b&apos;</span>], [<span class="hljs-number">3</span>, <span class="hljs-string">&apos;c&apos;</span>]]) <span class="hljs-comment">//=&gt; [[1, 2, 3], [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]]</span>
+R.transpose([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]]) <span class="hljs-comment">//=&gt; [[1, &apos;a&apos;], [2, &apos;b&apos;], [3, &apos;c&apos;]]</span>
+
+<span class="hljs-comment">// If some of the rows are shorter than the following rows, their elements are skipped:</span>
+R.transpose([[<span class="hljs-number">10</span>, <span class="hljs-number">11</span>], [<span class="hljs-number">20</span>], [], [<span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">32</span>]]) <span class="hljs-comment">//=&gt; [[10, 20, 30], [11, 31], [32]]</span>
+</code></pre>
+<h2 id="unfold&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x7684;&#x8FED;&#x4EE3;&#x64CD;&#x4F5C;">unfold(&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x7684;&#x8FED;&#x4EE3;&#x64CD;&#x4F5C;)</h2>
+<p><code>(a &#x2192; [b]) &#x2192; * &#x2192; [b]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;fn&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5224;&#x5B9A;&#x4E3A;false&#x65F6;&#x505C;&#x6B62;&#x8FED;&#x4EE3;&#xFF0C;&#x5224;&#x5B9A;&#x4E3A;true&#x65F6;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x4F5C;&#x4E3A;&#x4E0B;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;&#x7684;&#x53C2;&#x6570;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8FED;&#x4EE3;&#x51FD;&#x6570;&#x7684;&#x521D;&#x59CB;&#x503C;</span>
+<span class="hljs-keyword">var</span> f = n =&gt; n &gt; <span class="hljs-number">50</span> ? <span class="hljs-literal">false</span> : [-n, n + <span class="hljs-number">10</span>];
+R.unfold(f, <span class="hljs-number">10</span>); <span class="hljs-comment">//=&gt; [-10, -20, -30, -40, -50]</span>
+</code></pre>
+<h2 id="uniq&#x6570;&#x7EC4;&#x53BB;&#x91CD;">uniq(&#x6570;&#x7EC4;&#x53BB;&#x91CD;)</h2>
+<p><code>[a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.uniq([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; [1, 2]</span>
+R.uniq([<span class="hljs-number">1</span>, <span class="hljs-string">&apos;1&apos;</span>]);     <span class="hljs-comment">//=&gt; [1, &apos;1&apos;]</span>
+R.uniq([[<span class="hljs-number">42</span>], [<span class="hljs-number">42</span>]]); <span class="hljs-comment">//=&gt; [[42]]</span>
+</code></pre>
+<h2 id="uniqby&#x6307;&#x5B9A;&#x64CD;&#x4F5C;&#x53BB;&#x91CD;">uniqBy(&#x6307;&#x5B9A;&#x64CD;&#x4F5C;&#x53BB;&#x91CD;)</h2>
+<p><code>(a &#x2192; b) &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.uniqBy(<span class="hljs-built_in">Math</span>.abs, [<span class="hljs-number">-1</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">//=&gt; [-1, -5, 2, 10]</span>
+</code></pre>
+<h2 id="uniqwith&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x53BB;&#x91CD;">uniqWith(&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x53BB;&#x91CD;)</h2>
+<p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> strEq = R.eqBy(<span class="hljs-built_in">String</span>);
+R.uniqWith(strEq)([<span class="hljs-number">1</span>, <span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; [1, 2]</span>
+R.uniqWith(strEq)([{}, {}]);       <span class="hljs-comment">//=&gt; [{}]</span>
+R.uniqWith(strEq)([<span class="hljs-number">1</span>, <span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-number">1</span>]);    <span class="hljs-comment">//=&gt; [1]</span>
+R.uniqWith(strEq)([<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]);    <span class="hljs-comment">//=&gt; [&apos;1&apos;]</span>
+</code></pre>
+<h2 id="unnest&#x964D;&#x7EF4;&#x64CD;&#x4F5C;">unnest(&#x964D;&#x7EF4;&#x64CD;&#x4F5C;)</h2>
+<p><code>Chain c =&gt; c (c a) &#x2192; c a</code></p>
+<pre><code class="lang-javascript">R.unnest([<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>], [[<span class="hljs-number">3</span>]]]); <span class="hljs-comment">//=&gt; [1, 2, [3]]</span>
+R.unnest([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]]); <span class="hljs-comment">//=&gt; [1, 2, 3, 4, 5, 6]</span>
+</code></pre>
+<h2 id="update&#x4FEE;&#x6539;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x503C;">update(&#x4FEE;&#x6539;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x503C;)</h2>
+<p><code>Number &#x2192; a &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.update(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);     <span class="hljs-comment">//=&gt; [0, 11, 2]</span>
+R.update(<span class="hljs-number">1</span>)(<span class="hljs-number">11</span>)([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);     <span class="hljs-comment">//=&gt; [0, 11, 2]</span>
+</code></pre>
+<h2 id="without&#x53BB;&#x9664;&#x4E0E;&#x6307;&#x5B9A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;">without(&#x53BB;&#x9664;&#x4E0E;&#x6307;&#x5B9A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;)</h2>
+<p><code>[a] &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8981;&#x53BB;&#x9664;&#x7684;&#x5143;&#x7D20;&#x96C6;&#x5408;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x76EE;&#x6807;&#x6570;&#x7EC4;</span>
+R.without([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [3, 4]</span>
+</code></pre>
+<h2 id="xprod&#x6570;&#x7EC4;&#x6DF7;&#x642D;&#x96C6;&#x5408;">xprod(&#x6570;&#x7EC4;&#x6DF7;&#x642D;&#x96C6;&#x5408;)</h2>
+<p><code>[a] &#x2192; [b] &#x2192; [[a,b]]</code></p>
+<pre><code class="lang-javascript">R.xprod([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>]); <span class="hljs-comment">//=&gt; [[1, &apos;a&apos;], [1, &apos;b&apos;], [2, &apos;a&apos;], [2, &apos;b&apos;]]</span>
+</code></pre>
+<h2 id="zip&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x503C;&#x5339;&#x914D;&#x6210;&#x65B0;&#x6570;&#x7EC4;">zip(&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x503C;&#x5339;&#x914D;&#x6210;&#x65B0;&#x6570;&#x7EC4;)</h2>
+<p><code>[a] &#x2192; [b] &#x2192; [[a,b]]</code></p>
+<pre><code class="lang-javascript">R.zip([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]); <span class="hljs-comment">//=&gt; [[1, &apos;a&apos;], [2, &apos;b&apos;], [3, &apos;c&apos;]]</span>
+R.zip([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]); <span class="hljs-comment">//=&gt; [[1, &apos;a&apos;], [2, &apos;b&apos;], [3, &apos;c&apos;]]</span>
+</code></pre>
+<h2 id="zipobj&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x5339;&#x914D;&#x6210;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;">zipObj(&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x5339;&#x914D;&#x6210;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;)</h2>
+<p><code>[String] &#x2192; [*] &#x2192; {String: *}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x952E;&#x540D;&#x96C6;&#x5408;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x952E;&#x503C;&#x96C6;&#x5408;</span>
+R.zipObj([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; {a: 1, b: 2, c: 3}</span>
+</code></pre>
+<h2 id="zipwith&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x503C;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x5339;&#x914D;&#x6210;&#x51FD;&#x6570;&#x6570;&#x7EC4;">zipWith(&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x503C;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x5339;&#x914D;&#x6210;&#x51FD;&#x6570;&#x6570;&#x7EC4;)</h2>
+<p><code>((a, b) &#x2192; c) &#x2192; [a] &#x2192; [b] &#x2192; [c]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> f = (x, y) =&gt; {
+  <span class="hljs-comment">// ...</span>
+};
+R.zipWith(f, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]);
+<span class="hljs-comment">//=&gt; [f(1, &apos;a&apos;), f(2, &apos;b&apos;), f(3, &apos;c&apos;)]</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="String.html" class="navigation navigation-prev " aria-label="Previous page: 字符串String">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Object.html" class="navigation navigation-next " aria-label="Next page: 对象Object">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组List","level":"3.6","depth":1,"next":{"title":"对象Object","level":"3.7","depth":1,"path":"Object.md","ref":"Object.md","articles":[]},"previous":{"title":"字符串String","level":"3.5","depth":1,"path":"String.md","ref":"String.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2018-08-03T10:42:13.708Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T09:26:01.580Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

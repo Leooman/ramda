@@ -1,0 +1,758 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>对象Object · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Function.html" />
+    
+    
+    <link rel="prev" href="List.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://github.com/Leooman/ramda">
+            
+                    
+                    Ramda V0.25.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Type.html">
+            
+                <a href="Type.html">
+            
+                    
+                    类型Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Math.html">
+            
+                <a href="Math.html">
+            
+                    
+                    数学运算Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Logic.html">
+            
+                <a href="Logic.html">
+            
+                    
+                    逻辑运算Logic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Relation.html">
+            
+                <a href="Relation.html">
+            
+                    
+                    关系运算Relation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    字符串String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="List.html">
+            
+                <a href="List.html">
+            
+                    
+                    数组List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.7" data-path="Object.html">
+            
+                <a href="Object.html">
+            
+                    
+                    对象Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    函数Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >对象Object</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="object">Object</h1>
+<h2 id="keys&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x7684;&#x952E;&#x96C6;&#x5408;">keys(&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x7684;&#x952E;&#x96C6;&#x5408;)</h2>
+<p><code>{k: v} &#x2192; [k]</code></p>
+<pre><code class="lang-javascript">R.keys({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span>
+</code></pre>
+<h2 id="keysin&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x548C;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x7684;&#x952E;&#x96C6;&#x5408;-">keysIn(&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x548C;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x7684;&#x952E;&#x96C6;&#x5408; )</h2>
+<p><code>{k: v} &#x2192; [k]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> F = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>.x = <span class="hljs-string">&apos;X&apos;</span>; };
+F.prototype.y = <span class="hljs-string">&apos;Y&apos;</span>;
+<span class="hljs-keyword">var</span> f = <span class="hljs-keyword">new</span> F();
+R.keysIn(f); <span class="hljs-comment">//=&gt; [&apos;x&apos;, &apos;y&apos;]</span>
+</code></pre>
+<h2 id="values&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x503C;&#x96C6;&#x5408;">values(&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>{k: v} &#x2192; [v]</code></p>
+<pre><code class="lang-javascript">R.values({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
+</code></pre>
+<h2 id="valuesin&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x548C;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x96C6;&#x5408;">valuesIn(&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x548C;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x96C6;&#x5408;)</h2>
+<p><code>{k: v} &#x2192; [v]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> F = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>.x = <span class="hljs-string">&apos;X&apos;</span>; };
+F.prototype.y = <span class="hljs-string">&apos;Y&apos;</span>;
+<span class="hljs-keyword">var</span> f = <span class="hljs-keyword">new</span> F();
+R.valuesIn(f); <span class="hljs-comment">//=&gt; [&apos;X&apos;, &apos;Y&apos;]</span>
+</code></pre>
+<h2 id="assoc&#x6DFB;&#x52A0;&#x6216;&#x91CD;&#x5199;&#x6307;&#x5B9A;&#x5C5E;&#x6027;">assoc(&#x6DFB;&#x52A0;&#x6216;&#x91CD;&#x5199;&#x6307;&#x5B9A;&#x5C5E;&#x6027;)</h2>
+<p><code>String &#x2192; a &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;prop&#x5C5E;&#x6027;&#x540D;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;val&#x5C5E;&#x6027;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;target&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x539F;&#x5BF9;&#x8C61;&#x4E0D;&#x53D8;</span>
+R.assoc(<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-number">3</span>, {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>}); <span class="hljs-comment">//=&gt; {a: 1, b: 2, c: 3}</span>
+</code></pre>
+<h2 id="assocpath&#x6DFB;&#x52A0;&#x6216;&#x91CD;&#x5199;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x503C;">assocPath(&#x6DFB;&#x52A0;&#x6216;&#x91CD;&#x5199;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x503C;)</h2>
+<p><code>[Idx] &#x2192; a &#x2192; {a} &#x2192; {a}</code> <code>Idx = String | Int</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;path&#x8DEF;&#x5F84;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;val&#x5C5E;&#x6027;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;target&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x539F;&#x5BF9;&#x8C61;&#x4E0D;&#x53D8;</span>
+R.assocPath([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>], <span class="hljs-number">42</span>, {a: {b: {c: <span class="hljs-number">0</span>}}}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span>
+
+<span class="hljs-comment">// Any missing or non-object keys in path will be overridden</span>
+R.assocPath([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>], <span class="hljs-number">42</span>, {a: <span class="hljs-number">5</span>}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span>
+</code></pre>
+<h2 id="clone&#x6DF1;&#x5C42;&#x514B;&#x9686;">clone(&#x6DF1;&#x5C42;&#x514B;&#x9686;)</h2>
+<p><code>{*} &#x2192; {*}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> objects = [{}, {}, {}];
+<span class="hljs-keyword">var</span> objectsClone = R.clone(objects);
+objects === objectsClone; <span class="hljs-comment">//=&gt; false</span>
+objects[<span class="hljs-number">0</span>] === objectsClone[<span class="hljs-number">0</span>]; <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="dissoc&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5C5E;&#x6027;">dissoc(&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5C5E;&#x6027;)</h2>
+<p><code>String &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;prop&#x5C5E;&#x6027;&#x540D;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;target&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x539F;&#x5BF9;&#x8C61;&#x4E0D;&#x53D8;</span>
+R.dissoc(<span class="hljs-string">&apos;b&apos;</span>, {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; {a: 1, c: 3}</span>
+</code></pre>
+<h2 id="dissocpath&#x5220;&#x9664;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x5C5E;&#x6027;">dissocPath(&#x5220;&#x9664;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x5C5E;&#x6027;)</h2>
+<p><code>[Idx] &#x2192; {k: v} &#x2192; {k: v}</code> <code>Idx = String | Int</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;path&#x8DEF;&#x5F84;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;target&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x539F;&#x5BF9;&#x8C61;&#x4E0D;&#x53D8;</span>
+R.dissocPath([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>], {a: {b: {c: <span class="hljs-number">42</span>}}}); <span class="hljs-comment">//=&gt; {a: {b: {}}}</span>
+</code></pre>
+<h2 id="eqprops&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;">eqProps(&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
+<p><code>k &#x2192; {k: v} &#x2192; {k: v} &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> o1 = { a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span> };
+<span class="hljs-keyword">var</span> o2 = { a: <span class="hljs-number">10</span>, b: <span class="hljs-number">20</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">40</span> };
+R.eqProps(<span class="hljs-string">&apos;a&apos;</span>, o1, o2); <span class="hljs-comment">//=&gt; false</span>
+R.eqProps(<span class="hljs-string">&apos;c&apos;</span>, o1, o2); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="evolve&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;">evolve(&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;)</h2>
+<p><code>{k: (v &#x2192; v)} &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;transformations&#x8F6C;&#x6362;&#x89C4;&#x5219;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;target&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x539F;&#x5BF9;&#x8C61;&#x4E0D;&#x53D8;</span>
+<span class="hljs-keyword">var</span> tomato  = {firstName: <span class="hljs-string">&apos;  Tomato &apos;</span>, data: {elapsed: <span class="hljs-number">100</span>, remaining: <span class="hljs-number">1400</span>}, id:<span class="hljs-number">123</span>};
+<span class="hljs-keyword">var</span> transformations = {
+  firstName: R.trim,
+  lastName: R.trim, <span class="hljs-comment">// Will not get invoked.</span>
+  data: {elapsed: R.add(<span class="hljs-number">1</span>), remaining: R.add(<span class="hljs-number">-1</span>)}
+};
+R.evolve(transformations, tomato); <span class="hljs-comment">//=&gt; {firstName: &apos;Tomato&apos;, data: {elapsed: 101, remaining: 1399}, id:123}</span>
+</code></pre>
+<h2 id="foreachobjindexed&#x904D;&#x5386;&#x5BF9;&#x8C61;">forEachObjIndexed(&#x904D;&#x5386;&#x5BF9;&#x8C61;)</h2>
+<p><code>((a, String, StrMap a) &#x2192; Any) &#x2192; StrMap a &#x2192; StrMap a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;fn,&#x63A5;&#x53D7;&#x4E09;&#x4E2A;&#x53C2;&#x6570;value,key,obj</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;obj&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//&#x8FD4;&#x56DE;&#x539F;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">var</span> printKeyConcatValue = (value, key) =&gt; <span class="hljs-built_in">console</span>.log(key + <span class="hljs-string">&apos;:&apos;</span> + value);
+R.forEachObjIndexed(printKeyConcatValue, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>}); <span class="hljs-comment">//=&gt; {x: 1, y: 2}</span>
+<span class="hljs-comment">// x:1</span>
+<span class="hljs-comment">// y:2</span>
+</code></pre>
+<h2 id="mapobjindexed&#x904D;&#x5386;&#x5BF9;&#x8C61;">mapObjIndexed(&#x904D;&#x5386;&#x5BF9;&#x8C61;)</h2>
+<p><code>((*, String, Object) &#x2192; *) &#x2192; Object &#x2192; Object</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x65B0;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">var</span> values = { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span> };
+<span class="hljs-keyword">var</span> prependKeyAndDouble = (num, key, obj) =&gt; key + (num * <span class="hljs-number">2</span>);
+
+R.mapObjIndexed(prependKeyAndDouble, values); <span class="hljs-comment">//=&gt; { x: &apos;x2&apos;, y: &apos;y4&apos;, z: &apos;z6&apos; }</span>
+</code></pre>
+<h2 id="has&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x662F;&#x5426;&#x5177;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;">has(&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x662F;&#x5426;&#x5177;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;)</h2>
+<p><code>s &#x2192; {s: x} &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> hasName = R.has(<span class="hljs-string">&apos;name&apos;</span>);
+hasName({name: <span class="hljs-string">&apos;alice&apos;</span>});   <span class="hljs-comment">//=&gt; true</span>
+hasName({name: <span class="hljs-string">&apos;bob&apos;</span>});     <span class="hljs-comment">//=&gt; true</span>
+hasName({});                <span class="hljs-comment">//=&gt; false</span>
+
+<span class="hljs-keyword">var</span> point = {x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>};
+<span class="hljs-keyword">var</span> pointHas = R.has(R.__, point);
+pointHas(<span class="hljs-string">&apos;x&apos;</span>);  <span class="hljs-comment">//=&gt; true</span>
+pointHas(<span class="hljs-string">&apos;y&apos;</span>);  <span class="hljs-comment">//=&gt; true</span>
+pointHas(<span class="hljs-string">&apos;z&apos;</span>);  <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="hasin&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x6216;&#x539F;&#x578B;&#x94FE;-&#x662F;&#x5426;&#x5177;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;">hasIn(&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x6216;&#x539F;&#x578B;&#x94FE; &#x662F;&#x5426;&#x5177;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;)</h2>
+<p><code>s &#x2192; {s: x} &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width, height</span>) </span>{
+  <span class="hljs-keyword">this</span>.width = width;
+  <span class="hljs-keyword">this</span>.height = height;
+}
+Rectangle.prototype.area = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.width * <span class="hljs-keyword">this</span>.height;
+};
+
+<span class="hljs-keyword">var</span> square = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>);
+R.hasIn(<span class="hljs-string">&apos;width&apos;</span>, square);  <span class="hljs-comment">//=&gt; true</span>
+R.hasIn(<span class="hljs-string">&apos;area&apos;</span>, square);  <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="invertobj&#x952E;&#x503C;&#x4E92;&#x6362;">invertObj(&#x952E;&#x503C;&#x4E92;&#x6362;)</h2>
+<p><code>{s: x} &#x2192; {x: s}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> raceResults = {
+  first: <span class="hljs-string">&apos;alice&apos;</span>,
+  second: <span class="hljs-string">&apos;jake&apos;</span>
+};
+R.invertObj(raceResults);
+<span class="hljs-comment">//=&gt; { &apos;alice&apos;: &apos;first&apos;, &apos;jake&apos;:&apos;second&apos; }</span>
+
+<span class="hljs-comment">// Alternatively:</span>
+<span class="hljs-keyword">var</span> raceResults = [<span class="hljs-string">&apos;alice&apos;</span>, <span class="hljs-string">&apos;jake&apos;</span>];
+R.invertObj(raceResults);
+<span class="hljs-comment">//=&gt; { &apos;alice&apos;: &apos;0&apos;, &apos;jake&apos;:&apos;1&apos; }</span>
+
+<span class="hljs-comment">//&#x5982;&#x679C;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x503C;&#x8986;&#x76D6;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;</span>
+<span class="hljs-keyword">var</span> raceResultsByFirstName = {
+  first: <span class="hljs-string">&apos;alice&apos;</span>,
+  second: <span class="hljs-string">&apos;jake&apos;</span>,
+  third: <span class="hljs-string">&apos;alice&apos;</span>,
+};
+R.invertObj(raceResultsByFirstName)
+<span class="hljs-comment">//=&gt; {&quot;alice&quot;: &quot;third&quot;, &quot;jake&quot;: &quot;second&quot;}</span>
+</code></pre>
+<h2 id="invert&#x952E;&#x503C;&#x4E92;&#x6362;">invert(&#x952E;&#x503C;&#x4E92;&#x6362;)</h2>
+<p><code>{s: x} &#x2192; {x: [ s, &#x2026; ]}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> raceResultsByFirstName = {
+  first: <span class="hljs-string">&apos;alice&apos;</span>,
+  second: <span class="hljs-string">&apos;jake&apos;</span>,
+  third: <span class="hljs-string">&apos;alice&apos;</span>,
+};
+R.invert(raceResultsByFirstName);
+<span class="hljs-comment">//=&gt; { &apos;alice&apos;: [&apos;first&apos;, &apos;third&apos;], &apos;jake&apos;:[&apos;second&apos;] }</span>
+
+<span class="hljs-keyword">var</span> raceResults = [<span class="hljs-string">&apos;alice&apos;</span>, <span class="hljs-string">&apos;jake&apos;</span>, <span class="hljs-string">&apos;alice&apos;</span>];
+R.invertObj(raceResults);
+<span class="hljs-comment">//=&gt; { &apos;alice&apos;: [&apos;0&apos;, &apos;2&apos;], &apos;jake&apos;: [&apos;1&apos;] }</span>
+</code></pre>
+<h2 id="lens&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684;lens&#x7279;&#x6B8A;&#x5BF9;&#x8C61;">lens(&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684;lens&#x7279;&#x6B8A;&#x5BF9;&#x8C61;)</h2>
+<p><code>(s &#x2192; a) &#x2192; ((a, s) &#x2192; s) &#x2192; Lens s a</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;getter&#x548C;setter&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;lens</span>
+<span class="hljs-comment">//getter&#x83B7;&#x53D6;&#x5C5E;&#x6027;&#x503C;</span>
+<span class="hljs-comment">//setter&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x4F46;&#x4E0D;&#x5E94;&#x8BE5;&#x6539;&#x53D8;&#x6570;&#x636E;&#x7ED3;&#x6784;</span>
+
+<span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;lenses&#x6765;&#x805A;&#x7126;&#x5230;&#x6211;&#x4EEC;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x5C5E;&#x6027;&#x4E0A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;getter&#x548C;setter&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5305;&#x88F9;&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">//prop&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684;getter&#x65B9;&#x6CD5;&#xFF0C;assoc&#x662F;&#x4E00;&#x4E2A;setter&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">var</span> xLens = R.lens(R.prop(<span class="hljs-string">&apos;x&apos;</span>), R.assoc(<span class="hljs-string">&apos;x&apos;</span>));
+
+R.view(xLens, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});            <span class="hljs-comment">//=&gt; 1</span>
+R.set(xLens, <span class="hljs-number">4</span>, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});          <span class="hljs-comment">//=&gt; {x: 4, y: 2}</span>
+R.over(xLens, R.negate, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; {x: -1, y: 2}</span>
+</code></pre>
+<h2 id="lensindex&#x6307;&#x5B9A;&#x7D22;&#x5F15;">lensIndex(&#x6307;&#x5B9A;&#x7D22;&#x5F15;)</h2>
+<p><code>Number &#x2192; Lens s a</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> headLens = R.lensIndex(<span class="hljs-number">0</span>);
+
+R.view(headLens, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]);            <span class="hljs-comment">//=&gt; &apos;a&apos;</span>
+R.set(headLens, <span class="hljs-string">&apos;x&apos;</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]);        <span class="hljs-comment">//=&gt; [&apos;x&apos;, &apos;b&apos;, &apos;c&apos;]</span>
+R.over(headLens, R.toUpper, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;A&apos;, &apos;b&apos;, &apos;c&apos;]</span>
+</code></pre>
+<h2 id="lenspath&#x6307;&#x5B9A;&#x8DEF;&#x5F84;">lensPath(&#x6307;&#x5B9A;&#x8DEF;&#x5F84;)</h2>
+<p><code>[Idx] &#x2192; Lens s a</code> <code>Idx = String | Int</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xHeadYLens = R.lensPath([<span class="hljs-string">&apos;x&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;y&apos;</span>]);
+
+R.view(xHeadYLens, {x: [{y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span>}, {y: <span class="hljs-number">4</span>, z: <span class="hljs-number">5</span>}]});
+<span class="hljs-comment">//=&gt; 2</span>
+R.set(xHeadYLens, <span class="hljs-number">1</span>, {x: [{y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span>}, {y: <span class="hljs-number">4</span>, z: <span class="hljs-number">5</span>}]});
+<span class="hljs-comment">//=&gt; {x: [{y: 1, z: 3}, {y: 4, z: 5}]}</span>
+R.over(xHeadYLens, R.negate, {x: [{y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span>}, {y: <span class="hljs-number">4</span>, z: <span class="hljs-number">5</span>}]});
+<span class="hljs-comment">//=&gt; {x: [{y: -2, z: 3}, {y: 4, z: 5}]}</span>
+</code></pre>
+<h2 id="lensprop&#x6307;&#x5B9A;&#x5C5E;&#x6027;">lensProp(&#x6307;&#x5B9A;&#x5C5E;&#x6027;)</h2>
+<p><code>String &#x2192; Lens s a</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xLens = R.lensProp(<span class="hljs-string">&apos;x&apos;</span>);
+
+R.view(xLens, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});            <span class="hljs-comment">//=&gt; 1</span>
+R.set(xLens, <span class="hljs-number">4</span>, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});          <span class="hljs-comment">//=&gt; {x: 4, y: 2}</span>
+R.over(xLens, R.negate, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; {x: -1, y: 2}</span>
+</code></pre>
+<h2 id="view&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;">view(&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;)</h2>
+<p><code>Lens s a &#x2192; s &#x2192; a</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xLens = R.lensProp(<span class="hljs-string">&apos;x&apos;</span>);
+
+R.view(xLens, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; 1</span>
+R.view(xLens, {x: <span class="hljs-number">4</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; 4</span>
+</code></pre>
+<h2 id="set&#x6307;&#x5B9A;&#x503C;&#x4FEE;&#x6539;&#x5C5E;&#x6027;">set(&#x6307;&#x5B9A;&#x503C;&#x4FEE;&#x6539;&#x5C5E;&#x6027;)</h2>
+<p><code>Lens s a &#x2192; a &#x2192; s &#x2192; s</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xLens = R.lensProp(<span class="hljs-string">&apos;x&apos;</span>);
+
+R.set(xLens, <span class="hljs-number">4</span>, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; {x: 4, y: 2}</span>
+R.set(xLens, <span class="hljs-number">8</span>, {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; {x: 8, y: 2}</span>
+</code></pre>
+<h2 id="over&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x5C5E;&#x6027;">over(&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x5C5E;&#x6027;)</h2>
+<p><code>Lens s a &#x2192; (a &#x2192; a) &#x2192; s &#x2192; s</code> <code>Lens s a = Functor f =&gt; (a &#x2192; f a) &#x2192; s &#x2192; f s</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> headLens = R.lensIndex(<span class="hljs-number">0</span>);
+
+R.over(headLens, R.toUpper, [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; [&apos;FOO&apos;, &apos;bar&apos;, &apos;baz&apos;]</span>
+</code></pre>
+<h2 id="merge&#x5BF9;&#x8C61;&#x5408;&#x5E76;">merge(&#x5BF9;&#x8C61;&#x5408;&#x5E76;)</h2>
+<p><code>{k: v} &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x540C;&#x540D;&#x5C5E;&#x6027;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x503C;&#x4F1A;&#x8986;&#x76D6;&#x6389;&#x524D;&#x9762;&#x7684;&#x503C;</span>
+R.merge({ <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;fred&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">10</span> }, { <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">40</span> });
+<span class="hljs-comment">//=&gt; { &apos;name&apos;: &apos;fred&apos;, &apos;age&apos;: 40 }</span>
+
+<span class="hljs-keyword">var</span> resetToDefault = R.merge(R.__, {x: <span class="hljs-number">0</span>});
+resetToDefault({x: <span class="hljs-number">5</span>, y: <span class="hljs-number">2</span>}); <span class="hljs-comment">//=&gt; {x: 0, y: 2}</span>
+</code></pre>
+<h2 id="mergedeepleft&#x5BF9;&#x8C61;&#x5DE6;&#x5408;&#x5E76;">mergeDeepLeft(&#x5BF9;&#x8C61;&#x5DE6;&#x5408;&#x5E76;)</h2>
+<p><code>{a} &#x2192; {a} &#x2192; {a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x4E24;&#x4E2A;&#x503C;&#x90FD;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x5C06;&#x88AB;&#x9012;&#x5F52;&#x5408;&#x5E76;</span>
+<span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x540C;&#x540D;&#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;(&#x5DE6;)&#x5C5E;&#x6027;&#x503C;</span>
+R.mergeDeepLeft({ name: <span class="hljs-string">&apos;fred&apos;</span>, age: <span class="hljs-number">10</span>, contact: { email: <span class="hljs-string">&apos;moo@example.com&apos;</span> }},
+                { age: <span class="hljs-number">40</span>, sex: <span class="hljs-string">&apos;M&apos;</span>, contact: { email: <span class="hljs-string">&apos;baa@example.com&apos;</span> }});
+<span class="hljs-comment">//=&gt; { name: &apos;fred&apos;, age: 10, sex: &apos;M&apos;, contact: { email: &apos;moo@example.com&apos; }}</span>
+</code></pre>
+<h2 id="mergedeepright&#x5BF9;&#x8C61;&#x53F3;&#x5408;&#x5E76;">mergeDeepRight(&#x5BF9;&#x8C61;&#x53F3;&#x5408;&#x5E76;)</h2>
+<p><code>{a} &#x2192; {a} &#x2192; {a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x4E24;&#x4E2A;&#x503C;&#x90FD;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x5C06;&#x88AB;&#x9012;&#x5F52;&#x5408;&#x5E76;</span>
+<span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x540C;&#x540D;&#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x5BF9;&#x8C61;(&#x53F3;)&#x5C5E;&#x6027;&#x503C;</span>
+R.mergeDeepRight({ name: <span class="hljs-string">&apos;fred&apos;</span>, age: <span class="hljs-number">10</span>, contact: { email: <span class="hljs-string">&apos;moo@example.com&apos;</span> }},
+                 { age: <span class="hljs-number">40</span>, contact: { email: <span class="hljs-string">&apos;baa@example.com&apos;</span> }});
+<span class="hljs-comment">//=&gt; { name: &apos;fred&apos;, age: 40, contact: { email: &apos;baa@example.com&apos; }}</span>
+</code></pre>
+<h2 id="mergedeepwith&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;">mergeDeepWith(&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;)</h2>
+<p><code>((a, a) &#x2192; a) &#x2192; {a} &#x2192; {a} &#x2192; {a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x540C;&#x540D;&#x5C5E;&#x6027;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x5904;&#x7406;</span>
+R.mergeDeepWith(R.concat,
+                { a: <span class="hljs-literal">true</span>, c: { values: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>] }},
+                { b: <span class="hljs-literal">true</span>, c: { values: [<span class="hljs-number">15</span>, <span class="hljs-number">35</span>] }});
+<span class="hljs-comment">//=&gt; { a: true, b: true, c: { values: [10, 20, 15, 35] }}</span>
+</code></pre>
+<h2 id="mergewith&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;">mergeWith(&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;)</h2>
+<p><code>((a, a) &#x2192; a) &#x2192; {a} &#x2192; {a} &#x2192; {a}</code></p>
+<pre><code class="lang-javascript">R.mergeWith(R.concat,
+            { a: <span class="hljs-literal">true</span>, values: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>] },
+            { b: <span class="hljs-literal">true</span>, values: [<span class="hljs-number">15</span>, <span class="hljs-number">35</span>] });
+<span class="hljs-comment">//=&gt; { a: true, b: true, values: [10, 20, 15, 35] }</span>
+</code></pre>
+<h2 id="mergedeepwithkey&#x6307;&#x5B9A;&#x952E;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;">mergeDeepWithKey(&#x6307;&#x5B9A;&#x952E;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;)</h2>
+<p><code>((String, a, a) &#x2192; a) &#x2192; {a} &#x2192; {a} &#x2192; {a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x6307;&#x5B9A;&#x952E;&#x540D;&#xFF0C;&#x6309;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x5904;&#x7406;</span>
+<span class="hljs-keyword">let</span> concatValues = (k, l, r) =&gt; k == <span class="hljs-string">&apos;values&apos;</span> ? R.concat(l, r) : r
+R.mergeDeepWithKey(concatValues,
+                   { a: <span class="hljs-literal">true</span>, c: { thing: <span class="hljs-string">&apos;foo&apos;</span>, values: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>] }},
+                   { b: <span class="hljs-literal">true</span>, c: { thing: <span class="hljs-string">&apos;bar&apos;</span>, values: [<span class="hljs-number">15</span>, <span class="hljs-number">35</span>] }});
+<span class="hljs-comment">//=&gt; { a: true, b: true, c: { thing: &apos;bar&apos;, values: [10, 20, 15, 35] }}</span>
+</code></pre>
+<h2 id="mergewithkey&#x6307;&#x5B9A;&#x952E;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;">mergeWithKey(&#x6307;&#x5B9A;&#x952E;&#x7684;&#x5BF9;&#x8C61;&#x5408;&#x5E76;)</h2>
+<p><code>((String, a, a) &#x2192; a) &#x2192; {a} &#x2192; {a} &#x2192; {a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x6307;&#x5B9A;&#x952E;&#x540D;&#xFF0C;&#x6309;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x5904;&#x7406;</span>
+<span class="hljs-keyword">let</span> concatValues = (k, l, r) =&gt; k == <span class="hljs-string">&apos;values&apos;</span> ? R.concat(l, r) : r
+R.mergeDeepWithKey(concatValues,
+                   { a: <span class="hljs-literal">true</span>, c: { thing: <span class="hljs-string">&apos;foo&apos;</span>, values: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>] }},
+                   { b: <span class="hljs-literal">true</span>, c: { thing: <span class="hljs-string">&apos;bar&apos;</span>, values: [<span class="hljs-number">15</span>, <span class="hljs-number">35</span>] }});
+<span class="hljs-comment">//=&gt; { a: true, b: true, c: { thing: &apos;bar&apos;, values: [10, 20, 15, 35] }}</span>
+</code></pre>
+<h2 id="objof&#x521B;&#x5EFA;&#x5355;&#x952E;&#x5BF9;&#x8C61;">objOf(&#x521B;&#x5EFA;&#x5355;&#x952E;&#x5BF9;&#x8C61;)</h2>
+<p><code>String &#x2192; a &#x2192; {String:a}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> matchPhrases = R.compose(
+  R.objOf(<span class="hljs-string">&apos;must&apos;</span>),
+  R.map(R.objOf(<span class="hljs-string">&apos;match_phrase&apos;</span>))
+);
+matchPhrases([<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>]); <span class="hljs-comment">//=&gt; {must: [{match_phrase: &apos;foo&apos;}, {match_phrase: &apos;bar&apos;}, {match_phrase: &apos;baz&apos;}]}</span>
+</code></pre>
+<h2 id="omit&#x5BF9;&#x8C61;&#x90E8;&#x5206;&#x62F7;&#x8D1D;&#x53BB;&#x9664;&#x6307;&#x5B9A;&#x952E;">omit(&#x5BF9;&#x8C61;&#x90E8;&#x5206;&#x62F7;&#x8D1D;[&#x53BB;&#x9664;&#x6307;&#x5B9A;&#x952E;])</h2>
+<p><code>[String] &#x2192; {String: *} &#x2192; {String: *}</code></p>
+<pre><code class="lang-javascript">R.omit([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>], {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {b: 2, c: 3}</span>
+</code></pre>
+<h2 id="pick&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x952E;&#xFF09;">pick(&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;[&#x5305;&#x542B;&#x6307;&#x5B9A;&#x952E;]&#xFF09;</h2>
+<p><code>[k] &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6307;&#x5B9A;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#x6389;</span>
+R.pick([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>], {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {a: 1, d: 4}</span>
+R.pick([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>], {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {a: 1}</span>
+</code></pre>
+<h2 id="pickall&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x952E;&#xFF09;">pickAll(&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;[&#x5305;&#x542B;&#x6307;&#x5B9A;&#x952E;]&#xFF09;</h2>
+<p><code>[k] &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6307;&#x5B9A;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#x8FD4;&#x56DE;undefined</span>
+R.pickAll([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>], {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {a: 1, d: 4}</span>
+R.pickAll([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>], {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>, d: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {a: 1, e: undefined, f: undefined}</span>
+</code></pre>
+<h2 id="pickby&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;">pickBy(&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;[&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;])</h2>
+<p><code>((v, k) &#x2192; Boolean) &#x2192; {k: v} &#x2192; {k: v}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> isUpperCase = (val, key) =&gt; key.toUpperCase() === key;
+R.pickBy(isUpperCase, {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, A: <span class="hljs-number">3</span>, B: <span class="hljs-number">4</span>}); <span class="hljs-comment">//=&gt; {A: 3, B: 4}</span>
+</code></pre>
+<h2 id="path&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x5C5E;&#x6027;&#x503C;">path(&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x5C5E;&#x6027;&#x503C;)</h2>
+<p><code>[Idx] &#x2192; {a} &#x2192; a | Undefined</code> <code>Idx = String | Int</code></p>
+<pre><code class="lang-javascript">R.path([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], {a: {b: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; 2</span>
+R.path([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], {c: {b: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; undefined</span>
+</code></pre>
+<h2 id="pathor&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x9ED8;&#x8BA4;&#x503C;">pathOr(&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x5C5E;&#x6027;&#x503C;/&#x9ED8;&#x8BA4;&#x503C;)</h2>
+<p><code>a &#x2192; [Idx] &#x2192; {a} &#x2192; a</code> <code>Idx = String | Int</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;</span>
+R.pathOr(<span class="hljs-string">&apos;N/A&apos;</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], {a: {b: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; 2</span>
+R.pathOr(<span class="hljs-string">&apos;N/A&apos;</span>, [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], {c: {b: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; &quot;N/A&quot;</span>
+</code></pre>
+<h2 id="project&#x6570;&#x7EC4;&#x6210;&#x5458;&#x5C5E;&#x6027;&#x7EC4;&#x9009;&#x751F;&#x6210;&#x65B0;&#x6570;&#x7EC4;-">project(&#x6570;&#x7EC4;&#x6210;&#x5458;&#x5C5E;&#x6027;&#x7EC4;&#x9009;&#x751F;&#x6210;&#x65B0;&#x6570;&#x7EC4; )</h2>
+<p><code>[k] &#x2192; [{k: v}] &#x2192; [{k: v}]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> abby = {name: <span class="hljs-string">&apos;Abby&apos;</span>, age: <span class="hljs-number">7</span>, hair: <span class="hljs-string">&apos;blond&apos;</span>, grade: <span class="hljs-number">2</span>};
+<span class="hljs-keyword">var</span> fred = {name: <span class="hljs-string">&apos;Fred&apos;</span>, age: <span class="hljs-number">12</span>, hair: <span class="hljs-string">&apos;brown&apos;</span>, grade: <span class="hljs-number">7</span>};
+<span class="hljs-keyword">var</span> kids = [abby, fred];
+R.project([<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;grade&apos;</span>], kids); <span class="hljs-comment">//=&gt; [{name: &apos;Abby&apos;, grade: 2}, {name: &apos;Fred&apos;, grade: 7}]</span>
+
+<span class="hljs-comment">//&#x6570;&#x7EC4;&#x6210;&#x5458;&#x4E2D;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x4E0D;&#x5B58;&#x5728;&#x8FD4;&#x56DE;undefined</span>
+<span class="hljs-keyword">var</span> abby = {name: <span class="hljs-string">&apos;Abby&apos;</span>, age: <span class="hljs-number">7</span>, hair: <span class="hljs-string">&apos;blond&apos;</span>};
+<span class="hljs-keyword">var</span> fred = {name: <span class="hljs-string">&apos;Fred&apos;</span>, age: <span class="hljs-number">12</span>, hair: <span class="hljs-string">&apos;brown&apos;</span>, grade: <span class="hljs-number">7</span>};
+<span class="hljs-keyword">var</span> kids = [abby, fred];
+R.project([<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;grade&apos;</span>], kids); <span class="hljs-comment">//=&gt; [{name: &apos;Abby&apos;, grade: undefined}, {name: &apos;Fred&apos;, grade: 7}]</span>
+</code></pre>
+<h2 id="prop&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;">prop(&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;)</h2>
+<p><code>s &#x2192; {s: a} &#x2192; a | Undefined</code></p>
+<pre><code class="lang-javascript">R.prop(<span class="hljs-string">&apos;x&apos;</span>, {x: <span class="hljs-number">100</span>}); <span class="hljs-comment">//=&gt; 100</span>
+R.prop(<span class="hljs-string">&apos;x&apos;</span>, {}); <span class="hljs-comment">//=&gt; undefined</span>
+</code></pre>
+<h2 id="propor&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;&#x9ED8;&#x8BA4;&#x503C;">propOr(&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;/&#x9ED8;&#x8BA4;&#x503C;)</h2>
+<p><code>a &#x2192; String &#x2192; Object &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> alice = {
+  name: <span class="hljs-string">&apos;ALICE&apos;</span>,
+  age: <span class="hljs-number">101</span>
+};
+<span class="hljs-keyword">var</span> favorite = R.prop(<span class="hljs-string">&apos;favoriteLibrary&apos;</span>);
+<span class="hljs-keyword">var</span> favoriteWithDefault = R.propOr(<span class="hljs-string">&apos;Ramda&apos;</span>, <span class="hljs-string">&apos;favoriteLibrary&apos;</span>);
+
+favorite(alice);  <span class="hljs-comment">//=&gt; undefined</span>
+favoriteWithDefault(alice);  <span class="hljs-comment">//=&gt; &apos;Ramda&apos;</span>
+</code></pre>
+<h2 id="props&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x503C;">props(&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x503C;)</h2>
+<p><code>[k] &#x2192; {k: v} &#x2192; [v]</code></p>
+<pre><code class="lang-javascript">R.props([<span class="hljs-string">&apos;x&apos;</span>, <span class="hljs-string">&apos;y&apos;</span>], {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>}); <span class="hljs-comment">//=&gt; [1, 2]</span>
+R.props([<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], {b: <span class="hljs-number">2</span>, a: <span class="hljs-number">1</span>}); <span class="hljs-comment">//=&gt; [undefined, 1, 2]</span>
+
+<span class="hljs-keyword">var</span> fullName = R.compose(R.join(<span class="hljs-string">&apos; &apos;</span>), R.props([<span class="hljs-string">&apos;first&apos;</span>, <span class="hljs-string">&apos;last&apos;</span>]));
+fullName({last: <span class="hljs-string">&apos;Bullet-Tooth&apos;</span>, age: <span class="hljs-number">33</span>, first: <span class="hljs-string">&apos;Tony&apos;</span>}); <span class="hljs-comment">//=&gt; &apos;Tony Bullet-Tooth&apos;</span>
+</code></pre>
+<h2 id="topairs&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x8F6C;&#x6570;&#x7EC4;">toPairs(&#x5BF9;&#x8C61;[&#x81EA;&#x8EAB;&#x5C5E;&#x6027;]&#x8F6C;&#x6570;&#x7EC4;)</h2>
+<p><code>{String: *} &#x2192; [[String,*]]</code></p>
+<pre><code class="lang-javascript">R.toPairs({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; [[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3]]</span>
+</code></pre>
+<h2 id="topairsin&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x6216;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x8F6C;&#x6570;&#x7EC4;">toPairsIn(&#x5BF9;&#x8C61;[&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x6216;&#x7EE7;&#x627F;&#x5C5E;&#x6027;]&#x8F6C;&#x6570;&#x7EC4;)</h2>
+<p><code>{String: *} &#x2192; [[String,*]]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> F = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>.x = <span class="hljs-string">&apos;X&apos;</span>; };
+F.prototype.y = <span class="hljs-string">&apos;Y&apos;</span>;
+<span class="hljs-keyword">var</span> f = <span class="hljs-keyword">new</span> F();
+R.toPairsIn(f); <span class="hljs-comment">//=&gt; [[&apos;x&apos;,&apos;X&apos;], [&apos;y&apos;,&apos;Y&apos;]]</span>
+</code></pre>
+<h2 id="where&#x5224;&#x65AD;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x7B26;&#x5408;&#x6761;&#x4EF6;">where(&#x5224;&#x65AD;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x7B26;&#x5408;&#x6761;&#x4EF6;)</h2>
+<p><code>{String: (* &#x2192; Boolean)} &#x2192; {String: *} &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> pred = R.where({
+  a: R.equals(<span class="hljs-string">&apos;foo&apos;</span>),
+  b: R.complement(R.equals(<span class="hljs-string">&apos;bar&apos;</span>)),
+  x: R.gt(R.__, <span class="hljs-number">10</span>),
+  y: R.lt(R.__, <span class="hljs-number">20</span>)
+});
+
+pred({a: <span class="hljs-string">&apos;foo&apos;</span>, b: <span class="hljs-string">&apos;xxx&apos;</span>, x: <span class="hljs-number">11</span>, y: <span class="hljs-number">19</span>}); <span class="hljs-comment">//=&gt; true</span>
+pred({a: <span class="hljs-string">&apos;xxx&apos;</span>, b: <span class="hljs-string">&apos;xxx&apos;</span>, x: <span class="hljs-number">11</span>, y: <span class="hljs-number">19</span>}); <span class="hljs-comment">//=&gt; false</span>
+pred({a: <span class="hljs-string">&apos;foo&apos;</span>, b: <span class="hljs-string">&apos;bar&apos;</span>, x: <span class="hljs-number">11</span>, y: <span class="hljs-number">19</span>}); <span class="hljs-comment">//=&gt; false</span>
+pred({a: <span class="hljs-string">&apos;foo&apos;</span>, b: <span class="hljs-string">&apos;xxx&apos;</span>, x: <span class="hljs-number">10</span>, y: <span class="hljs-number">19</span>}); <span class="hljs-comment">//=&gt; false</span>
+pred({a: <span class="hljs-string">&apos;foo&apos;</span>, b: <span class="hljs-string">&apos;xxx&apos;</span>, x: <span class="hljs-number">11</span>, y: <span class="hljs-number">20</span>}); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="whereeq&#x5224;&#x65AD;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x6307;&#x5B9A;&#x503C;">whereEq(&#x5224;&#x65AD;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x6307;&#x5B9A;&#x503C;)</h2>
+<p><code>{String: *} &#x2192; {String: *} &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> pred = R.whereEq({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>});
+
+pred({a: <span class="hljs-number">1</span>});              <span class="hljs-comment">//=&gt; false</span>
+pred({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>});        <span class="hljs-comment">//=&gt; true</span>
+pred({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>});  <span class="hljs-comment">//=&gt; true</span>
+pred({a: <span class="hljs-number">1</span>, b: <span class="hljs-number">1</span>});        <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="List.html" class="navigation navigation-prev " aria-label="Previous page: 数组List">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Function.html" class="navigation navigation-next " aria-label="Next page: 函数Function">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"对象Object","level":"3.7","depth":1,"next":{"title":"函数Function","level":"3.8","depth":1,"path":"Function.md","ref":"Function.md","articles":[]},"previous":{"title":"数组List","level":"3.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Object.md","mtime":"2018-08-03T10:43:39.027Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T09:26:01.580Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

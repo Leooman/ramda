@@ -1,0 +1,759 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>函数Function · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Object.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://github.com/Leooman/ramda">
+            
+                    
+                    Ramda V0.25.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Type.html">
+            
+                <a href="Type.html">
+            
+                    
+                    类型Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Math.html">
+            
+                <a href="Math.html">
+            
+                    
+                    数学运算Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Logic.html">
+            
+                <a href="Logic.html">
+            
+                    
+                    逻辑运算Logic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Relation.html">
+            
+                <a href="Relation.html">
+            
+                    
+                    关系运算Relation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    字符串String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="List.html">
+            
+                <a href="List.html">
+            
+                    
+                    数组List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Object.html">
+            
+                <a href="Object.html">
+            
+                    
+                    对象Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.8" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    函数Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >函数Function</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="function">Function</h1>
+<h2 id="o&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x6267;&#x884C;">o(&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x6267;&#x884C;)</h2>
+<p><code>(b &#x2192; c) &#x2192; (a &#x2192; b) &#x2192; a &#x2192; c</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> classyGreeting = name =&gt; <span class="hljs-string">&quot;The name&apos;s &quot;</span> + name.last + <span class="hljs-string">&quot;, &quot;</span> + name.first + <span class="hljs-string">&quot; &quot;</span> + name.last
+<span class="hljs-keyword">var</span> yellGreeting = R.o(R.toUpper, classyGreeting);
+yellGreeting({first: <span class="hljs-string">&apos;James&apos;</span>, last: <span class="hljs-string">&apos;Bond&apos;</span>}); <span class="hljs-comment">//=&gt; &quot;THE NAME&apos;S BOND, JAMES BOND&quot;</span>
+
+R.o(R.multiply(<span class="hljs-number">10</span>), R.add(<span class="hljs-number">10</span>))(<span class="hljs-number">-4</span>) <span class="hljs-comment">//=&gt; 60</span>
+</code></pre>
+<h2 id="compose&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x6267;&#x884C;">compose(&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x6267;&#x884C;)</h2>
+<p><code>((y &#x2192; z), (x &#x2192; y), &#x2026;, (o &#x2192; p), ((a, b, &#x2026;, n) &#x2192; o)) &#x2192; ((a, b, &#x2026;, n) &#x2192; z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> classyGreeting = (firstName, lastName) =&gt; <span class="hljs-string">&quot;The name&apos;s &quot;</span> + lastName + <span class="hljs-string">&quot;, &quot;</span> + firstName + <span class="hljs-string">&quot; &quot;</span> + lastName
+<span class="hljs-keyword">var</span> yellGreeting = R.compose(R.toUpper, classyGreeting);
+yellGreeting(<span class="hljs-string">&apos;James&apos;</span>, <span class="hljs-string">&apos;Bond&apos;</span>); <span class="hljs-comment">//=&gt; &quot;THE NAME&apos;S BOND, JAMES BOND&quot;</span>
+
+R.compose(<span class="hljs-built_in">Math</span>.abs, R.add(<span class="hljs-number">1</span>), R.multiply(<span class="hljs-number">2</span>))(<span class="hljs-number">-4</span>) <span class="hljs-comment">//=&gt; 7</span>
+</code></pre>
+<h2 id="composeppromise&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x6267;&#x884C;">composeP(promise&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x6267;&#x884C;)</h2>
+<p><code>((y &#x2192; Promise z), (x &#x2192; Promise y), &#x2026;, (a &#x2192; Promise b)) &#x2192; (a &#x2192; Promise z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6700;&#x53F3;&#x4FA7;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x6709;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x4E3A;&#x4E00;&#x5143;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">var</span> db = {
+  users: {
+    JOE: {
+      name: <span class="hljs-string">&apos;Joe&apos;</span>,
+      followers: [<span class="hljs-string">&apos;STEVE&apos;</span>, <span class="hljs-string">&apos;SUZY&apos;</span>]
+    }
+  }
+}
+
+<span class="hljs-comment">// We&apos;ll pretend to do a db lookup which returns a promise</span>
+<span class="hljs-keyword">var</span> lookupUser = (userId) =&gt; <span class="hljs-built_in">Promise</span>.resolve(db.users[userId])
+<span class="hljs-keyword">var</span> lookupFollowers = (user) =&gt; <span class="hljs-built_in">Promise</span>.resolve(user.followers)
+lookupUser(<span class="hljs-string">&apos;JOE&apos;</span>).then(lookupFollowers)
+
+<span class="hljs-comment">//  followersForUser :: String -&gt; Promise [UserId]</span>
+<span class="hljs-keyword">var</span> followersForUser = R.composeP(lookupFollowers, lookupUser);
+followersForUser(<span class="hljs-string">&apos;JOE&apos;</span>).then(followers =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Followers:&apos;</span>, followers))
+<span class="hljs-comment">// Followers: [&quot;STEVE&quot;,&quot;SUZY&quot;]</span>
+</code></pre>
+<h2 id="pipe&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x6267;&#x884C;">pipe(&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x6267;&#x884C;)</h2>
+<p><code>(((a, b, &#x2026;, n) &#x2192; o), (o &#x2192; p), &#x2026;, (x &#x2192; y), (y &#x2192; z)) &#x2192; ((a, b, &#x2026;, n) &#x2192; z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> f = R.pipe(<span class="hljs-built_in">Math</span>.pow, R.negate, R.inc);
+
+f(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// -(3^4) + 1</span>
+</code></pre>
+<h2 id="pipeppromise&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x6267;&#x884C;">pipeP(promise&#x51FD;&#x6570;&#x5408;&#x6210;&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x6267;&#x884C;)</h2>
+<p><code>((a &#x2192; Promise b), (b &#x2192; Promise c), &#x2026;, (y &#x2192; Promise z)) &#x2192; (a &#x2192; Promise z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x6700;&#x5DE6;&#x4FA7;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x6709;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x4E3A;&#x4E00;&#x5143;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//  followersForUser :: String -&gt; Promise [User]</span>
+<span class="hljs-keyword">var</span> followersForUser = R.pipeP(db.getUserById, db.getFollowers);
+</code></pre>
+<h2 id="addindex&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4F20;&#x9012;item-index-list&#x7684;&#x5217;&#x8868;&#x8FED;&#x4EE3;&#x51FD;&#x6570;">addIndex(&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4F20;&#x9012;(item, index, list)&#x7684;&#x5217;&#x8868;&#x8FED;&#x4EE3;&#x51FD;&#x6570;)</h2>
+<p><code>((a &#x2026; &#x2192; b) &#x2026; &#x2192; [a] &#x2192; *) &#x2192; (a &#x2026;, Int, [a] &#x2192; b) &#x2026; &#x2192; [a] &#x2192; *)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x53C2;&#x6570;&#x4E3A;&#x4E00;&#x4E2A;&#x4E0D;&#x5C06;&#x7D22;&#x5F15;&#x6216;&#x5217;&#x8868;&#x6210;&#x5458;&#x4F20;&#x9012;&#x5230;&#x5176;&#x56DE;&#x8C03;&#x7684;&#x5217;&#x8868;&#x8FED;&#x4EE3;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">var</span> mapIndexed = R.addIndex(R.map);
+mapIndexed((val, idx) =&gt; idx + <span class="hljs-string">&apos;-&apos;</span> + val, [<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>]);
+<span class="hljs-comment">//=&gt; [&apos;0-f&apos;, &apos;1-o&apos;, &apos;2-o&apos;, &apos;3-b&apos;, &apos;4-a&apos;, &apos;5-r&apos;]</span>
+</code></pre>
+<h2 id="always&#x5E38;&#x91CF;">always(&#x5E38;&#x91CF;)</h2>
+<p><code>a &#x2192; (* &#x2192; a)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> t = R.always(<span class="hljs-string">&apos;Tee&apos;</span>);
+t(); <span class="hljs-comment">//=&gt; &apos;Tee&apos;</span>
+</code></pre>
+<h2 id="ffalse">F(false)</h2>
+<p><code>* &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.F(); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="ttrue">T(true)</h2>
+<p><code>* &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.T(); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="ap&#x6570;&#x7EC4;&#x6210;&#x5458;&#x6267;&#x884C;&#x4E00;&#x7EC4;&#x51FD;&#x6570;">ap(&#x6570;&#x7EC4;&#x6210;&#x5458;&#x6267;&#x884C;&#x4E00;&#x7EC4;&#x51FD;&#x6570;)</h2>
+<p><code>[a &#x2192; b] &#x2192; [a] &#x2192; [b]</code> <code>Apply f =&gt; f (a &#x2192; b) &#x2192; f a &#x2192; f b</code> <code>(a &#x2192; b &#x2192; c) &#x2192; (a &#x2192; b) &#x2192; (a &#x2192; c)</code></p>
+<pre><code class="lang-javascript">R.ap([R.multiply(<span class="hljs-number">2</span>), R.add(<span class="hljs-number">3</span>)], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [2, 4, 6, 4, 5, 6]</span>
+R.ap([R.concat(<span class="hljs-string">&apos;tasty &apos;</span>), R.toUpper], [<span class="hljs-string">&apos;pizza&apos;</span>, <span class="hljs-string">&apos;salad&apos;</span>]); <span class="hljs-comment">//=&gt; [&quot;tasty pizza&quot;, &quot;tasty salad&quot;, &quot;PIZZA&quot;, &quot;SALAD&quot;]</span>
+
+<span class="hljs-comment">// R.ap can also be used as S combinator</span>
+<span class="hljs-comment">// when only two functions are passed</span>
+R.ap(R.concat, R.toUpper)(<span class="hljs-string">&apos;Ramda&apos;</span>) <span class="hljs-comment">//=&gt; &apos;RamdaRAMDA&apos;</span>
+</code></pre>
+<h2 id="apply&#x53C2;&#x6570;&#x6570;&#x7EC4;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;">apply(&#x53C2;&#x6570;&#x6570;&#x7EC4;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;)</h2>
+<p><code>(*&#x2026; &#x2192; a) &#x2192; [*] &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> nums = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">-99</span>, <span class="hljs-number">42</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>];
+R.apply(<span class="hljs-built_in">Math</span>.max, nums); <span class="hljs-comment">//=&gt; 42</span>
+</code></pre>
+<h2 id="unapply&#x4E0E;apply&#x76F8;&#x53CD;">unapply(&#x4E0E;apply&#x76F8;&#x53CD;)</h2>
+<p><code>([*&#x2026;] &#x2192; a) &#x2192; (*&#x2026; &#x2192; a)</code></p>
+<pre><code class="lang-javascript">R.unapply(<span class="hljs-built_in">JSON</span>.stringify)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; &apos;[1,2,3]&apos;</span>
+</code></pre>
+<h2 id="memoizewith&#x51FD;&#x6570;&#x7ED3;&#x679C;&#x7F13;&#x5B58;">memoizeWith(&#x51FD;&#x6570;&#x7ED3;&#x679C;&#x7F13;&#x5B58;)</h2>
+<p><code>(*&#x2026; &#x2192; String) &#x2192; (*&#x2026; &#x2192; a) &#x2192; (*&#x2026; &#x2192; a)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;fn&#x4EA7;&#x751F;&#x7F13;&#x5B58;&#x503C;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;fn&#x8BB0;&#x5FC6;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> factorial = R.memoizeWith(R.identity, n =&gt; {
+  count += <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">return</span> R.product(R.range(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>));
+});
+factorial(<span class="hljs-number">5</span>); <span class="hljs-comment">//=&gt; 120</span>
+factorial(<span class="hljs-number">5</span>); <span class="hljs-comment">//=&gt; 120</span>
+factorial(<span class="hljs-number">5</span>); <span class="hljs-comment">//=&gt; 120</span>
+count; <span class="hljs-comment">//=&gt; 1</span>
+</code></pre>
+<h2 id="call&#x53C2;&#x6570;&#x5E8F;&#x5217;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;">call(&#x53C2;&#x6570;&#x5E8F;&#x5217;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;)</h2>
+<p><code>(*&#x2026; &#x2192; a),*&#x2026; &#x2192; a</code></p>
+<pre><code class="lang-javascript">R.call(R.add, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; 3</span>
+
+<span class="hljs-keyword">var</span> indentN = R.pipe(R.repeat(<span class="hljs-string">&apos; &apos;</span>),
+                     R.join(<span class="hljs-string">&apos;&apos;</span>),
+                     R.replace(<span class="hljs-regexp">/^(?!$)/gm</span>));
+
+<span class="hljs-keyword">var</span> format = R.converge(R.call, [
+                            R.pipe(R.prop(<span class="hljs-string">&apos;indent&apos;</span>), indentN),
+                            R.prop(<span class="hljs-string">&apos;value&apos;</span>)
+                        ]);
+
+format({indent: <span class="hljs-number">2</span>, value: <span class="hljs-string">&apos;foo\nbar\nbaz\n&apos;</span>}); <span class="hljs-comment">//=&gt; &apos;  foo\n  bar\n  baz\n&apos;</span>
+</code></pre>
+<h2 id="applyspec&#x6A21;&#x677F;&#x51FD;&#x6570;">applySpec(&#x6A21;&#x677F;&#x51FD;&#x6570;)</h2>
+<p><code>{k: ((a, b, &#x2026;, m) &#x2192; v)} &#x2192; ((a, b, &#x2026;, m) &#x2192; {k: v})</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x5C06;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x6A21;&#x677F;&#x5185;&#x7684;&#x51FD;&#x6570;&#x6267;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x586B;&#x5145;&#x5230;&#x6A21;&#x677F;</span>
+<span class="hljs-keyword">var</span> getMetrics = R.applySpec({
+  sum: R.add,
+  nested: { mul: R.multiply }
+});
+getMetrics(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// =&gt; { sum: 6, nested: { mul: 8 } }</span>
+</code></pre>
+<h2 id="juxt&#x51FD;&#x6570;&#x7EC4;&#x5904;&#x7406;">juxt(&#x51FD;&#x6570;&#x7EC4;&#x5904;&#x7406;)</h2>
+<p><code>[(a, b, &#x2026;, m) &#x2192; n] &#x2192; ((a, b, &#x2026;, m) &#x2192; [n])</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> getRange = R.juxt([<span class="hljs-built_in">Math</span>.min, <span class="hljs-built_in">Math</span>.max]);
+getRange(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">-3</span>); <span class="hljs-comment">//=&gt; [-3, 9]</span>
+</code></pre>
+<h2 id="converge&#x53CC;&#x5C42;&#x51FD;&#x6570;&#x7EC4;&#x5904;&#x7406;">converge(&#x53CC;&#x5C42;&#x51FD;&#x6570;&#x7EC4;&#x5904;&#x7406;)</h2>
+<p><code>((x1, x2, &#x2026;) &#x2192; z) &#x2192; [((a, b, &#x2026;) &#x2192; x1), ((a, b, &#x2026;) &#x2192; x2), &#x2026;] &#x2192; (a &#x2192; b &#x2192; &#x2026; &#x2192; z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x51FD;&#x6570;&#x6570;&#x7EC4;&#x3002;&#x4F20;&#x5165;&#x7684;&#x503C;&#x5148;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5305;&#x542B;&#x7684;&#x51FD;&#x6570;&#x5206;&#x522B;&#x5904;&#x7406;&#x4EE5;&#x540E;&#xFF0C;&#x518D;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5904;&#x7406;&#x524D;&#x4E00;&#x6B65;&#x751F;&#x6210;&#x7684;&#x7ED3;&#x679C;</span>
+<span class="hljs-keyword">var</span> average = R.converge(R.divide, [R.sum, R.length])
+average([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]) <span class="hljs-comment">//=&gt; 4</span>
+
+<span class="hljs-keyword">var</span> strangeConcat = R.converge(R.concat, [R.toUpper, R.toLower])
+strangeConcat(<span class="hljs-string">&quot;Yodel&quot;</span>) <span class="hljs-comment">//=&gt; &quot;YODELyodel&quot;</span>
+</code></pre>
+<h2 id="usewith&#x53CC;&#x5C42;&#x51FD;&#x6570;&#x7EC4;&#x4E00;&#x5BF9;&#x4E00;&#x5904;&#x7406;">useWith(&#x53CC;&#x5C42;&#x51FD;&#x6570;&#x7EC4;&#x4E00;&#x5BF9;&#x4E00;&#x5904;&#x7406;)</h2>
+<p><code>((x1, x2, &#x2026;) &#x2192; z) &#x2192; [(a &#x2192; x1), (b &#x2192; x2), &#x2026;] &#x2192; (a &#x2192; b &#x2192; &#x2026; &#x2192; z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x51FD;&#x6570;&#x6570;&#x7EC4;&#x3002;&#x4F20;&#x5165;&#x7684;&#x503C;&#x5148;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5305;&#x542B;&#x7684;&#x51FD;&#x6570;&#x4E00;&#x5BF9;&#x4E00;&#x5BF9;&#x5E94;&#x5904;&#x7406;&#x4EE5;&#x540E;&#xFF0C;&#x518D;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5904;&#x7406;&#x524D;&#x4E00;&#x6B65;&#x751F;&#x6210;&#x7684;&#x7ED3;&#x679C;</span>
+R.useWith(<span class="hljs-built_in">Math</span>.pow, [R.identity, R.identity])(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 81</span>
+R.useWith(<span class="hljs-built_in">Math</span>.pow, [R.identity, R.identity])(<span class="hljs-number">3</span>)(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 81</span>
+R.useWith(<span class="hljs-built_in">Math</span>.pow, [R.dec, R.inc])(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 32</span>
+R.useWith(<span class="hljs-built_in">Math</span>.pow, [R.dec, R.inc])(<span class="hljs-number">3</span>)(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 32</span>
+</code></pre>
+<h2 id="applyto&#x5355;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;">applyTo(&#x5355;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x51FD;&#x6570;)</h2>
+<p><code>a &#x2192; (a &#x2192; b) &#x2192; b</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> t42 = R.applyTo(<span class="hljs-number">42</span>);
+t42(R.identity); <span class="hljs-comment">//=&gt; 42</span>
+t42(R.add(<span class="hljs-number">1</span>)); <span class="hljs-comment">//=&gt; 43</span>
+</code></pre>
+<h2 id="comparator&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5217;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570;">comparator(&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5217;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570;)</h2>
+<p><code>((a, b) &#x2192; Boolean) &#x2192; ((a, b) &#x2192; Number)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> byAge = R.comparator((a, b) =&gt; a.age &lt; b.age);
+<span class="hljs-keyword">var</span> people = [{age:<span class="hljs-number">12</span>},{age:<span class="hljs-number">53</span>},{age:<span class="hljs-number">8</span>}];
+<span class="hljs-keyword">var</span> peopleByIncreasingAge = R.sort(byAge, people);<span class="hljs-comment">//=&gt; [{age:8},{age:12},{age:53}]</span>
+</code></pre>
+<h2 id="ascend&#x5347;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570;-">ascend(&#x5347;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570; )</h2>
+<p><code>Ord b =&gt; (a &#x2192; b) &#x2192; a &#x2192; a &#x2192; Number</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> byAge = R.ascend(R.prop(<span class="hljs-string">&apos;age&apos;</span>));
+<span class="hljs-keyword">var</span> people = [{age:<span class="hljs-number">12</span>},{age:<span class="hljs-number">53</span>},{age:<span class="hljs-number">8</span>}];
+<span class="hljs-keyword">var</span> peopleByYoungestFirst = R.sort(byAge, people);<span class="hljs-comment">//=&gt; [{age:8},{age:12},{age:53}]</span>
+</code></pre>
+<h2 id="descend&#x964D;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570;-">descend(&#x964D;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570; )</h2>
+<p><code>Ord b =&gt; (a &#x2192; b) &#x2192; a &#x2192; a &#x2192; Number</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> byAge = R.descend(R.prop(<span class="hljs-string">&apos;age&apos;</span>));
+<span class="hljs-keyword">var</span> people = [{age:<span class="hljs-number">12</span>},{age:<span class="hljs-number">53</span>},{age:<span class="hljs-number">8</span>}];
+<span class="hljs-keyword">var</span> peopleByYoungestFirst = R.sort(byAge, people);<span class="hljs-comment">//=&gt; [{age:53},{age:12},{age:8}]</span>
+</code></pre>
+<h2 id="binary&#x53C2;&#x6570;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x53EA;&#x4F20;&#x5165;&#x524D;&#x4E24;&#x4E2A;&#x53C2;&#x6570;-">binary(&#x53C2;&#x6570;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x53EA;&#x4F20;&#x5165;&#x524D;&#x4E24;&#x4E2A;&#x53C2;&#x6570; )</h2>
+<p><code>(* &#x2192; c) &#x2192; (a, b &#x2192; c)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> takesThreeArgs = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b, c</span>) </span>{
+  <span class="hljs-keyword">return</span> [a, b, c];
+};
+takesThreeArgs.length; <span class="hljs-comment">//=&gt; 3</span>
+takesThreeArgs(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
+
+<span class="hljs-keyword">var</span> takesTwoArgs = R.binary(takesThreeArgs);
+takesTwoArgs.length; <span class="hljs-comment">//=&gt; 2</span>
+<span class="hljs-comment">// Only 2 arguments are passed to the wrapped function</span>
+takesTwoArgs(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; [1, 2, undefined]</span>
+</code></pre>
+<h2 id="nary&#x53C2;&#x6570;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x53EA;&#x4F20;&#x5165;&#x524D;n&#x4E2A;&#x53C2;&#x6570;">nAry(&#x53C2;&#x6570;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x53EA;&#x4F20;&#x5165;&#x524D;n&#x4E2A;&#x53C2;&#x6570;)</h2>
+<p><code>Number &#x2192; (* &#x2192; a) &#x2192; (* &#x2192; a)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> takesTwoArgs = (a, b) =&gt; [a, b];
+
+takesTwoArgs.length; <span class="hljs-comment">//=&gt; 2</span>
+takesTwoArgs(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; [1, 2]</span>
+
+<span class="hljs-keyword">var</span> takesOneArg = R.nAry(<span class="hljs-number">1</span>, takesTwoArgs);
+takesOneArg.length; <span class="hljs-comment">//=&gt; 1</span>
+<span class="hljs-comment">// Only `n` arguments are passed to the wrapped function</span>
+takesOneArg(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; [1, undefined]</span>
+</code></pre>
+<h2 id="unary&#x53C2;&#x6570;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x53EA;&#x4F20;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;">unary(&#x53C2;&#x6570;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x53EA;&#x4F20;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;)</h2>
+<p><code>(* &#x2192; b) &#x2192; (a &#x2192; b)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> takesTwoArgs = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> [a, b];
+};
+takesTwoArgs.length; <span class="hljs-comment">//=&gt; 2</span>
+takesTwoArgs(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; [1, 2]</span>
+
+<span class="hljs-keyword">var</span> takesOneArg = R.unary(takesTwoArgs);
+takesOneArg.length; <span class="hljs-comment">//=&gt; 1</span>
+<span class="hljs-comment">// Only 1 argument is passed to the wrapped function</span>
+takesOneArg(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; [1, undefined]</span>
+</code></pre>
+<h2 id="bind&#x7ED1;&#x5B9A;&#x4E0A;&#x4E0B;&#x6587;&#x51FD;&#x6570;">bind(&#x7ED1;&#x5B9A;&#x4E0A;&#x4E0B;&#x6587;&#x51FD;&#x6570;)</h2>
+<p><code>(* &#x2192; *) &#x2192; {*} &#x2192; (* &#x2192; *)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> log = R.bind(<span class="hljs-built_in">console</span>.log, <span class="hljs-built_in">console</span>);
+R.pipe(R.assoc(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">2</span>), R.tap(log), R.assoc(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">3</span>))({a: <span class="hljs-number">1</span>}); <span class="hljs-comment">//=&gt; {a: 3}</span>
+<span class="hljs-comment">// logs {a: 2}</span>
+</code></pre>
+<h2 id="partial&#x6307;&#x5B9A;&#x5DE6;&#x4FA7;&#x90E8;&#x5206;&#x53C2;&#x6570;">partial(&#x6307;&#x5B9A;&#x5DE6;&#x4FA7;&#x90E8;&#x5206;&#x53C2;&#x6570;)</h2>
+<p><code>((a, b, c, &#x2026;, n) &#x2192; x) &#x2192; [a, b, c, &#x2026;] &#x2192; ((d, e, f, &#x2026;, n) &#x2192; x)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5141;&#x8BB8;&#x591A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6307;&#x5B9A;&#x6700;&#x5DE6;&#x8FB9;&#x7684;&#x90E8;&#x5206;&#x53C2;&#x6570;&#x3002;</span>
+<span class="hljs-keyword">var</span> multiply2 = (a, b) =&gt; a * b;
+<span class="hljs-keyword">var</span> double = R.partial(multiply2, [<span class="hljs-number">2</span>]);
+double(<span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; 4</span>
+
+<span class="hljs-keyword">var</span> greet = (salutation, title, firstName, lastName) =&gt;
+  salutation + <span class="hljs-string">&apos;, &apos;</span> + title + <span class="hljs-string">&apos; &apos;</span> + firstName + <span class="hljs-string">&apos; &apos;</span> + lastName + <span class="hljs-string">&apos;!&apos;</span>;
+
+<span class="hljs-keyword">var</span> sayHello = R.partial(greet, [<span class="hljs-string">&apos;Hello&apos;</span>]);
+<span class="hljs-keyword">var</span> sayHelloToMs = R.partial(sayHello, [<span class="hljs-string">&apos;Ms.&apos;</span>]);
+sayHelloToMs(<span class="hljs-string">&apos;Jane&apos;</span>, <span class="hljs-string">&apos;Jones&apos;</span>); <span class="hljs-comment">//=&gt; &apos;Hello, Ms. Jane Jones!&apos;</span>
+</code></pre>
+<h2 id="partialright&#x6307;&#x5B9A;&#x53F3;&#x4FA7;&#x90E8;&#x5206;&#x53C2;&#x6570;">partialRight(&#x6307;&#x5B9A;&#x53F3;&#x4FA7;&#x90E8;&#x5206;&#x53C2;&#x6570;)</h2>
+<p><code>((a, b, c, &#x2026;, n) &#x2192; x) &#x2192; [d, e, f, &#x2026;, n] &#x2192; ((a, b, c, &#x2026;) &#x2192; x)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5141;&#x8BB8;&#x591A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6307;&#x5B9A;&#x6700;&#x53F3;&#x8FB9;&#x7684;&#x90E8;&#x5206;&#x53C2;&#x6570;&#x3002;</span>
+<span class="hljs-keyword">var</span> greet = (salutation, title, firstName, lastName) =&gt;
+  salutation + <span class="hljs-string">&apos;, &apos;</span> + title + <span class="hljs-string">&apos; &apos;</span> + firstName + <span class="hljs-string">&apos; &apos;</span> + lastName + <span class="hljs-string">&apos;!&apos;</span>;
+
+<span class="hljs-keyword">var</span> greetMsJaneJones = R.partialRight(greet, [<span class="hljs-string">&apos;Ms.&apos;</span>, <span class="hljs-string">&apos;Jane&apos;</span>, <span class="hljs-string">&apos;Jones&apos;</span>]);
+
+greetMsJaneJones(<span class="hljs-string">&apos;Hello&apos;</span>); <span class="hljs-comment">//=&gt; &apos;Hello, Ms. Jane Jones!&apos;</span>
+</code></pre>
+<h2 id="curry&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;">curry(&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;)</h2>
+<p><code>(* &#x2192; a) &#x2192; (* &#x2192; a)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> addFourNumbers = (a, b, c, d) =&gt; a + b + c + d;
+
+<span class="hljs-keyword">var</span> curriedAddFourNumbers = R.curry(addFourNumbers);
+<span class="hljs-keyword">var</span> f = curriedAddFourNumbers(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> g = f(<span class="hljs-number">3</span>);
+g(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 10</span>
+</code></pre>
+<h2 id="curryn&#x53EF;&#x53D8;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;">curryN(&#x53EF;&#x53D8;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;)</h2>
+<p><code>Number &#x2192; (* &#x2192; a) &#x2192; (* &#x2192; a)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sumArgs = (...args) =&gt; R.sum(args);
+<span class="hljs-keyword">var</span> curriedAddFourNumbers = R.curryN(<span class="hljs-number">4</span>, sumArgs);
+<span class="hljs-keyword">var</span> f = curriedAddFourNumbers(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> g = f(<span class="hljs-number">3</span>);
+g(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 10</span>
+
+<span class="hljs-keyword">var</span> sumArgs = (...args) =&gt; R.sum(args);
+<span class="hljs-keyword">var</span> curriedAddFourNumbers = R.curryN(<span class="hljs-number">3</span>, sumArgs);
+<span class="hljs-keyword">var</span> f = curriedAddFourNumbers(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> g = f(<span class="hljs-number">3</span>);
+g(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; TypeError: g is not a function</span>
+
+<span class="hljs-keyword">var</span> sumArgs = (...args) =&gt; R.sum(args);
+<span class="hljs-keyword">var</span> curriedAddFourNumbers = R.curryN(<span class="hljs-number">5</span>, sumArgs);
+<span class="hljs-keyword">var</span> f = curriedAddFourNumbers(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> g = f(<span class="hljs-number">3</span>);
+g(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; function()</span>
+</code></pre>
+<h2 id="uncurryn&#x53CD;&#x67EF;&#x91CC;&#x5316;">uncurryN(&#x53CD;&#x67EF;&#x91CC;&#x5316;)</h2>
+<p><code>Number &#x2192; (a &#x2192; b) &#x2192; (a &#x2192; c)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> addFour = a =&gt; b =&gt; c =&gt; d =&gt; a + b + c + d;
+
+<span class="hljs-keyword">var</span> uncurriedAddFour = R.uncurryN(<span class="hljs-number">4</span>, addFour);
+uncurriedAddFour(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 10</span>
+</code></pre>
+<h2 id="empty&#x8FD4;&#x56DE;&#x4E0E;&#x6307;&#x5B9A;&#x503C;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7A7A;&#x503C;">empty(&#x8FD4;&#x56DE;&#x4E0E;&#x6307;&#x5B9A;&#x503C;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7A7A;&#x503C;)</h2>
+<p><code>a &#x2192; a</code></p>
+<pre><code class="lang-javascript">R.empty(Just(<span class="hljs-number">42</span>));      <span class="hljs-comment">//=&gt; Nothing()</span>
+R.empty([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);     <span class="hljs-comment">//=&gt; []</span>
+R.empty(<span class="hljs-string">&apos;unicorns&apos;</span>);    <span class="hljs-comment">//=&gt; &apos;&apos;</span>
+R.empty({x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>});  <span class="hljs-comment">//=&gt; {}</span>
+</code></pre>
+<h2 id="flip&#x7FFB;&#x8F6C;&#x524D;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x987A;&#x5E8F;">flip(&#x7FFB;&#x8F6C;&#x524D;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x987A;&#x5E8F;)</h2>
+<p><code>((a, b, c, &#x2026;) &#x2192; z) &#x2192; (b &#x2192; a &#x2192; c &#x2192; &#x2026; &#x2192; z)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> mergeThree = (a, b, c) =&gt; [].concat(a, b, c);
+
+mergeThree(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
+
+R.flip(mergeThree)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; [2, 1, 3]</span>
+</code></pre>
+<h2 id="identity&#x5360;&#x4F4D;&#x51FD;&#x6570;">identity(&#x5360;&#x4F4D;&#x51FD;&#x6570;)</h2>
+<p><code>a &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x8FD0;&#x7B97;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x6216;&#x5360;&#x4F4D;&#x7B26;&#x4F7F;&#x7528;</span>
+R.identity(<span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; 1</span>
+
+<span class="hljs-keyword">var</span> obj = {};
+R.identity(obj) === obj; <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="invoker&#x5F15;&#x7528;&#x51FD;&#x6570;">invoker(&#x5F15;&#x7528;&#x51FD;&#x6570;)</h2>
+<p><code>Number &#x2192; String &#x2192; (a &#x2192; b &#x2192; &#x2026; &#x2192; n &#x2192; Object &#x2192; *)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5F15;&#x5165;&#x7684;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x4E2A;&#x6570;</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5F15;&#x5165;&#x7684;&#x51FD;&#x6570;&#x7684;&#x540D;&#x79F0;</span>
+<span class="hljs-keyword">var</span> sliceFrom = R.invoker(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;slice&apos;</span>);
+sliceFrom(<span class="hljs-number">6</span>, <span class="hljs-string">&apos;abcdefghijklm&apos;</span>); <span class="hljs-comment">//=&gt; &apos;ghijklm&apos;</span>
+<span class="hljs-keyword">var</span> sliceFrom6 = R.invoker(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;slice&apos;</span>)(<span class="hljs-number">6</span>);
+sliceFrom6(<span class="hljs-number">8</span>, <span class="hljs-string">&apos;abcdefghijklm&apos;</span>); <span class="hljs-comment">//=&gt; &apos;gh&apos;</span>
+</code></pre>
+<h2 id="construct&#x6784;&#x9020;&#x51FD;&#x6570;">construct(&#x6784;&#x9020;&#x51FD;&#x6570;)</h2>
+<p><code>(* &#x2192; {*}) &#x2192; (* &#x2192; {*})</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Constructor function</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Animal</span>(<span class="hljs-params">kind</span>) </span>{
+  <span class="hljs-keyword">this</span>.kind = kind;
+};
+Animal.prototype.sighting = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;It&apos;s a &quot;</span> + <span class="hljs-keyword">this</span>.kind + <span class="hljs-string">&quot;!&quot;</span>;
+}
+
+<span class="hljs-keyword">var</span> AnimalConstructor = R.construct(Animal)
+
+<span class="hljs-comment">// Notice we no longer need the &apos;new&apos; keyword:</span>
+AnimalConstructor(<span class="hljs-string">&apos;Pig&apos;</span>); <span class="hljs-comment">//=&gt; {&quot;kind&quot;: &quot;Pig&quot;, &quot;sighting&quot;: function (){...}};</span>
+
+<span class="hljs-keyword">var</span> animalTypes = [<span class="hljs-string">&quot;Lion&quot;</span>, <span class="hljs-string">&quot;Tiger&quot;</span>, <span class="hljs-string">&quot;Bear&quot;</span>];
+<span class="hljs-keyword">var</span> animalSighting = R.invoker(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;sighting&apos;</span>);
+<span class="hljs-keyword">var</span> sightNewAnimal = R.compose(animalSighting, AnimalConstructor);
+R.map(sightNewAnimal, animalTypes); <span class="hljs-comment">//=&gt; [&quot;It&apos;s a Lion!&quot;, &quot;It&apos;s a Tiger!&quot;, &quot;It&apos;s a Bear!&quot;]</span>
+</code></pre>
+<h2 id="constructn&#x53EF;&#x53D8;&#x6784;&#x9020;&#x51FD;&#x6570;">constructN(&#x53EF;&#x53D8;&#x6784;&#x9020;&#x51FD;&#x6570;)</h2>
+<p><code>Number &#x2192; (* &#x2192; {*}) &#x2192; (* &#x2192; {*})</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Variadic Constructor function</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Salad</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.ingredients = <span class="hljs-built_in">arguments</span>;
+}
+
+Salad.prototype.recipe = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> instructions = R.map(ingredient =&gt; <span class="hljs-string">&apos;Add a dollop of &apos;</span> + ingredient, <span class="hljs-keyword">this</span>.ingredients);
+  <span class="hljs-keyword">return</span> R.join(<span class="hljs-string">&apos;\n&apos;</span>, instructions);
+};
+
+<span class="hljs-keyword">var</span> ThreeLayerSalad = R.constructN(<span class="hljs-number">3</span>, Salad);
+
+<span class="hljs-comment">// Notice we no longer need the &apos;new&apos; keyword, and the constructor is curried for 3 arguments.</span>
+<span class="hljs-keyword">var</span> salad = ThreeLayerSalad(<span class="hljs-string">&apos;Mayonnaise&apos;</span>)(<span class="hljs-string">&apos;Potato Chips&apos;</span>)(<span class="hljs-string">&apos;Ketchup&apos;</span>);
+
+<span class="hljs-built_in">console</span>.log(salad.recipe());
+<span class="hljs-comment">// Add a dollop of Mayonnaise</span>
+<span class="hljs-comment">// Add a dollop of Potato Chips</span>
+<span class="hljs-comment">// Add a dollop of Ketchup</span>
+</code></pre>
+<h2 id="lift&#x63D0;&#x5347;">lift(&#x63D0;&#x5347;)</h2>
+<p><code>(*&#x2026; &#x2192; *) &#x2192; ([*]&#x2026; &#x2192; [*])</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> madd3 = R.lift((a, b, c) =&gt; a + b + c);
+
+madd3([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">2</span>,<span class="hljs-number">5</span>]); <span class="hljs-comment">//=&gt; [</span>
+                            <span class="hljs-comment">//=&gt;     4, 7, </span>
+                              <span class="hljs-comment">//=&gt;     6, 9, </span>
+                              <span class="hljs-comment">//=&gt;     5, 8,</span>
+                              <span class="hljs-comment">//=&gt;     7, 10, </span>
+                              <span class="hljs-comment">//=&gt;     6, 9,</span>
+                              <span class="hljs-comment">//=&gt;     8, 11</span>
+                            <span class="hljs-comment">//=&gt; ]</span>
+<span class="hljs-keyword">var</span> madd5 = R.lift((a, b, c, d, e) =&gt; a + b + c + d + e);
+
+madd5([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], [<span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>], [<span class="hljs-number">6</span>], [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>]); <span class="hljs-comment">//=&gt; [21, 22, 22, 23, 22, 23, 23, 24]</span>
+</code></pre>
+<h2 id="liftn&#x53EF;&#x53D8;&#x63D0;&#x5347;">liftN(&#x53EF;&#x53D8;&#x63D0;&#x5347;)</h2>
+<p><code>Number &#x2192; (*&#x2026; &#x2192; *) &#x2192; ([*]&#x2026; &#x2192; [*])</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> madd3 = R.liftN(<span class="hljs-number">3</span>, (...args) =&gt; R.sum(args));
+madd3([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; [3, 4, 5, 4, 5, 6, 5, 6, 7]</span>
+</code></pre>
+<h2 id="ntharg&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x53C2;&#x6570;">nthArg(&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x7684;&#x53C2;&#x6570;)</h2>
+<p><code>Number &#x2192; *&#x2026; &#x2192; *</code></p>
+<pre><code class="lang-javascript">R.nthArg(<span class="hljs-number">1</span>)(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>); <span class="hljs-comment">//=&gt; &apos;b&apos;</span>
+R.nthArg(<span class="hljs-number">-1</span>)(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>); <span class="hljs-comment">//=&gt; &apos;c&apos;</span>
+</code></pre>
+<h2 id="&#x5360;&#x4F4D;&#x7B26;">__(&#x5360;&#x4F4D;&#x7B26;)</h2>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> greet = R.replace(<span class="hljs-string">&apos;{name}&apos;</span>, R.__, <span class="hljs-string">&apos;Hello, {name}!&apos;</span>);
+greet(<span class="hljs-string">&apos;Alice&apos;</span>); <span class="hljs-comment">//=&gt; &apos;Hello, Alice!&apos;</span>
+</code></pre>
+<h2 id="of&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x6240;&#x63D0;&#x4F9B;&#x503C;&#x7684;&#x5355;&#x6570;&#x7EC4;">of(&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x6240;&#x63D0;&#x4F9B;&#x503C;&#x7684;&#x5355;&#x6570;&#x7EC4;)</h2>
+<p><code>a &#x2192; [a]</code></p>
+<pre><code class="lang-javascript">R.of(<span class="hljs-literal">null</span>); <span class="hljs-comment">//=&gt; [null]</span>
+R.of([<span class="hljs-number">42</span>]); <span class="hljs-comment">//=&gt; [[42]]</span>
+</code></pre>
+<h2 id="once&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x51FD;&#x6570;">once(&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x51FD;&#x6570;)</h2>
+<p><code>(a&#x2026; &#x2192; b) &#x2192; (a&#x2026; &#x2192; b)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> addOneOnce = R.once(x =&gt; x + <span class="hljs-number">1</span>);
+addOneOnce(<span class="hljs-number">10</span>); <span class="hljs-comment">//=&gt; 11</span>
+addOneOnce(addOneOnce(<span class="hljs-number">50</span>)); <span class="hljs-comment">//=&gt; 11</span>
+</code></pre>
+<h2 id="tap&#x503C;&#x53D8;&#x6362;">tap(&#x503C;&#x53D8;&#x6362;)</h2>
+<p><code>(a &#x2192; *) &#x2192; a &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sayX = x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;x is &apos;</span> + x);
+R.tap(sayX, <span class="hljs-number">100</span>); <span class="hljs-comment">//=&gt; 100</span>
+<span class="hljs-comment">// logs &apos;x is 100&apos;</span>
+</code></pre>
+<h2 id="trycatchtry-catch">tryCatch(try catch)</h2>
+<p><code>(&#x2026;x &#x2192; a) &#x2192; ((e, &#x2026;x) &#x2192; a) &#x2192; (&#x2026;x &#x2192; a)</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;tryer</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;catcher</span>
+R.tryCatch(R.prop(<span class="hljs-string">&apos;x&apos;</span>), R.F)({x: <span class="hljs-literal">true</span>}); <span class="hljs-comment">//=&gt; true</span>
+R.tryCatch(R.prop(<span class="hljs-string">&apos;x&apos;</span>), R.F)(<span class="hljs-literal">null</span>);      <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Object.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 对象Object">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"函数Function","level":"3.8","depth":1,"previous":{"title":"对象Object","level":"3.7","depth":1,"path":"Object.md","ref":"Object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Function.md","mtime":"2018-08-03T10:44:46.833Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T09:26:01.580Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

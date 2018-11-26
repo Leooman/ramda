@@ -1,0 +1,591 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>关系运算Relation · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="String.html" />
+    
+    
+    <link rel="prev" href="Logic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://github.com/Leooman/ramda">
+            
+                    
+                    Ramda V0.25.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Type.html">
+            
+                <a href="Type.html">
+            
+                    
+                    类型Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Math.html">
+            
+                <a href="Math.html">
+            
+                    
+                    数学运算Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Logic.html">
+            
+                <a href="Logic.html">
+            
+                    
+                    逻辑运算Logic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4" data-path="Relation.html">
+            
+                <a href="Relation.html">
+            
+                    
+                    关系运算Relation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    字符串String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="List.html">
+            
+                <a href="List.html">
+            
+                    
+                    数组List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Object.html">
+            
+                <a href="Object.html">
+            
+                    
+                    对象Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    函数Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >关系运算Relation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="relation">Relation</h1>
+<h2 id="clamp&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;">clamp(&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; a &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6700;&#x5C0F;&#x9650;&#x5B9A;&#x503C;minimum</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6700;&#x5927;&#x9650;&#x5B9A;&#x503C;maximum</span>
+<span class="hljs-comment">//&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;value</span>
+<span class="hljs-comment">//&#x8FD4;&#x56DE;&#x503C; &#xFF1A;value &lt; minimum &#x65F6;&#x8FD4;&#x56DE; minimum ,value &gt; maximum &#x65F6;&#x8FD4;&#x56DE; maximum , &#x5426;&#x5219;&#x8FD4;&#x56DE;value</span>
+<span class="hljs-comment">//&#x4E5F;&#x9002;&#x7528;&#x4E8E;&#x5176;&#x4ED6;&#x5177;&#x6709;&#x6392;&#x5E8F;&#x5C5E;&#x6027;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x65E5;&#x671F;</span>
+R.clamp(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">-5</span>) <span class="hljs-comment">// =&gt; 1</span>
+R.clamp(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>) <span class="hljs-comment">// =&gt; 10</span>
+R.clamp(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">4</span>)  <span class="hljs-comment">// =&gt; 4</span>
+</code></pre>
+<h2 id="countby&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;">countBy(&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;)</h2>
+<p><code>(a &#x2192; String) &#x2192; [a] &#x2192; {*}</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1.0</span>, <span class="hljs-number">1.1</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">3.0</span>, <span class="hljs-number">2.2</span>];
+R.countBy(<span class="hljs-built_in">Math</span>.floor)(numbers);    <span class="hljs-comment">//=&gt; {&apos;1&apos;: 3, &apos;2&apos;: 2, &apos;3&apos;: 1}</span>
+
+<span class="hljs-keyword">var</span> letters = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+R.countBy(R.toLower)(letters);   <span class="hljs-comment">//=&gt; {&apos;a&apos;: 3, &apos;b&apos;: 2, &apos;c&apos;: 1}</span>
+</code></pre>
+<h2 id="difference&#x5217;&#x8868;&#x5DEE;&#x96C6;">difference(&#x5217;&#x8868;&#x5DEE;&#x96C6;)</h2>
+<p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5B58;&#x5728;&#x800C;&#x4E14;&#x7B2C;&#x4E8C;&#x4E2A;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x503C;&#x96C6;&#x5408;</span>
+<span class="hljs-comment">//&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#x5BF9;&#x6BD4;&#x65F6;&#x53EA;&#x5224;&#x65AD;&#x503C;&#x76F8;&#x7B49;&#x800C;&#x4E0D;&#x662F;&#x5F15;&#x7528;&#x76F8;&#x7B49;</span>
+R.difference([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [1,2]</span>
+R.difference([<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [7,6,5]</span>
+R.difference([{a: <span class="hljs-number">1</span>}, {b: <span class="hljs-number">2</span>}], [{a: <span class="hljs-number">1</span>}, {c: <span class="hljs-number">3</span>}]) <span class="hljs-comment">//=&gt; [{b: 2}]</span>
+</code></pre>
+<h2 id="differencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;">differenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;)</h2>
+<p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5B58;&#x5728;&#x800C;&#x4E14;&#x7B2C;&#x4E8C;&#x4E2A;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x503C;&#x96C6;&#x5408;</span>
+<span class="hljs-keyword">var</span> cmp = (x, y) =&gt; x.a === y.a;
+<span class="hljs-keyword">var</span> l1 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}];
+<span class="hljs-keyword">var</span> l2 = [{a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}];
+R.differenceWith(cmp, l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2}]</span>
+</code></pre>
+<h2 id="eqby&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;">eqBy(&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
+<p><code>(a &#x2192; b) &#x2192; a &#x2192; a &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.eqBy(<span class="hljs-built_in">Math</span>.abs, <span class="hljs-number">5</span>, <span class="hljs-number">-5</span>); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="equals&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;">equals(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;)</h2>
+<p><code>a &#x2192; b &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#x5BF9;&#x6BD4;&#x65F6;&#x53EA;&#x5224;&#x65AD;&#x503C;&#x76F8;&#x7B49;&#x800C;&#x4E0D;&#x662F;&#x5F15;&#x7528;&#x76F8;&#x7B49;</span>
+R.equals(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
+R.equals(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;1&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+R.equals([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; true</span>
+
+<span class="hljs-keyword">var</span> a = {}; a.v = a;
+<span class="hljs-keyword">var</span> b = {}; b.v = b;
+R.equals(a, b); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="identical&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;">identical(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
+<p><code>a &#x2192; a &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x5982;&#x679C;&#x5F15;&#x7528;&#x76F8;&#x540C;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5219;&#x4E24;&#x4E2A;&#x503C;&#x76F8;&#x7B49;</span>
+<span class="hljs-keyword">var</span> o = {};
+R.identical(o, o); <span class="hljs-comment">//=&gt; true</span>
+R.identical(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
+R.identical(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;1&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+R.identical([], []); <span class="hljs-comment">//=&gt; false</span>
+<span class="hljs-comment">//0&#x548C;-0&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;NaN&#x548C;NaN&#x76F8;&#x7B49;</span>
+R.identical(<span class="hljs-number">0</span>, <span class="hljs-number">-0</span>); <span class="hljs-comment">//=&gt; false</span>
+R.identical(<span class="hljs-literal">NaN</span>, <span class="hljs-literal">NaN</span>); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="gt&#x5927;&#x4E8E;&#x5224;&#x65AD;">gt(&#x5927;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.gt(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
+R.gt(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; false</span>
+R.gt(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; false</span>
+R.gt(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+R.gt(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="gte&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;">gte(&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.gte(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
+R.gte(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; true</span>
+R.gte(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; false</span>
+R.gte(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+R.gte(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
+</code></pre>
+<h2 id="lt&#x5C0F;&#x4E8E;&#x5224;&#x65AD;">lt(&#x5C0F;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.lt(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; false</span>
+R.lt(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; false</span>
+R.lt(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; true</span>
+R.lt(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
+R.lt(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="lte&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;">lte(&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.lte(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; false</span>
+R.lte(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; true</span>
+R.lte(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; true</span>
+R.lte(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
+R.lte(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="innerjoin&#x5185;&#x8054;&#x5339;&#x914D;">innerJoin(&#x5185;&#x8054;&#x5339;&#x914D;)</h2>
+<p><code>((a, b) &#x2192; Boolean) &#x2192; [a] &#x2192; [b] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x503C;&#x96C6;&#x5408;</span>
+<span class="hljs-comment">//&#x6309;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x987A;&#x5E8F;&#x8FD4;&#x56DE;&#xFF0C;&#x4E0D;&#x5220;&#x9664;&#x91CD;&#x590D;&#x503C;</span>
+R.innerJoin(
+  (record, id) =&gt; record.id === id,
+  [{id: <span class="hljs-number">824</span>, name: <span class="hljs-string">&apos;Richie Furay&apos;</span>},
+   {id: <span class="hljs-number">956</span>, name: <span class="hljs-string">&apos;Dewey Martin&apos;</span>},
+   {id: <span class="hljs-number">313</span>, name: <span class="hljs-string">&apos;Bruce Palmer&apos;</span>},
+   {id: <span class="hljs-number">456</span>, name: <span class="hljs-string">&apos;Stephen Stills&apos;</span>},
+   {id: <span class="hljs-number">456</span>, name: <span class="hljs-string">&apos;Stephen Stills&apos;</span>},
+   {id: <span class="hljs-number">177</span>, name: <span class="hljs-string">&apos;Neil Young&apos;</span>}],
+  [<span class="hljs-number">177</span>, <span class="hljs-number">456</span>, <span class="hljs-number">999</span>]
+);
+<span class="hljs-comment">//=&gt; [{id: 456, name: &apos;Stephen Stills&apos;}, {id: 456, name: &apos;Stephen Stills&apos;}, {id: 177, name: &apos;Neil Young&apos;}]</span>
+</code></pre>
+<h2 id="intersection&#x5217;&#x8868;&#x4EA4;&#x96C6;">intersection(&#x5217;&#x8868;&#x4EA4;&#x96C6;)</h2>
+<p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
+<pre><code class="lang-javascript">R.intersection([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [3,4]</span>
+</code></pre>
+<h2 id="max&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;">max(&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; a</code></p>
+<pre><code class="lang-javascript">R.max(<span class="hljs-number">789</span>, <span class="hljs-number">123</span>); <span class="hljs-comment">//=&gt; 789</span>
+R.max(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>); <span class="hljs-comment">//=&gt; &apos;b&apos;</span>
+</code></pre>
+<h2 id="maxby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;">maxBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;)</h2>
+<p><code>Ord b =&gt; (a &#x2192; b) &#x2192; a &#x2192; a &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//  &#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;</span>
+<span class="hljs-keyword">var</span> square = n =&gt; n * n;
+
+R.maxBy(square, <span class="hljs-number">-3</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; -3</span>
+
+R.reduce(R.maxBy(square), <span class="hljs-number">0</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-2</span>]); <span class="hljs-comment">//=&gt; -5</span>
+R.reduce(R.maxBy(square), <span class="hljs-number">0</span>, []); <span class="hljs-comment">//=&gt; 0</span>
+</code></pre>
+<h2 id="min&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;">min(&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;)</h2>
+<p><code>Ord a =&gt; a &#x2192; a &#x2192; a</code></p>
+<pre><code class="lang-javascript">R.min(<span class="hljs-number">789</span>, <span class="hljs-number">123</span>); <span class="hljs-comment">//=&gt; 123</span>
+R.min(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>); <span class="hljs-comment">//=&gt; &apos;a&apos;</span>
+</code></pre>
+<h2 id="minby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;">minBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;)</h2>
+<p><code>Ord b =&gt; (a &#x2192; b) &#x2192; a &#x2192; a &#x2192; a</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//  &#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;</span>
+<span class="hljs-keyword">var</span> square = n =&gt; n * n;
+
+R.minBy(square, <span class="hljs-number">-3</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; 2</span>
+
+R.reduce(R.minBy(square), <span class="hljs-literal">Infinity</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-2</span>]); <span class="hljs-comment">//=&gt; 1</span>
+R.reduce(R.minBy(square), <span class="hljs-literal">Infinity</span>, []); <span class="hljs-comment">//=&gt; Infinity</span>
+</code></pre>
+<h2 id="patheq&#x8DEF;&#x5F84;&#x5339;&#x914D;">pathEq(&#x8DEF;&#x5F84;&#x5339;&#x914D;)</h2>
+<p><code>[Idx] &#x2192; a &#x2192; {a} &#x2192; Boolean</code> <code>Idx = String | Int</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x503C;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6210;&#x5458;</span>
+<span class="hljs-keyword">var</span> user1 = { address: { zipCode: <span class="hljs-number">90210</span> } };
+<span class="hljs-keyword">var</span> user2 = { address: { zipCode: <span class="hljs-number">55555</span> } };
+<span class="hljs-keyword">var</span> user3 = { name: <span class="hljs-string">&apos;Bob&apos;</span> };
+<span class="hljs-keyword">var</span> users = [ user1, user2, user3 ];
+<span class="hljs-keyword">var</span> isFamous = R.pathEq([<span class="hljs-string">&apos;address&apos;</span>, <span class="hljs-string">&apos;zipCode&apos;</span>], <span class="hljs-number">90210</span>);
+R.filter(isFamous, users); <span class="hljs-comment">//=&gt; [ user1 ]</span>
+</code></pre>
+<h2 id="propeq&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;">propEq(&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;)</h2>
+<p><code>String &#x2192; a &#x2192; Object &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6210;&#x5458;</span>
+<span class="hljs-keyword">var</span> abby = {name: <span class="hljs-string">&apos;Abby&apos;</span>, age: <span class="hljs-number">7</span>, hair: <span class="hljs-string">&apos;blond&apos;</span>};
+<span class="hljs-keyword">var</span> fred = {name: <span class="hljs-string">&apos;Fred&apos;</span>, age: <span class="hljs-number">12</span>, hair: <span class="hljs-string">&apos;brown&apos;</span>};
+<span class="hljs-keyword">var</span> rusty = {name: <span class="hljs-string">&apos;Rusty&apos;</span>, age: <span class="hljs-number">10</span>, hair: <span class="hljs-string">&apos;brown&apos;</span>};
+<span class="hljs-keyword">var</span> alois = {name: <span class="hljs-string">&apos;Alois&apos;</span>, age: <span class="hljs-number">15</span>, disposition: <span class="hljs-string">&apos;surly&apos;</span>};
+<span class="hljs-keyword">var</span> kids = [abby, fred, rusty, alois];
+<span class="hljs-keyword">var</span> hasBrownHair = R.propEq(<span class="hljs-string">&apos;hair&apos;</span>, <span class="hljs-string">&apos;brown&apos;</span>);
+R.filter(hasBrownHair, kids); <span class="hljs-comment">//=&gt; [fred, rusty]</span>
+</code></pre>
+<h2 id="sortby&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;">sortBy(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</h2>
+<p><code>Ord b =&gt; (a &#x2192; b) &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sortByFirstItem = R.sortBy(R.prop(<span class="hljs-number">0</span>));
+<span class="hljs-keyword">var</span> sortByNameCaseInsensitive = R.sortBy(R.compose(R.toLower, R.prop(<span class="hljs-string">&apos;name&apos;</span>)));
+<span class="hljs-keyword">var</span> pairs = [[<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">-2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">-3</span>, <span class="hljs-number">3</span>]];
+sortByFirstItem(pairs); <span class="hljs-comment">//=&gt; [[-3, 3], [-2, 2], [-1, 1]]</span>
+<span class="hljs-keyword">var</span> alice = {
+  name: <span class="hljs-string">&apos;ALICE&apos;</span>,
+  age: <span class="hljs-number">101</span>
+};
+<span class="hljs-keyword">var</span> bob = {
+  name: <span class="hljs-string">&apos;Bob&apos;</span>,
+  age: <span class="hljs-number">-10</span>
+};
+<span class="hljs-keyword">var</span> clara = {
+  name: <span class="hljs-string">&apos;clara&apos;</span>,
+  age: <span class="hljs-number">314.159</span>
+};
+<span class="hljs-keyword">var</span> people = [clara, bob, alice];
+sortByNameCaseInsensitive(people); <span class="hljs-comment">//=&gt; [alice, bob, clara]</span>
+</code></pre>
+<h2 id="sortwith&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;">sortWith(&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</h2>
+<p><code>[(a, a) &#x2192; Number] &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> alice = {
+  name: <span class="hljs-string">&apos;alice&apos;</span>,
+  age: <span class="hljs-number">40</span>
+};
+<span class="hljs-keyword">var</span> bob = {
+  name: <span class="hljs-string">&apos;bob&apos;</span>,
+  age: <span class="hljs-number">30</span>
+};
+<span class="hljs-keyword">var</span> clara = {
+  name: <span class="hljs-string">&apos;clara&apos;</span>,
+  age: <span class="hljs-number">40</span>
+};
+<span class="hljs-keyword">var</span> people = [clara, bob, alice];
+<span class="hljs-keyword">var</span> ageNameSort = R.sortWith([
+  R.descend(R.prop(<span class="hljs-string">&apos;age&apos;</span>)),<span class="hljs-comment">//&#x540E;&#x6267;&#x884C;</span>
+  R.ascend(R.prop(<span class="hljs-string">&apos;name&apos;</span>))<span class="hljs-comment">//&#x5148;&#x6267;&#x884C;</span>
+]);
+ageNameSort(people); <span class="hljs-comment">//=&gt; [alice, clara, bob]</span>
+</code></pre>
+<h2 id="symmetricdifference&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;">symmetricDifference(&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</h2>
+<p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
+<pre><code class="lang-javascript">R.symmetricDifference([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [1,2,7,6,5]</span>
+R.symmetricDifference([<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [7,6,5,1,2]</span>
+</code></pre>
+<h2 id="symmetricdifferencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;">symmetricDifferenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</h2>
+<p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [a] &#x2192; [a]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> eqA = R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>));
+<span class="hljs-keyword">var</span> l1 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}];
+<span class="hljs-keyword">var</span> l2 = [{a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}, {a: <span class="hljs-number">5</span>}, {a: <span class="hljs-number">6</span>}];
+R.symmetricDifferenceWith(eqA, l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2}, {a: 5}, {a: 6}]</span>
+</code></pre>
+<h2 id="union&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;">union(&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;)</h2>
+<p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
+<pre><code class="lang-javascript">R.union([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3, 4]</span>
+R.union([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>], []); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
+</code></pre>
+<h2 id="unionwith&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;">unionWith(&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;)</h2>
+<p><code>((a, a) &#x2192; Boolean) &#x2192; [*] &#x2192; [*] &#x2192; [*]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> l1 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}];
+<span class="hljs-keyword">var</span> l2 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">4</span>}];
+R.unionWith(R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>)), l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2}, {a: 4}]</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Logic.html" class="navigation navigation-prev " aria-label="Previous page: 逻辑运算Logic">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="String.html" class="navigation navigation-next " aria-label="Next page: 字符串String">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"关系运算Relation","level":"3.4","depth":1,"next":{"title":"字符串String","level":"3.5","depth":1,"path":"String.md","ref":"String.md","articles":[]},"previous":{"title":"逻辑运算Logic","level":"3.3","depth":1,"path":"Logic.md","ref":"Logic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Relation.md","mtime":"2018-08-03T03:20:10.588Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T09:26:01.580Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

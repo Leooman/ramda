@@ -1,0 +1,408 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>字符串String · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="List.html" />
+    
+    
+    <link rel="prev" href="Relation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://github.com/Leooman/ramda">
+            
+                    
+                    Ramda V0.25.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Type.html">
+            
+                <a href="Type.html">
+            
+                    
+                    类型Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Math.html">
+            
+                <a href="Math.html">
+            
+                    
+                    数学运算Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Logic.html">
+            
+                <a href="Logic.html">
+            
+                    
+                    逻辑运算Logic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Relation.html">
+            
+                <a href="Relation.html">
+            
+                    
+                    关系运算Relation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    字符串String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="List.html">
+            
+                <a href="List.html">
+            
+                    
+                    数组List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Object.html">
+            
+                <a href="Object.html">
+            
+                    
+                    对象Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    函数Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >字符串String</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="string">String</h1>
+<h2 id="trim&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;">_trim(&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;)</h2>
+<p><code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.trim(<span class="hljs-string">&apos;   xyz  &apos;</span>); <span class="hljs-comment">//=&gt; &apos;xyz&apos;</span>
+R.map(R.trim, R.split(<span class="hljs-string">&apos;,&apos;</span>, <span class="hljs-string">&apos;x, y, z&apos;</span>)); <span class="hljs-comment">//=&gt; [&apos;x&apos;, &apos;y&apos;, &apos;z&apos;]</span>
+</code></pre>
+<h2 id="match&#x6B63;&#x5219;&#x5339;&#x914D;">match(&#x6B63;&#x5219;&#x5339;&#x914D;)</h2>
+<p><code>RegExp &#x2192; String &#x2192; [String | Undefined]</code></p>
+<pre><code class="lang-javascript">R.match(<span class="hljs-regexp">/([a-z]a)/g</span>, <span class="hljs-string">&apos;bananas&apos;</span>); <span class="hljs-comment">//=&gt; [&apos;ba&apos;, &apos;na&apos;, &apos;na&apos;]</span>
+R.match(<span class="hljs-regexp">/a/</span>, <span class="hljs-string">&apos;b&apos;</span>); <span class="hljs-comment">//=&gt; []</span>
+R.match(<span class="hljs-regexp">/a/</span>, <span class="hljs-literal">null</span>); <span class="hljs-comment">//=&gt; TypeError: null does not have a method named &quot;match&quot;</span>
+</code></pre>
+<h2 id="replace&#x66FF;&#x6362;">replace(&#x66FF;&#x6362;)</h2>
+<p><code>RegExp|String &#x2192; String &#x2192; String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.replace(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;foo foo foo&apos;</span>); <span class="hljs-comment">//=&gt; &apos;bar foo foo&apos;</span>
+R.replace(<span class="hljs-regexp">/foo/</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;foo foo foo&apos;</span>); <span class="hljs-comment">//=&gt; &apos;bar foo foo&apos;</span>
+
+<span class="hljs-comment">// Use the &quot;g&quot; (global) flag to replace all occurrences:</span>
+R.replace(<span class="hljs-regexp">/foo/g</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;foo foo foo&apos;</span>); <span class="hljs-comment">//=&gt; &apos;bar bar bar&apos;</span>
+</code></pre>
+<h2 id="split&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;">split(&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;)</h2>
+<p><code>(String | RegExp) &#x2192; String &#x2192; [String]</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> pathComponents = R.split(<span class="hljs-string">&apos;/&apos;</span>);
+R.tail(pathComponents(<span class="hljs-string">&apos;/usr/local/bin/node&apos;</span>)); <span class="hljs-comment">//=&gt; [&apos;usr&apos;, &apos;local&apos;, &apos;bin&apos;, &apos;node&apos;]</span>
+
+R.split(<span class="hljs-string">&apos;.&apos;</span>, <span class="hljs-string">&apos;a.b.c.xyz.d&apos;</span>); <span class="hljs-comment">//=&gt; [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;xyz&apos;, &apos;d&apos;]</span>
+</code></pre>
+<h2 id="test&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;">test(&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;)</h2>
+<p><code>RegExp &#x2192; String &#x2192; Boolean</code></p>
+<pre><code class="lang-javascript">R.test(<span class="hljs-regexp">/^x/</span>, <span class="hljs-string">&apos;xyz&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
+R.test(<span class="hljs-regexp">/^y/</span>, <span class="hljs-string">&apos;xyz&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
+</code></pre>
+<h2 id="tolower&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;">toLower(&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;)</h2>
+<p><code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.toLower(<span class="hljs-string">&apos;XYZ&apos;</span>); <span class="hljs-comment">//=&gt; &apos;xyz&apos;</span>
+</code></pre>
+<h2 id="toupper&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;">toUpper(&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;)</h2>
+<p><code>String &#x2192; String</code></p>
+<pre><code class="lang-javascript">R.toUpper(<span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;ABC&apos;</span>
+</code></pre>
+<h2 id="tostring&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;">toString(&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;)</h2>
+<p><code>* &#x2192; String</code> </p>
+<pre><code class="lang-javascript">R.toString(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; &apos;42&apos;</span>
+R.toString(<span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;&quot;abc&quot;&apos;</span>
+R.toString([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; &apos;[1, 2, 3]&apos;</span>
+R.toString({foo: <span class="hljs-number">1</span>, bar: <span class="hljs-number">2</span>, baz: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; &apos;{&quot;bar&quot;: 2, &quot;baz&quot;: 3, &quot;foo&quot;: 1}&apos;</span>
+R.toString(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&apos;2001-02-03T04:05:06Z&apos;</span>)); <span class="hljs-comment">//=&gt; &apos;new Date(&quot;2001-02-03T04:05:06.000Z&quot;)&apos;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Relation.html" class="navigation navigation-prev " aria-label="Previous page: 关系运算Relation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="List.html" class="navigation navigation-next " aria-label="Next page: 数组List">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"字符串String","level":"3.5","depth":1,"next":{"title":"数组List","level":"3.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"previous":{"title":"关系运算Relation","level":"3.4","depth":1,"path":"Relation.md","ref":"Relation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2018-08-02T10:49:23.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T09:26:01.580Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
