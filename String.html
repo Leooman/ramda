@@ -1,20 +1,36 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>字符串String · GitBook</title>
+        <title>字符串String · 函数式编程Ramda</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Leooman">
         
         
     
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -63,6 +80,15 @@
     <link rel="prev" href="Relation.html" />
     
 
+    
+        <link rel="shortcut icon" href='logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='logo.ico' type="image/x-icon">
+    
+    
+    
+
     </head>
     <body>
         
@@ -71,7 +97,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -80,6 +106,8 @@
 
 
 <ul class="summary">
+    
+    
     
     
 
@@ -93,6 +121,8 @@
             
                 <a target="_blank" href="https://github.com/Leooman/ramda">
             
+                    
+                        <b>1.1.</b>
                     
                     Ramda V0.25.0
             
@@ -114,6 +144,8 @@
                 <a href="./">
             
                     
+                        <b>2.1.</b>
+                    
                     Ramda及函数式编程
             
                 </a>
@@ -134,6 +166,8 @@
                 <a href="Type.html">
             
                     
+                        <b>3.1.</b>
+                    
                     类型Type
             
                 </a>
@@ -146,6 +180,8 @@
             
                 <a href="Math.html">
             
+                    
+                        <b>3.2.</b>
                     
                     数学运算Math
             
@@ -160,6 +196,8 @@
                 <a href="Logic.html">
             
                     
+                        <b>3.3.</b>
+                    
                     逻辑运算Logic
             
                 </a>
@@ -172,6 +210,8 @@
             
                 <a href="Relation.html">
             
+                    
+                        <b>3.4.</b>
                     
                     关系运算Relation
             
@@ -186,6 +226,8 @@
                 <a href="String.html">
             
                     
+                        <b>3.5.</b>
+                    
                     字符串String
             
                 </a>
@@ -198,6 +240,8 @@
             
                 <a href="List.html">
             
+                    
+                        <b>3.6.</b>
                     
                     数组List
             
@@ -212,6 +256,8 @@
                 <a href="Object.html">
             
                     
+                        <b>3.7.</b>
+                    
                     对象Object
             
                 </a>
@@ -224,6 +270,8 @@
             
                 <a href="Function.html">
             
+                    
+                        <b>3.8.</b>
                     
                     函数Function
             
@@ -240,7 +288,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -278,18 +326,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="trim&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;">_trim(&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;)</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x5B57;&#x7B26;&#x4E32;string">&#x5B57;&#x7B26;&#x4E32;String</a></li><ul><li><a href="#trim&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;">_trim(&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;)</a></li><li><a href="#match&#x6B63;&#x5219;&#x5339;&#x914D;">match(&#x6B63;&#x5219;&#x5339;&#x914D;)</a></li><li><a href="#replace&#x66FF;&#x6362;">replace(&#x66FF;&#x6362;)</a></li><li><a href="#split&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;">split(&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;)</a></li><li><a href="#test&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;">test(&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;)</a></li><li><a href="#tolower&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;">toLower(&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;)</a></li><li><a href="#toupper&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;">toUpper(&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;)</a></li><li><a href="#tostring&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;">toString(&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;)</a></li></ul></ul></div><a href="#&#x5B57;&#x7B26;&#x4E32;string" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B57;&#x7B26;&#x4E32;string"><a name="&#x5B57;&#x7B26;&#x4E32;string" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;string"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;String</h1>
+<h2 id="trim&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;"><a name="trim&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;" class="anchor-navigation-ex-anchor" href="#trim&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;"><i class="fa fa-link" aria-hidden="true"></i></a>_trim(&#x53BB;&#x9664;&#x5DE6;&#x53F3;&#x4E24;&#x4FA7;&#x7A7A;&#x767D;)</h2>
 <p><code>String &#x2192; String</code></p>
 <pre><code class="lang-javascript">R.trim(<span class="hljs-string">&apos;   xyz  &apos;</span>); <span class="hljs-comment">//=&gt; &apos;xyz&apos;</span>
 R.map(R.trim, R.split(<span class="hljs-string">&apos;,&apos;</span>, <span class="hljs-string">&apos;x, y, z&apos;</span>)); <span class="hljs-comment">//=&gt; [&apos;x&apos;, &apos;y&apos;, &apos;z&apos;]</span>
 </code></pre>
-<h2 id="match&#x6B63;&#x5219;&#x5339;&#x914D;">match(&#x6B63;&#x5219;&#x5339;&#x914D;)</h2>
+<h2 id="match&#x6B63;&#x5219;&#x5339;&#x914D;"><a name="match&#x6B63;&#x5219;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#match&#x6B63;&#x5219;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>match(&#x6B63;&#x5219;&#x5339;&#x914D;)</h2>
 <p><code>RegExp &#x2192; String &#x2192; [String | Undefined]</code></p>
 <pre><code class="lang-javascript">R.match(<span class="hljs-regexp">/([a-z]a)/g</span>, <span class="hljs-string">&apos;bananas&apos;</span>); <span class="hljs-comment">//=&gt; [&apos;ba&apos;, &apos;na&apos;, &apos;na&apos;]</span>
 R.match(<span class="hljs-regexp">/a/</span>, <span class="hljs-string">&apos;b&apos;</span>); <span class="hljs-comment">//=&gt; []</span>
 R.match(<span class="hljs-regexp">/a/</span>, <span class="hljs-literal">null</span>); <span class="hljs-comment">//=&gt; TypeError: null does not have a method named &quot;match&quot;</span>
 </code></pre>
-<h2 id="replace&#x66FF;&#x6362;">replace(&#x66FF;&#x6362;)</h2>
+<h2 id="replace&#x66FF;&#x6362;"><a name="replace&#x66FF;&#x6362;" class="anchor-navigation-ex-anchor" href="#replace&#x66FF;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>replace(&#x66FF;&#x6362;)</h2>
 <p><code>RegExp|String &#x2192; String &#x2192; String &#x2192; String</code></p>
 <pre><code class="lang-javascript">R.replace(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;foo foo foo&apos;</span>); <span class="hljs-comment">//=&gt; &apos;bar foo foo&apos;</span>
 R.replace(<span class="hljs-regexp">/foo/</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;foo foo foo&apos;</span>); <span class="hljs-comment">//=&gt; &apos;bar foo foo&apos;</span>
@@ -297,27 +346,27 @@ R.replace(<span class="hljs-regexp">/foo/</span>, <span class="hljs-string">&apo
 <span class="hljs-comment">// Use the &quot;g&quot; (global) flag to replace all occurrences:</span>
 R.replace(<span class="hljs-regexp">/foo/g</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;foo foo foo&apos;</span>); <span class="hljs-comment">//=&gt; &apos;bar bar bar&apos;</span>
 </code></pre>
-<h2 id="split&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;">split(&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;)</h2>
+<h2 id="split&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;"><a name="split&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;" class="anchor-navigation-ex-anchor" href="#split&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;"><i class="fa fa-link" aria-hidden="true"></i></a>split(&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;)</h2>
 <p><code>(String | RegExp) &#x2192; String &#x2192; [String]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> pathComponents = R.split(<span class="hljs-string">&apos;/&apos;</span>);
 R.tail(pathComponents(<span class="hljs-string">&apos;/usr/local/bin/node&apos;</span>)); <span class="hljs-comment">//=&gt; [&apos;usr&apos;, &apos;local&apos;, &apos;bin&apos;, &apos;node&apos;]</span>
 
 R.split(<span class="hljs-string">&apos;.&apos;</span>, <span class="hljs-string">&apos;a.b.c.xyz.d&apos;</span>); <span class="hljs-comment">//=&gt; [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;xyz&apos;, &apos;d&apos;]</span>
 </code></pre>
-<h2 id="test&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;">test(&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;)</h2>
+<h2 id="test&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;"><a name="test&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#test&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>test(&#x6B63;&#x5219;&#x5339;&#x914D;&#x5224;&#x65AD;)</h2>
 <p><code>RegExp &#x2192; String &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript">R.test(<span class="hljs-regexp">/^x/</span>, <span class="hljs-string">&apos;xyz&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
 R.test(<span class="hljs-regexp">/^y/</span>, <span class="hljs-string">&apos;xyz&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
 </code></pre>
-<h2 id="tolower&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;">toLower(&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;)</h2>
+<h2 id="tolower&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;"><a name="tolower&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;" class="anchor-navigation-ex-anchor" href="#tolower&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>toLower(&#x5B57;&#x7B26;&#x4E32;&#x5C0F;&#x5199;)</h2>
 <p><code>String &#x2192; String</code></p>
 <pre><code class="lang-javascript">R.toLower(<span class="hljs-string">&apos;XYZ&apos;</span>); <span class="hljs-comment">//=&gt; &apos;xyz&apos;</span>
 </code></pre>
-<h2 id="toupper&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;">toUpper(&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;)</h2>
+<h2 id="toupper&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;"><a name="toupper&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;" class="anchor-navigation-ex-anchor" href="#toupper&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>toUpper(&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5199;)</h2>
 <p><code>String &#x2192; String</code></p>
 <pre><code class="lang-javascript">R.toUpper(<span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;ABC&apos;</span>
 </code></pre>
-<h2 id="tostring&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;">toString(&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;)</h2>
+<h2 id="tostring&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;"><a name="tostring&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#tostring&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>toString(&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;)</h2>
 <p><code>* &#x2192; String</code> </p>
 <pre><code class="lang-javascript">R.toString(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; &apos;42&apos;</span>
 R.toString(<span class="hljs-string">&apos;abc&apos;</span>); <span class="hljs-comment">//=&gt; &apos;&quot;abc&quot;&apos;</span>
@@ -325,7 +374,9 @@ R.toString([<span class="hljs-number">1</span>, <span class="hljs-number">2</spa
 R.toString({foo: <span class="hljs-number">1</span>, bar: <span class="hljs-number">2</span>, baz: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; &apos;{&quot;bar&quot;: 2, &quot;baz&quot;: 3, &quot;foo&quot;: 1}&apos;</span>
 R.toString(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&apos;2001-02-03T04:05:06Z&apos;</span>)); <span class="hljs-comment">//=&gt; &apos;new Date(&quot;2001-02-03T04:05:06.000Z&quot;)&apos;</span>
 </code></pre>
-
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; leooman.com 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x65B0;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2018-11-27 11:50:40
+</span></footer>
                                 
                                 </section>
                             
@@ -368,7 +419,7 @@ R.toString(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Dat
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串String","level":"3.5","depth":1,"next":{"title":"数组List","level":"3.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"previous":{"title":"关系运算Relation","level":"3.4","depth":1,"path":"Relation.md","ref":"Relation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2018-11-26T09:35:07.561Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T10:06:17.388Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串String","level":"3.5","depth":1,"next":{"title":"数组List","level":"3.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"previous":{"title":"关系运算Relation","level":"3.4","depth":1,"path":"Relation.md","ref":"Relation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-page-toc@^0.1.1","github@^2.0.0","anchors@^0.7.1","splitter@^0.0.8","tbfed-pagefooter@^0.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","-sharing","sharing-plus@^0.0.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © leooman.com 2018","modify_label":"文件最新发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/Leooman"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"serif","size":2},"highlight":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"logo.ico","bookmark":"logo.ico"},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon","qq","qzone"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"Leooman","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"函数式编程Ramda","language":"zh-hans","links":{"sidebar":{}},"gitbook":"3.2.3","description":"Ramda使用"},"file":{"path":"String.md","mtime":"2018-11-27T03:50:40.847Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-27T03:55:30.791Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -376,6 +427,18 @@ R.toString(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Dat
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -391,10 +454,6 @@ R.toString(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Dat
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

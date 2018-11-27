@@ -1,20 +1,36 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数学运算Math · GitBook</title>
+        <title>数学运算Math · 函数式编程Ramda</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Leooman">
         
         
     
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -63,6 +80,15 @@
     <link rel="prev" href="Type.html" />
     
 
+    
+        <link rel="shortcut icon" href='logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='logo.ico' type="image/x-icon">
+    
+    
+    
+
     </head>
     <body>
         
@@ -71,7 +97,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -80,6 +106,8 @@
 
 
 <ul class="summary">
+    
+    
     
     
 
@@ -93,6 +121,8 @@
             
                 <a target="_blank" href="https://github.com/Leooman/ramda">
             
+                    
+                        <b>1.1.</b>
                     
                     Ramda V0.25.0
             
@@ -114,6 +144,8 @@
                 <a href="./">
             
                     
+                        <b>2.1.</b>
+                    
                     Ramda及函数式编程
             
                 </a>
@@ -134,6 +166,8 @@
                 <a href="Type.html">
             
                     
+                        <b>3.1.</b>
+                    
                     类型Type
             
                 </a>
@@ -146,6 +180,8 @@
             
                 <a href="Math.html">
             
+                    
+                        <b>3.2.</b>
                     
                     数学运算Math
             
@@ -160,6 +196,8 @@
                 <a href="Logic.html">
             
                     
+                        <b>3.3.</b>
+                    
                     逻辑运算Logic
             
                 </a>
@@ -172,6 +210,8 @@
             
                 <a href="Relation.html">
             
+                    
+                        <b>3.4.</b>
                     
                     关系运算Relation
             
@@ -186,6 +226,8 @@
                 <a href="String.html">
             
                     
+                        <b>3.5.</b>
+                    
                     字符串String
             
                 </a>
@@ -198,6 +240,8 @@
             
                 <a href="List.html">
             
+                    
+                        <b>3.6.</b>
                     
                     数组List
             
@@ -212,6 +256,8 @@
                 <a href="Object.html">
             
                     
+                        <b>3.7.</b>
+                    
                     对象Object
             
                 </a>
@@ -224,6 +270,8 @@
             
                 <a href="Function.html">
             
+                    
+                        <b>3.8.</b>
                     
                     函数Function
             
@@ -240,7 +288,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -278,12 +326,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="add&#x4E24;&#x6570;&#x76F8;&#x52A0;">add(&#x4E24;&#x6570;&#x76F8;&#x52A0;)</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6570;&#x5B66;&#x8FD0;&#x7B97;math">&#x6570;&#x5B66;&#x8FD0;&#x7B97;Math</a></li><ul><li><a href="#add&#x4E24;&#x6570;&#x76F8;&#x52A0;">add(&#x4E24;&#x6570;&#x76F8;&#x52A0;)</a></li><li><a href="#subtract&#x4E24;&#x6570;&#x76F8;&#x51CF;">subtract(&#x4E24;&#x6570;&#x76F8;&#x51CF;)</a></li><li><a href="#mutiply&#x4E24;&#x6570;&#x76F8;&#x4E58;">mutiply(&#x4E24;&#x6570;&#x76F8;&#x4E58;)</a></li><li><a href="#divide&#x4E24;&#x6570;&#x76F8;&#x9664;">divide(&#x4E24;&#x6570;&#x76F8;&#x9664;)</a></li><li><a href="#dec&#x81EA;&#x51CF;">dec(&#x81EA;&#x51CF;)</a></li><li><a href="#inc&#x81EA;&#x589E;">inc(&#x81EA;&#x589E;)</a></li><li><a href="#mean&#x5E73;&#x5747;&#x6570;">mean(&#x5E73;&#x5747;&#x6570;)</a></li><li><a href="#median&#x4E2D;&#x4F4D;&#x6570;">median(&#x4E2D;&#x4F4D;&#x6570;)</a></li><li><a href="#negate&#x8D1F;&#x6570;">negate(&#x8D1F;&#x6570;)</a></li><li><a href="#product&#x4E58;&#x79EF;">product(&#x4E58;&#x79EF;)</a></li><li><a href="#sum&#x6C42;&#x548C;">sum(&#x6C42;&#x548C;)</a></li><li><a href="#modulo&#x53D6;&#x4F59;">modulo(&#x53D6;&#x4F59;)</a></li><li><a href="#mathmod&#x53D6;&#x4F59;">mathMod(&#x53D6;&#x4F59;)</a></li></ul></ul></div><a href="#&#x6570;&#x5B66;&#x8FD0;&#x7B97;math" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6570;&#x5B66;&#x8FD0;&#x7B97;math"><a name="&#x6570;&#x5B66;&#x8FD0;&#x7B97;math" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x5B66;&#x8FD0;&#x7B97;math"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x5B66;&#x8FD0;&#x7B97;Math</h1>
+<h2 id="add&#x4E24;&#x6570;&#x76F8;&#x52A0;"><a name="add&#x4E24;&#x6570;&#x76F8;&#x52A0;" class="anchor-navigation-ex-anchor" href="#add&#x4E24;&#x6570;&#x76F8;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>add(&#x4E24;&#x6570;&#x76F8;&#x52A0;)</h2>
 <p><code>Number &#x2192; Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);       <span class="hljs-comment">//=&gt;  5</span>
 R.add(<span class="hljs-number">7</span>)(<span class="hljs-number">10</span>);      <span class="hljs-comment">//=&gt; 17</span>
 </code></pre>
-<h2 id="subtract&#x4E24;&#x6570;&#x76F8;&#x51CF;">subtract(&#x4E24;&#x6570;&#x76F8;&#x51CF;)</h2>
+<h2 id="subtract&#x4E24;&#x6570;&#x76F8;&#x51CF;"><a name="subtract&#x4E24;&#x6570;&#x76F8;&#x51CF;" class="anchor-navigation-ex-anchor" href="#subtract&#x4E24;&#x6570;&#x76F8;&#x51CF;"><i class="fa fa-link" aria-hidden="true"></i></a>subtract(&#x4E24;&#x6570;&#x76F8;&#x51CF;)</h2>
 <p><code>Number &#x2192; Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.subtract(<span class="hljs-number">10</span>, <span class="hljs-number">8</span>); <span class="hljs-comment">//=&gt; 2</span>
 
@@ -294,7 +343,7 @@ minus5(<span class="hljs-number">17</span>); <span class="hljs-comment">//=&gt; 
 complementaryAngle(<span class="hljs-number">30</span>); <span class="hljs-comment">//=&gt; 60</span>
 complementaryAngle(<span class="hljs-number">72</span>); <span class="hljs-comment">//=&gt; 18</span>
 </code></pre>
-<h2 id="mutiply&#x4E24;&#x6570;&#x76F8;&#x4E58;">mutiply(&#x4E24;&#x6570;&#x76F8;&#x4E58;)</h2>
+<h2 id="mutiply&#x4E24;&#x6570;&#x76F8;&#x4E58;"><a name="mutiply&#x4E24;&#x6570;&#x76F8;&#x4E58;" class="anchor-navigation-ex-anchor" href="#mutiply&#x4E24;&#x6570;&#x76F8;&#x4E58;"><i class="fa fa-link" aria-hidden="true"></i></a>mutiply(&#x4E24;&#x6570;&#x76F8;&#x4E58;)</h2>
 <p><code>Number &#x2192; Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> double = R.multiply(<span class="hljs-number">2</span>);
 <span class="hljs-keyword">var</span> triple = R.multiply(<span class="hljs-number">3</span>);
@@ -302,7 +351,7 @@ double(<span class="hljs-number">3</span>);       <span class="hljs-comment">//=
 triple(<span class="hljs-number">4</span>);       <span class="hljs-comment">//=&gt; 12</span>
 R.multiply(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>);  <span class="hljs-comment">//=&gt; 10</span>
 </code></pre>
-<h2 id="divide&#x4E24;&#x6570;&#x76F8;&#x9664;">divide(&#x4E24;&#x6570;&#x76F8;&#x9664;)</h2>
+<h2 id="divide&#x4E24;&#x6570;&#x76F8;&#x9664;"><a name="divide&#x4E24;&#x6570;&#x76F8;&#x9664;" class="anchor-navigation-ex-anchor" href="#divide&#x4E24;&#x6570;&#x76F8;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>divide(&#x4E24;&#x6570;&#x76F8;&#x9664;)</h2>
 <p><code>Number &#x2192; Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.divide(<span class="hljs-number">71</span>, <span class="hljs-number">100</span>); <span class="hljs-comment">//=&gt; 0.71</span>
 
@@ -312,38 +361,38 @@ half(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; 21
 <span class="hljs-keyword">var</span> reciprocal = R.divide(<span class="hljs-number">1</span>);
 reciprocal(<span class="hljs-number">4</span>);   <span class="hljs-comment">//=&gt; 0.25</span>
 </code></pre>
-<h2 id="dec&#x81EA;&#x51CF;">dec(&#x81EA;&#x51CF;)</h2>
+<h2 id="dec&#x81EA;&#x51CF;"><a name="dec&#x81EA;&#x51CF;" class="anchor-navigation-ex-anchor" href="#dec&#x81EA;&#x51CF;"><i class="fa fa-link" aria-hidden="true"></i></a>dec(&#x81EA;&#x51CF;)</h2>
 <p><code>Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.dec(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; 41</span>
 </code></pre>
-<h2 id="inc&#x81EA;&#x589E;">inc(&#x81EA;&#x589E;)</h2>
+<h2 id="inc&#x81EA;&#x589E;"><a name="inc&#x81EA;&#x589E;" class="anchor-navigation-ex-anchor" href="#inc&#x81EA;&#x589E;"><i class="fa fa-link" aria-hidden="true"></i></a>inc(&#x81EA;&#x589E;)</h2>
 <p><code>Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.inc(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; 43</span>
 </code></pre>
-<h2 id="mean&#x5E73;&#x5747;&#x6570;">mean(&#x5E73;&#x5747;&#x6570;)</h2>
+<h2 id="mean&#x5E73;&#x5747;&#x6570;"><a name="mean&#x5E73;&#x5747;&#x6570;" class="anchor-navigation-ex-anchor" href="#mean&#x5E73;&#x5747;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>mean(&#x5E73;&#x5747;&#x6570;)</h2>
 <p><code>[Number] &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.mean([<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">//=&gt; 6</span>
 R.mean([]); <span class="hljs-comment">//=&gt; NaN</span>
 </code></pre>
-<h2 id="median&#x4E2D;&#x4F4D;&#x6570;">median(&#x4E2D;&#x4F4D;&#x6570;)</h2>
+<h2 id="median&#x4E2D;&#x4F4D;&#x6570;"><a name="median&#x4E2D;&#x4F4D;&#x6570;" class="anchor-navigation-ex-anchor" href="#median&#x4E2D;&#x4F4D;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>median(&#x4E2D;&#x4F4D;&#x6570;)</h2>
 <p><code>[Number] &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.median([<span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>]); <span class="hljs-comment">//=&gt; 7</span>
 R.median([<span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">//=&gt; 8</span>
 R.median([]); <span class="hljs-comment">//=&gt; NaN</span>
 </code></pre>
-<h2 id="negate&#x8D1F;&#x6570;">negate(&#x8D1F;&#x6570;)</h2>
+<h2 id="negate&#x8D1F;&#x6570;"><a name="negate&#x8D1F;&#x6570;" class="anchor-navigation-ex-anchor" href="#negate&#x8D1F;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>negate(&#x8D1F;&#x6570;)</h2>
 <p><code>Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.negate(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; -42</span>
 </code></pre>
-<h2 id="product&#x4E58;&#x79EF;">product(&#x4E58;&#x79EF;)</h2>
+<h2 id="product&#x4E58;&#x79EF;"><a name="product&#x4E58;&#x79EF;" class="anchor-navigation-ex-anchor" href="#product&#x4E58;&#x79EF;"><i class="fa fa-link" aria-hidden="true"></i></a>product(&#x4E58;&#x79EF;)</h2>
 <p><code>[Number] &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.product([<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">8</span>,<span class="hljs-number">100</span>,<span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; 38400</span>
 </code></pre>
-<h2 id="sum&#x6C42;&#x548C;">sum(&#x6C42;&#x548C;)</h2>
+<h2 id="sum&#x6C42;&#x548C;"><a name="sum&#x6C42;&#x548C;" class="anchor-navigation-ex-anchor" href="#sum&#x6C42;&#x548C;"><i class="fa fa-link" aria-hidden="true"></i></a>sum(&#x6C42;&#x548C;)</h2>
 <p><code>[Number] &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.sum([<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">8</span>,<span class="hljs-number">100</span>,<span class="hljs-number">1</span>]); <span class="hljs-comment">//=&gt; 121</span>
 </code></pre>
-<h2 id="modulo&#x53D6;&#x4F59;">modulo(&#x53D6;&#x4F59;)</h2>
+<h2 id="modulo&#x53D6;&#x4F59;"><a name="modulo&#x53D6;&#x4F59;" class="anchor-navigation-ex-anchor" href="#modulo&#x53D6;&#x4F59;"><i class="fa fa-link" aria-hidden="true"></i></a>modulo(&#x53D6;&#x4F59;)</h2>
 <p><code>Number &#x2192; Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript">R.modulo(<span class="hljs-number">17</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; 2</span>
 <span class="hljs-comment">// JS behavior:</span>
@@ -356,7 +405,7 @@ R.modulo(<span class="hljs-number">-17.5</span>, <span class="hljs-number">3</sp
 isOdd(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; 0</span>
 isOdd(<span class="hljs-number">21</span>); <span class="hljs-comment">//=&gt; 1</span>
 </code></pre>
-<h2 id="mathmod&#x53D6;&#x4F59;">mathMod(&#x53D6;&#x4F59;)</h2>
+<h2 id="mathmod&#x53D6;&#x4F59;"><a name="mathmod&#x53D6;&#x4F59;" class="anchor-navigation-ex-anchor" href="#mathmod&#x53D6;&#x4F59;"><i class="fa fa-link" aria-hidden="true"></i></a>mathMod(&#x53D6;&#x4F59;)</h2>
 <p><code>Number &#x2192; Number &#x2192; Number</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#x8981;&#x6C42;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;NaN</span>
 <span class="hljs-comment">// &#x9664;&#x6570;&#x4E3A;0&#x6216;&#x8005;&#x8D1F;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;NaN</span>
@@ -376,7 +425,9 @@ seventeenMod(<span class="hljs-number">3</span>);  <span class="hljs-comment">//
 seventeenMod(<span class="hljs-number">4</span>);  <span class="hljs-comment">//=&gt; 1</span>
 seventeenMod(<span class="hljs-number">10</span>); <span class="hljs-comment">//=&gt; 7</span>
 </code></pre>
-
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; leooman.com 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x65B0;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2018-11-27 11:49:34
+</span></footer>
                                 
                                 </section>
                             
@@ -419,7 +470,7 @@ seventeenMod(<span class="hljs-number">10</span>); <span class="hljs-comment">//
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数学运算Math","level":"3.2","depth":1,"next":{"title":"逻辑运算Logic","level":"3.3","depth":1,"path":"Logic.md","ref":"Logic.md","articles":[]},"previous":{"title":"类型Type","level":"3.1","depth":1,"path":"Type.md","ref":"Type.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Math.md","mtime":"2018-11-26T09:34:49.468Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T10:06:17.388Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数学运算Math","level":"3.2","depth":1,"next":{"title":"逻辑运算Logic","level":"3.3","depth":1,"path":"Logic.md","ref":"Logic.md","articles":[]},"previous":{"title":"类型Type","level":"3.1","depth":1,"path":"Type.md","ref":"Type.md","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-page-toc@^0.1.1","github@^2.0.0","anchors@^0.7.1","splitter@^0.0.8","tbfed-pagefooter@^0.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","-sharing","sharing-plus@^0.0.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © leooman.com 2018","modify_label":"文件最新发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/Leooman"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"serif","size":2},"highlight":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"logo.ico","bookmark":"logo.ico"},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon","qq","qzone"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"Leooman","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"函数式编程Ramda","language":"zh-hans","links":{"sidebar":{}},"gitbook":"3.2.3","description":"Ramda使用"},"file":{"path":"Math.md","mtime":"2018-11-27T03:49:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-27T03:55:30.791Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -427,6 +478,18 @@ seventeenMod(<span class="hljs-number">10</span>); <span class="hljs-comment">//
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -442,10 +505,6 @@ seventeenMod(<span class="hljs-number">10</span>); <span class="hljs-comment">//
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

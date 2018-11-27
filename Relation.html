@@ -1,20 +1,36 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>关系运算Relation · GitBook</title>
+        <title>关系运算Relation · 函数式编程Ramda</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Leooman">
         
         
     
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -49,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -63,6 +80,15 @@
     <link rel="prev" href="Logic.html" />
     
 
+    
+        <link rel="shortcut icon" href='logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='logo.ico' type="image/x-icon">
+    
+    
+    
+
     </head>
     <body>
         
@@ -71,7 +97,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -80,6 +106,8 @@
 
 
 <ul class="summary">
+    
+    
     
     
 
@@ -93,6 +121,8 @@
             
                 <a target="_blank" href="https://github.com/Leooman/ramda">
             
+                    
+                        <b>1.1.</b>
                     
                     Ramda V0.25.0
             
@@ -114,6 +144,8 @@
                 <a href="./">
             
                     
+                        <b>2.1.</b>
+                    
                     Ramda及函数式编程
             
                 </a>
@@ -134,6 +166,8 @@
                 <a href="Type.html">
             
                     
+                        <b>3.1.</b>
+                    
                     类型Type
             
                 </a>
@@ -146,6 +180,8 @@
             
                 <a href="Math.html">
             
+                    
+                        <b>3.2.</b>
                     
                     数学运算Math
             
@@ -160,6 +196,8 @@
                 <a href="Logic.html">
             
                     
+                        <b>3.3.</b>
+                    
                     逻辑运算Logic
             
                 </a>
@@ -172,6 +210,8 @@
             
                 <a href="Relation.html">
             
+                    
+                        <b>3.4.</b>
                     
                     关系运算Relation
             
@@ -186,6 +226,8 @@
                 <a href="String.html">
             
                     
+                        <b>3.5.</b>
+                    
                     字符串String
             
                 </a>
@@ -198,6 +240,8 @@
             
                 <a href="List.html">
             
+                    
+                        <b>3.6.</b>
                     
                     数组List
             
@@ -212,6 +256,8 @@
                 <a href="Object.html">
             
                     
+                        <b>3.7.</b>
+                    
                     对象Object
             
                 </a>
@@ -224,6 +270,8 @@
             
                 <a href="Function.html">
             
+                    
+                        <b>3.8.</b>
                     
                     函数Function
             
@@ -240,7 +288,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -278,7 +326,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="clamp&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;">clamp(&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;)</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;relation">&#x5173;&#x7CFB;&#x8FD0;&#x7B97;Relation</a></li><ul><li><a href="#clamp&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;">clamp(&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;)</a></li><li><a href="#countby&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;">countBy(&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;)</a></li><li><a href="#difference&#x5217;&#x8868;&#x5DEE;&#x96C6;">difference(&#x5217;&#x8868;&#x5DEE;&#x96C6;)</a></li><li><a href="#differencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;">differenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;)</a></li><li><a href="#eqby&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;">eqBy(&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;)</a></li><li><a href="#equals&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;">equals(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;)</a></li><li><a href="#identical&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;">identical(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;)</a></li><li><a href="#gt&#x5927;&#x4E8E;&#x5224;&#x65AD;">gt(&#x5927;&#x4E8E;&#x5224;&#x65AD;)</a></li><li><a href="#gte&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;">gte(&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</a></li><li><a href="#lt&#x5C0F;&#x4E8E;&#x5224;&#x65AD;">lt(&#x5C0F;&#x4E8E;&#x5224;&#x65AD;)</a></li><li><a href="#lte&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;">lte(&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</a></li><li><a href="#innerjoin&#x5185;&#x8054;&#x5339;&#x914D;">innerJoin(&#x5185;&#x8054;&#x5339;&#x914D;)</a></li><li><a href="#intersection&#x5217;&#x8868;&#x4EA4;&#x96C6;">intersection(&#x5217;&#x8868;&#x4EA4;&#x96C6;)</a></li><li><a href="#max&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;">max(&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;)</a></li><li><a href="#maxby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;">maxBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;)</a></li><li><a href="#min&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;">min(&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;)</a></li><li><a href="#minby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;">minBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;)</a></li><li><a href="#patheq&#x8DEF;&#x5F84;&#x5339;&#x914D;">pathEq(&#x8DEF;&#x5F84;&#x5339;&#x914D;)</a></li><li><a href="#propeq&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;">propEq(&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;)</a></li><li><a href="#sortby&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;">sortBy(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</a></li><li><a href="#sortwith&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;">sortWith(&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</a></li><li><a href="#symmetricdifference&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;">symmetricDifference(&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</a></li><li><a href="#symmetricdifferencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;">symmetricDifferenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</a></li><li><a href="#union&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;">union(&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;)</a></li><li><a href="#unionwith&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;">unionWith(&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;)</a></li></ul></ul></div><a href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;relation" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;relation"><a name="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;relation" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;relation"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;Relation</h1>
+<h2 id="clamp&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;"><a name="clamp&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;" class="anchor-navigation-ex-anchor" href="#clamp&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;"><i class="fa fa-link" aria-hidden="true"></i></a>clamp(&#x9650;&#x5B9A;&#x53D6;&#x503C;&#x8303;&#x56F4;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; a &#x2192; a</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6700;&#x5C0F;&#x9650;&#x5B9A;&#x503C;minimum</span>
 <span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6700;&#x5927;&#x9650;&#x5B9A;&#x503C;maximum</span>
@@ -289,7 +338,7 @@ R.clamp(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>,
 R.clamp(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>) <span class="hljs-comment">// =&gt; 10</span>
 R.clamp(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">4</span>)  <span class="hljs-comment">// =&gt; 4</span>
 </code></pre>
-<h2 id="countby&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;">countBy(&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;)</h2>
+<h2 id="countby&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;"><a name="countby&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;" class="anchor-navigation-ex-anchor" href="#countby&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>countBy(&#x5217;&#x8868;&#x5143;&#x7D20;&#x8BA1;&#x6570;)</h2>
 <p><code>(a &#x2192; String) &#x2192; [a] &#x2192; {*}</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1.0</span>, <span class="hljs-number">1.1</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">3.0</span>, <span class="hljs-number">2.2</span>];
 R.countBy(<span class="hljs-built_in">Math</span>.floor)(numbers);    <span class="hljs-comment">//=&gt; {&apos;1&apos;: 3, &apos;2&apos;: 2, &apos;3&apos;: 1}</span>
@@ -297,7 +346,7 @@ R.countBy(<span class="hljs-built_in">Math</span>.floor)(numbers);    <span clas
 <span class="hljs-keyword">var</span> letters = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
 R.countBy(R.toLower)(letters);   <span class="hljs-comment">//=&gt; {&apos;a&apos;: 3, &apos;b&apos;: 2, &apos;c&apos;: 1}</span>
 </code></pre>
-<h2 id="difference&#x5217;&#x8868;&#x5DEE;&#x96C6;">difference(&#x5217;&#x8868;&#x5DEE;&#x96C6;)</h2>
+<h2 id="difference&#x5217;&#x8868;&#x5DEE;&#x96C6;"><a name="difference&#x5217;&#x8868;&#x5DEE;&#x96C6;" class="anchor-navigation-ex-anchor" href="#difference&#x5217;&#x8868;&#x5DEE;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>difference(&#x5217;&#x8868;&#x5DEE;&#x96C6;)</h2>
 <p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5B58;&#x5728;&#x800C;&#x4E14;&#x7B2C;&#x4E8C;&#x4E2A;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x503C;&#x96C6;&#x5408;</span>
 <span class="hljs-comment">//&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#x5BF9;&#x6BD4;&#x65F6;&#x53EA;&#x5224;&#x65AD;&#x503C;&#x76F8;&#x7B49;&#x800C;&#x4E0D;&#x662F;&#x5F15;&#x7528;&#x76F8;&#x7B49;</span>
@@ -305,7 +354,7 @@ R.difference([<span class="hljs-number">1</span>,<span class="hljs-number">2</sp
 R.difference([<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [7,6,5]</span>
 R.difference([{a: <span class="hljs-number">1</span>}, {b: <span class="hljs-number">2</span>}], [{a: <span class="hljs-number">1</span>}, {c: <span class="hljs-number">3</span>}]) <span class="hljs-comment">//=&gt; [{b: 2}]</span>
 </code></pre>
-<h2 id="differencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;">differenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;)</h2>
+<h2 id="differencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;"><a name="differencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;" class="anchor-navigation-ex-anchor" href="#differencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>differenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5DEE;&#x96C6;)</h2>
 <p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [a] &#x2192; [a]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5B58;&#x5728;&#x800C;&#x4E14;&#x7B2C;&#x4E8C;&#x4E2A;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x503C;&#x96C6;&#x5408;</span>
 <span class="hljs-keyword">var</span> cmp = (x, y) =&gt; x.a === y.a;
@@ -313,11 +362,11 @@ R.difference([{a: <span class="hljs-number">1</span>}, {b: <span class="hljs-num
 <span class="hljs-keyword">var</span> l2 = [{a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}];
 R.differenceWith(cmp, l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2}]</span>
 </code></pre>
-<h2 id="eqby&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;">eqBy(&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
+<h2 id="eqby&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;"><a name="eqby&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;" class="anchor-navigation-ex-anchor" href="#eqby&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;"><i class="fa fa-link" aria-hidden="true"></i></a>eqBy(&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x5904;&#x7406;&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
 <p><code>(a &#x2192; b) &#x2192; a &#x2192; a &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript">R.eqBy(<span class="hljs-built_in">Math</span>.abs, <span class="hljs-number">5</span>, <span class="hljs-number">-5</span>); <span class="hljs-comment">//=&gt; true</span>
 </code></pre>
-<h2 id="equals&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;">equals(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;)</h2>
+<h2 id="equals&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;"><a name="equals&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;" class="anchor-navigation-ex-anchor" href="#equals&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;"><i class="fa fa-link" aria-hidden="true"></i></a>equals(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x503C;&#x76F8;&#x7B49;)</h2>
 <p><code>a &#x2192; b &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#x5BF9;&#x6BD4;&#x65F6;&#x53EA;&#x5224;&#x65AD;&#x503C;&#x76F8;&#x7B49;&#x800C;&#x4E0D;&#x662F;&#x5F15;&#x7528;&#x76F8;&#x7B49;</span>
 R.equals(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
@@ -328,7 +377,7 @@ R.equals([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>
 <span class="hljs-keyword">var</span> b = {}; b.v = b;
 R.equals(a, b); <span class="hljs-comment">//=&gt; true</span>
 </code></pre>
-<h2 id="identical&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;">identical(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
+<h2 id="identical&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;"><a name="identical&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;" class="anchor-navigation-ex-anchor" href="#identical&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;"><i class="fa fa-link" aria-hidden="true"></i></a>identical(&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;)</h2>
 <p><code>a &#x2192; a &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x5982;&#x679C;&#x5F15;&#x7528;&#x76F8;&#x540C;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5219;&#x4E24;&#x4E2A;&#x503C;&#x76F8;&#x7B49;</span>
 <span class="hljs-keyword">var</span> o = {};
@@ -340,7 +389,7 @@ R.identical([], []); <span class="hljs-comment">//=&gt; false</span>
 R.identical(<span class="hljs-number">0</span>, <span class="hljs-number">-0</span>); <span class="hljs-comment">//=&gt; false</span>
 R.identical(<span class="hljs-literal">NaN</span>, <span class="hljs-literal">NaN</span>); <span class="hljs-comment">//=&gt; true</span>
 </code></pre>
-<h2 id="gt&#x5927;&#x4E8E;&#x5224;&#x65AD;">gt(&#x5927;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<h2 id="gt&#x5927;&#x4E8E;&#x5224;&#x65AD;"><a name="gt&#x5927;&#x4E8E;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#gt&#x5927;&#x4E8E;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>gt(&#x5927;&#x4E8E;&#x5224;&#x65AD;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript">R.gt(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
 R.gt(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; false</span>
@@ -348,7 +397,7 @@ R.gt(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <s
 R.gt(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
 R.gt(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
 </code></pre>
-<h2 id="gte&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;">gte(&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<h2 id="gte&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;"><a name="gte&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#gte&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>gte(&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript">R.gte(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
 R.gte(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; true</span>
@@ -356,7 +405,7 @@ R.gte(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <
 R.gte(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
 R.gte(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
 </code></pre>
-<h2 id="lt&#x5C0F;&#x4E8E;&#x5224;&#x65AD;">lt(&#x5C0F;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<h2 id="lt&#x5C0F;&#x4E8E;&#x5224;&#x65AD;"><a name="lt&#x5C0F;&#x4E8E;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#lt&#x5C0F;&#x4E8E;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>lt(&#x5C0F;&#x4E8E;&#x5224;&#x65AD;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript">R.lt(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; false</span>
 R.lt(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; false</span>
@@ -364,7 +413,7 @@ R.lt(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <s
 R.lt(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
 R.lt(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
 </code></pre>
-<h2 id="lte&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;">lte(&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</h2>
+<h2 id="lte&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;"><a name="lte&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#lte&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>lte(&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5224;&#x65AD;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript">R.lte(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; false</span>
 R.lte(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; true</span>
@@ -372,7 +421,7 @@ R.lte(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <
 R.lte(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">//=&gt; true</span>
 R.lte(<span class="hljs-string">&apos;z&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">//=&gt; false</span>
 </code></pre>
-<h2 id="innerjoin&#x5185;&#x8054;&#x5339;&#x914D;">innerJoin(&#x5185;&#x8054;&#x5339;&#x914D;)</h2>
+<h2 id="innerjoin&#x5185;&#x8054;&#x5339;&#x914D;"><a name="innerjoin&#x5185;&#x8054;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#innerjoin&#x5185;&#x8054;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>innerJoin(&#x5185;&#x8054;&#x5339;&#x914D;)</h2>
 <p><code>((a, b) &#x2192; Boolean) &#x2192; [a] &#x2192; [b] &#x2192; [a]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x503C;&#x96C6;&#x5408;</span>
 <span class="hljs-comment">//&#x6309;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x987A;&#x5E8F;&#x8FD4;&#x56DE;&#xFF0C;&#x4E0D;&#x5220;&#x9664;&#x91CD;&#x590D;&#x503C;</span>
@@ -388,16 +437,16 @@ R.innerJoin(
 );
 <span class="hljs-comment">//=&gt; [{id: 456, name: &apos;Stephen Stills&apos;}, {id: 456, name: &apos;Stephen Stills&apos;}, {id: 177, name: &apos;Neil Young&apos;}]</span>
 </code></pre>
-<h2 id="intersection&#x5217;&#x8868;&#x4EA4;&#x96C6;">intersection(&#x5217;&#x8868;&#x4EA4;&#x96C6;)</h2>
+<h2 id="intersection&#x5217;&#x8868;&#x4EA4;&#x96C6;"><a name="intersection&#x5217;&#x8868;&#x4EA4;&#x96C6;" class="anchor-navigation-ex-anchor" href="#intersection&#x5217;&#x8868;&#x4EA4;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>intersection(&#x5217;&#x8868;&#x4EA4;&#x96C6;)</h2>
 <p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
 <pre><code class="lang-javascript">R.intersection([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [3,4]</span>
 </code></pre>
-<h2 id="max&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;">max(&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;)</h2>
+<h2 id="max&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;"><a name="max&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;" class="anchor-navigation-ex-anchor" href="#max&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>max(&#x4E24;&#x6570;&#x8F83;&#x5927;&#x503C;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; a</code></p>
 <pre><code class="lang-javascript">R.max(<span class="hljs-number">789</span>, <span class="hljs-number">123</span>); <span class="hljs-comment">//=&gt; 789</span>
 R.max(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>); <span class="hljs-comment">//=&gt; &apos;b&apos;</span>
 </code></pre>
-<h2 id="maxby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;">maxBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;)</h2>
+<h2 id="maxby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;"><a name="maxby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;" class="anchor-navigation-ex-anchor" href="#maxby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;"><i class="fa fa-link" aria-hidden="true"></i></a>maxBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;)</h2>
 <p><code>Ord b =&gt; (a &#x2192; b) &#x2192; a &#x2192; a &#x2192; a</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//  &#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5927;</span>
 <span class="hljs-keyword">var</span> square = n =&gt; n * n;
@@ -407,12 +456,12 @@ R.maxBy(square, <span class="hljs-number">-3</span>, <span class="hljs-number">2
 R.reduce(R.maxBy(square), <span class="hljs-number">0</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-2</span>]); <span class="hljs-comment">//=&gt; -5</span>
 R.reduce(R.maxBy(square), <span class="hljs-number">0</span>, []); <span class="hljs-comment">//=&gt; 0</span>
 </code></pre>
-<h2 id="min&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;">min(&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;)</h2>
+<h2 id="min&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;"><a name="min&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;" class="anchor-navigation-ex-anchor" href="#min&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>min(&#x4E24;&#x6570;&#x8F83;&#x5C0F;&#x503C;)</h2>
 <p><code>Ord a =&gt; a &#x2192; a &#x2192; a</code></p>
 <pre><code class="lang-javascript">R.min(<span class="hljs-number">789</span>, <span class="hljs-number">123</span>); <span class="hljs-comment">//=&gt; 123</span>
 R.min(<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>); <span class="hljs-comment">//=&gt; &apos;a&apos;</span>
 </code></pre>
-<h2 id="minby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;">minBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;)</h2>
+<h2 id="minby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;"><a name="minby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;" class="anchor-navigation-ex-anchor" href="#minby&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;"><i class="fa fa-link" aria-hidden="true"></i></a>minBy(&#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;)</h2>
 <p><code>Ord b =&gt; (a &#x2192; b) &#x2192; a &#x2192; a &#x2192; a</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//  &#x6839;&#x636E;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5224;&#x65AD;&#x4F55;&#x503C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6700;&#x5C0F;</span>
 <span class="hljs-keyword">var</span> square = n =&gt; n * n;
@@ -422,7 +471,7 @@ R.minBy(square, <span class="hljs-number">-3</span>, <span class="hljs-number">2
 R.reduce(R.minBy(square), <span class="hljs-literal">Infinity</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-2</span>]); <span class="hljs-comment">//=&gt; 1</span>
 R.reduce(R.minBy(square), <span class="hljs-literal">Infinity</span>, []); <span class="hljs-comment">//=&gt; Infinity</span>
 </code></pre>
-<h2 id="patheq&#x8DEF;&#x5F84;&#x5339;&#x914D;">pathEq(&#x8DEF;&#x5F84;&#x5339;&#x914D;)</h2>
+<h2 id="patheq&#x8DEF;&#x5F84;&#x5339;&#x914D;"><a name="patheq&#x8DEF;&#x5F84;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#patheq&#x8DEF;&#x5F84;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>pathEq(&#x8DEF;&#x5F84;&#x5339;&#x914D;)</h2>
 <p><code>[Idx] &#x2192; a &#x2192; {a} &#x2192; Boolean</code> <code>Idx = String | Int</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x503C;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6210;&#x5458;</span>
 <span class="hljs-keyword">var</span> user1 = { address: { zipCode: <span class="hljs-number">90210</span> } };
@@ -432,7 +481,7 @@ R.reduce(R.minBy(square), <span class="hljs-literal">Infinity</span>, []); <span
 <span class="hljs-keyword">var</span> isFamous = R.pathEq([<span class="hljs-string">&apos;address&apos;</span>, <span class="hljs-string">&apos;zipCode&apos;</span>], <span class="hljs-number">90210</span>);
 R.filter(isFamous, users); <span class="hljs-comment">//=&gt; [ user1 ]</span>
 </code></pre>
-<h2 id="propeq&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;">propEq(&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;)</h2>
+<h2 id="propeq&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;"><a name="propeq&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#propeq&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>propEq(&#x5C5E;&#x6027;&#x503C;&#x5339;&#x914D;)</h2>
 <p><code>String &#x2192; a &#x2192; Object &#x2192; Boolean</code></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">//&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6210;&#x5458;</span>
 <span class="hljs-keyword">var</span> abby = {name: <span class="hljs-string">&apos;Abby&apos;</span>, age: <span class="hljs-number">7</span>, hair: <span class="hljs-string">&apos;blond&apos;</span>};
@@ -443,7 +492,7 @@ R.filter(isFamous, users); <span class="hljs-comment">//=&gt; [ user1 ]</span>
 <span class="hljs-keyword">var</span> hasBrownHair = R.propEq(<span class="hljs-string">&apos;hair&apos;</span>, <span class="hljs-string">&apos;brown&apos;</span>);
 R.filter(hasBrownHair, kids); <span class="hljs-comment">//=&gt; [fred, rusty]</span>
 </code></pre>
-<h2 id="sortby&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;">sortBy(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</h2>
+<h2 id="sortby&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;"><a name="sortby&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#sortby&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>sortBy(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</h2>
 <p><code>Ord b =&gt; (a &#x2192; b) &#x2192; [a] &#x2192; [a]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sortByFirstItem = R.sortBy(R.prop(<span class="hljs-number">0</span>));
 <span class="hljs-keyword">var</span> sortByNameCaseInsensitive = R.sortBy(R.compose(R.toLower, R.prop(<span class="hljs-string">&apos;name&apos;</span>)));
@@ -464,7 +513,7 @@ sortByFirstItem(pairs); <span class="hljs-comment">//=&gt; [[-3, 3], [-2, 2], [-
 <span class="hljs-keyword">var</span> people = [clara, bob, alice];
 sortByNameCaseInsensitive(people); <span class="hljs-comment">//=&gt; [alice, bob, clara]</span>
 </code></pre>
-<h2 id="sortwith&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;">sortWith(&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</h2>
+<h2 id="sortwith&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;"><a name="sortwith&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#sortwith&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>sortWith(&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x89C4;&#x5219;&#x6392;&#x5E8F;)</h2>
 <p><code>[(a, a) &#x2192; Number] &#x2192; [a] &#x2192; [a]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> alice = {
   name: <span class="hljs-string">&apos;alice&apos;</span>,
@@ -485,30 +534,32 @@ sortByNameCaseInsensitive(people); <span class="hljs-comment">//=&gt; [alice, bo
 ]);
 ageNameSort(people); <span class="hljs-comment">//=&gt; [alice, clara, bob]</span>
 </code></pre>
-<h2 id="symmetricdifference&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;">symmetricDifference(&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</h2>
+<h2 id="symmetricdifference&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;"><a name="symmetricdifference&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;" class="anchor-navigation-ex-anchor" href="#symmetricdifference&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>symmetricDifference(&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</h2>
 <p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
 <pre><code class="lang-javascript">R.symmetricDifference([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [1,2,7,6,5]</span>
 R.symmetricDifference([<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [7,6,5,1,2]</span>
 </code></pre>
-<h2 id="symmetricdifferencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;">symmetricDifferenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</h2>
+<h2 id="symmetricdifferencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;"><a name="symmetricdifferencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;" class="anchor-navigation-ex-anchor" href="#symmetricdifferencewith&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>symmetricDifferenceWith(&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x975E;&#x4EA4;&#x96C6;)</h2>
 <p><code>((a, a) &#x2192; Boolean) &#x2192; [a] &#x2192; [a] &#x2192; [a]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> eqA = R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>));
 <span class="hljs-keyword">var</span> l1 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}];
 <span class="hljs-keyword">var</span> l2 = [{a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}, {a: <span class="hljs-number">5</span>}, {a: <span class="hljs-number">6</span>}];
 R.symmetricDifferenceWith(eqA, l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2}, {a: 5}, {a: 6}]</span>
 </code></pre>
-<h2 id="union&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;">union(&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;)</h2>
+<h2 id="union&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;"><a name="union&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#union&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>union(&#x5217;&#x8868;&#x53BB;&#x91CD;&#x5408;&#x5E76;)</h2>
 <p><code>[*] &#x2192; [*] &#x2192; [*]</code></p>
 <pre><code class="lang-javascript">R.union([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">//=&gt; [1, 2, 3, 4]</span>
 R.union([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>], []); <span class="hljs-comment">//=&gt; [1, 2, 3]</span>
 </code></pre>
-<h2 id="unionwith&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;">unionWith(&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;)</h2>
+<h2 id="unionwith&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;"><a name="unionwith&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#unionwith&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>unionWith(&#x5217;&#x8868;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x5408;&#x5E76;)</h2>
 <p><code>((a, a) &#x2192; Boolean) &#x2192; [*] &#x2192; [*] &#x2192; [*]</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> l1 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}];
 <span class="hljs-keyword">var</span> l2 = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">4</span>}];
 R.unionWith(R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>)), l1, l2); <span class="hljs-comment">//=&gt; [{a: 1}, {a: 2}, {a: 4}]</span>
 </code></pre>
-
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; leooman.com 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x65B0;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2018-11-27 11:50:27
+</span></footer>
                                 
                                 </section>
                             
@@ -551,7 +602,7 @@ R.unionWith(R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>)), l1, 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"关系运算Relation","level":"3.4","depth":1,"next":{"title":"字符串String","level":"3.5","depth":1,"path":"String.md","ref":"String.md","articles":[]},"previous":{"title":"逻辑运算Logic","level":"3.3","depth":1,"path":"Logic.md","ref":"Logic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Relation.md","mtime":"2018-11-26T09:35:02.296Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-26T10:06:17.388Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"关系运算Relation","level":"3.4","depth":1,"next":{"title":"字符串String","level":"3.5","depth":1,"path":"String.md","ref":"String.md","articles":[]},"previous":{"title":"逻辑运算Logic","level":"3.3","depth":1,"path":"Logic.md","ref":"Logic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-page-toc@^0.1.1","github@^2.0.0","anchors@^0.7.1","splitter@^0.0.8","tbfed-pagefooter@^0.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","-sharing","sharing-plus@^0.0.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © leooman.com 2018","modify_label":"文件最新发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/Leooman"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"serif","size":2},"highlight":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"logo.ico","bookmark":"logo.ico"},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon","qq","qzone"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"Leooman","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"函数式编程Ramda","language":"zh-hans","links":{"sidebar":{}},"gitbook":"3.2.3","description":"Ramda使用"},"file":{"path":"Relation.md","mtime":"2018-11-27T03:50:27.799Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-27T03:55:30.791Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -559,6 +610,18 @@ R.unionWith(R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>)), l1, 
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -574,10 +637,6 @@ R.unionWith(R.eqBy(R.prop(<span class="hljs-string">&apos;a&apos;</span>)), l1, 
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
